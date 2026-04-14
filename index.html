@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript Emotion Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --bg:       #0c0d10;
+  --surf:     #13151b;
+  --surf2:    #1a1d26;
+  --surf3:    #20232e;
+  --border:   #242733;
+  --border2:  #2e3242;
+  --text:     #dde0ec;
+  --muted:    #52566a;
+  --muted2:   #3a3d4f;
+  --accent:   #5b8dee;
+  --accent-d: #3a6acc;
+
+  --joy:      #f5c842;
+  --anger:    #e85555;
+  --sadness:  #5b8dee;
+  --fear:     #c366d4;
+  --surprise: #f07c38;
+  --disgust:  #4ec994;
+  --neutral:  #6b7190;
+
+  --lane-h: 60px;
+  --header-h: 52px;
+  --controls-h: 48px;
+  --filters-h: 44px;
+  --preview-h: 200px;
+  --footer-h: 36px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:13px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  user-select:none;
+}
+
+/* ── HEADER ── */
+header{
+  height:var(--header-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:16px;
+  flex-shrink:0;
+}
+.logo{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--text);
+  white-space:nowrap;
+}
+.logo em{color:var(--accent);font-style:normal}
+.sep{width:1px;height:20px;background:var(--border2);flex-shrink:0}
+
+/* episode selector */
+.ep-group{display:flex;align-items:center;gap:8px}
+.ep-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+select.ep-select{
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  color:var(--text);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:3px;
+  cursor:pointer;
+  outline:none;
+  appearance:none;
+  -webkit-appearance:none;
+  padding-right:22px;
+  background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a5e72'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 7px center;
+  transition:border-color .15s;
+}
+select.ep-select:hover{border-color:var(--accent)}
+select.ep-select:focus{border-color:var(--accent)}
+
+/* stats badge */
+.stats{
+  margin-left:auto;
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.stat{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:.04em;
+}
+.stat b{color:var(--text);font-weight:500}
+
+/* ── FILTER BAR ── */
+#filter-bar{
+  height:var(--filters-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:6px;
+  flex-shrink:0;
+  overflow-x:auto;
+}
+#filter-bar::-webkit-scrollbar{height:3px}
+#filter-bar::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.filter-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--muted);
+  white-space:nowrap;
+  flex-shrink:0;
+  margin-right:4px;
+}
+.filter-sep{width:1px;height:20px;background:var(--border2);margin:0 6px;flex-shrink:0}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:4px 10px 4px 8px;
+  border-radius:20px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:all .15s;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.pill .dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.pill.active{
+  border-color:currentColor;
+  color:var(--text);
+  background:rgba(255,255,255,.04);
+}
+.pill.active .dot{box-shadow:0 0 0 2px rgba(255,255,255,.15)}
+.pill:hover{border-color:var(--muted);color:var(--text)}
+
+.pill-all{
+  padding:4px 10px;
+  border-radius:20px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:all .15s;
+  flex-shrink:0;
+}
+.pill-all:hover,.pill-all.active{
+  border-color:var(--muted);
+  color:var(--text);
+  background:rgba(255,255,255,.04);
+}
+
+/* ── PREVIEW PANEL ── */
+#preview-panel{
+  height:var(--preview-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  flex-shrink:0;
+  overflow:hidden;
+}
+
+#preview-transcript{
+  flex:1;
+  overflow-y:auto;
+  padding:14px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+#preview-transcript::-webkit-scrollbar{width:4px}
+#preview-transcript::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.utt-row{
+  display:flex;
+  gap:12px;
+  align-items:baseline;
+  animation:slideIn .18s ease;
+  padding:6px 8px;
+  border-radius:4px;
+  transition:background .1s;
+  cursor:default;
+}
+.utt-row:hover{background:var(--surf2)}
+@keyframes slideIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+
+.utt-meta{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  min-width:80px;
+  flex-shrink:0;
+}
+.utt-name{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.utt-emo{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.65;
+}
+.utt-ts{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:8px;
+  color:var(--muted);
+}
+.utt-text{
+  font-size:13px;
+  font-weight:300;
+  line-height:1.6;
+  color:var(--text);
+  font-style:italic;
+}
+
+.preview-empty{
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.04em;
+  text-align:center;
+}
+.preview-empty svg{opacity:.3}
+
+/* stats sidebar */
+#preview-stats{
+  width:180px;
+  flex-shrink:0;
+  border-left:1px solid var(--border);
+  padding:14px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  overflow-y:auto;
+}
+.pstat-title{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--muted);
+  margin-bottom:2px;
+}
+.pstat-bar-row{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.pbar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.pbar-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  color:var(--muted);
+  width:52px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-transform:uppercase;
+}
+.pbar-track{
+  flex:1;
+  height:4px;
+  background:var(--surf3);
+  border-radius:2px;
+  overflow:hidden;
+}
+.pbar-fill{height:100%;border-radius:2px;transition:width .3s ease}
+.pbar-count{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:8px;
+  color:var(--muted);
+  min-width:14px;
+  text-align:right;
+}
+
+/* ── TIMELINE ── */
+#timeline-wrap{
+  flex:1;
+  overflow:hidden;
+  position:relative;
+}
+
+#timeline-svg-wrap{
+  width:100%;
+  height:100%;
+}
+
+/* axis */
+.axis text{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  fill:var(--muted);
+}
+.axis .domain{stroke:none}
+.axis .tick line{stroke:var(--border2)}
+
+/* brush */
+.brush .selection{
+  fill:rgba(91,141,238,.15);
+  stroke:var(--accent);
+  stroke-width:1.5;
+}
+.brush .overlay{cursor:crosshair}
+.brush .handle{fill:var(--accent);rx:2}
+
+/* ── CONTROLS ── */
+#controls{
+  height:var(--controls-h);
+  background:var(--surf);
+  border-top:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.ctrl-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:6px 14px;
+  border-radius:4px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .15s;
+}
+.ctrl-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ctrl-btn.primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+.ctrl-btn.primary:hover{background:var(--accent-d);border-color:var(--accent-d)}
+.ctrl-btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+
+.ctrl-divider{width:1px;height:22px;background:var(--border2)}
+
+.kbd-hint{
+  margin-left:auto;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.kbd{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  color:var(--muted);
+  letter-spacing:.03em;
+}
+.kbd kbd{
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  border-radius:3px;
+  padding:1px 5px;
+  font-family:inherit;
+  font-size:9px;
+  color:var(--text);
+}
+
+/* window size display */
+.window-size{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  padding:4px 10px;
+  border:1px solid var(--border2);
+  border-radius:3px;
+  background:var(--surf2);
+  min-width:90px;
+  text-align:center;
+}
+
+/* tooltip */
+#tooltip{
+  position:fixed;
+  pointer-events:none;
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  border-radius:5px;
+  padding:10px 14px;
+  font-size:12px;
+  max-width:260px;
+  line-height:1.55;
+  opacity:0;
+  transition:opacity .1s;
+  z-index:9999;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+.tt-sp{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;font-weight:600}
+.tt-txt{font-style:italic;font-weight:300;margin-bottom:5px}
+.tt-row{display:flex;align-items:center;gap:5px;margin-top:3px}
+.tt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tt-emo{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.04em}
+.tt-time{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:4px}
+
+/* onboarding pulse */
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+.onboard-hint{
+  position:absolute;
+  bottom:52px;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--accent);
+  letter-spacing:.06em;
+  animation:pulse 1.8s ease infinite;
+  pointer-events:none;
+  white-space:nowrap;
+}
+
+/* no-data */
+.no-data{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  gap:8px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Transcript <em>Emotion</em> Explorer</div>
+  <div class="sep"></div>
+  <div class="ep-group">
+    <span class="ep-label">Season</span>
+    <select class="ep-select" id="sel-season"></select>
+    <span class="ep-label">Episode</span>
+    <select class="ep-select" id="sel-episode"></select>
+  </div>
+  <div class="sep"></div>
+  <div class="stats">
+    <span class="stat">Utterances: <b id="stat-count">—</b></span>
+    <span class="stat">Duration: <b id="stat-dur">—</b></span>
+    <span class="stat">Speakers: <b id="stat-sp">—</b></span>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <span class="filter-label">Speakers</span>
+  <button class="pill-all active" id="btn-all-sp" onclick="toggleAllSpeakers()">All</button>
+  <div id="speaker-pills"></div>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Emotions</span>
+  <button class="pill-all active" id="btn-all-emo" onclick="toggleAllEmotions()">All</button>
+  <div id="emotion-pills"></div>
+</div>
+
+<!-- PREVIEW PANEL -->
+<div id="preview-panel">
+  <div id="preview-transcript">
+    <div class="preview-empty">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="14" width="28" height="2" rx="1" fill="currentColor"/>
+        <rect x="8" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
+        <rect x="22" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
+        <rect x="13" y="5" width="6" height="6" rx="1" fill="currentColor"/>
+      </svg>
+      <span>Drag on the timeline to inspect a window</span>
+      <span style="font-size:9px;opacity:.6">← → arrow keys move the window</span>
+    </div>
+  </div>
+  <div id="preview-stats">
+    <div class="pstat-title">Window summary</div>
+    <div id="pstat-content" style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.03em;opacity:.6">
+      Select a window to see emotion breakdown
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div id="timeline-wrap">
+  <div id="timeline-svg-wrap"></div>
+  <div class="onboard-hint" id="onboard">↔ drag to select · hover shapes for detail</div>
+</div>
+
+<!-- CONTROLS -->
+<div id="controls">
+  <button class="ctrl-btn" id="btn-prev" onclick="moveWindow(-1)" title="Move window left (←)">◀ Prev</button>
+  <button class="ctrl-btn" id="btn-next" onclick="moveWindow(1)" title="Move window right (→)">Next ▶</button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="zoomWindow(-1)" title="Shrink window">− Narrow</button>
+  <span class="window-size" id="window-size-lbl">no window</span>
+  <button class="ctrl-btn" onclick="zoomWindow(1)" title="Expand window">+ Widen</button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="clearBrush()">✕ Clear</button>
+  <div class="ctrl-divider"></div>
+  <div class="kbd-hint">
+    <span class="kbd"><kbd>←</kbd><kbd>→</kbd> move window</span>
+    <span class="kbd"><kbd>shift</kbd>+<kbd>←→</kbd> resize</span>
+    <span class="kbd"><kbd>esc</kbd> clear</span>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  DATA  (baked in – George's preprocessed output)
+// ═══════════════════════════════════════════════════════════════
+const ALL_DATA = [{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":79037,"end":85417,"utterance":"Alright, so I'm back in high school, I'm standing in the middle of the cafeteria, and I realize I am totally naked."},{"season":1,"episode":1,"speaker":"Chandler","emotion":"surprise","emotion_code":6,"start":87378,"end":91465,"utterance":"Then I look down, and I realize there's a phone... there."},{"season":1,"episode":1,"speaker":"Joey","emotion":"surprise","emotion_code":6,"start":94928,"end":95600,"utterance":"Instead of...?"},{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":95600,"end":96892,"utterance":"That's right."},{"season":1,"episode":1,"speaker":"Joey","emotion":"neutral","emotion_code":4,"start":97055,"end":97973,"utterance":"Never had that dream."},{"season":1,"episode":1,"speaker":"Phoebe","emotion":"neutral","emotion_code":4,"start":97973,"end":98629,"utterance":"No."},{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":98723,"end":102851,"utterance":"All of a sudden, the phone starts to ring."},{"season":1,"episode":1,"speaker":"Ross","emotion":"sadness","emotion_code":5,"start":202660,"end":205829,"utterance":"I don't want to be single, okay? I just... I just- I just wanna be married again!"},{"season":1,"episode":1,"speaker":"Chandler","emotion":"fear","emotion_code":2,"start":209959,"end":213086,"utterance":"And I just want a million dollars!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":214214,"end":215297,"utterance":"Rachel?!"},{"season":1,"episode":1,"speaker":"Joey","emotion":"neutral","emotion_code":4,"start":611861,"end":614990,"utterance":"Hey."},{"season":1,"episode":1,"speaker":"Phoebe","emotion":"neutral","emotion_code":4,"start":614990,"end":615133,"utterance":"Hey!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":622204,"end":624289,"utterance":"Oh my God!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":636427,"end":640680,"utterance":"My brother's going through that right now, he's such a mess. How did you get through it?"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":644560,"end":646144,"utterance":"-leg?"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":650775,"end":652651,"utterance":"You actually broke her watch?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":653277,"end":654737,"utterance":"Barry, I'm sorry..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":654737,"end":656422,"utterance":"I am so sorry..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":656614,"end":666706,"utterance":"I know you probably think that this is all about what I said the other day about you making love with your socks on, but it isn't... it isn't, it's about me, and I ju- Hi, machine cut me off again... anyway..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1005504,"end":1006088,"utterance":"Oh, look, wish me luck!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":1006088,"end":1007192,"utterance":"What for?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1007339,"end":1010633,"utterance":"I'm gonna go get one of those job things."},{"season":1,"episode":1,"speaker":"Ross","emotion":"fear","emotion_code":2,"start":1243492,"end":1249080,"utterance":"You know you probably didn't know this, but back in high school, I had a, um, major crush on you."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1250540,"end":1251707,"utterance":"I knew."},{"season":1,"episode":1,"speaker":"Ross","emotion":"surprise","emotion_code":6,"start":1252084,"end":1258138,"utterance":"You did! Oh.... I always figured you just thought I was Monica's geeky older brother."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1258882,"end":1259684,"utterance":"I did."},{"season":1,"episode":1,"speaker":"Ross","emotion":"sadness","emotion_code":5,"start":1259684,"end":1260931,"utterance":"Oh."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"surprise","emotion_code":6,"start":1262844,"end":1263970,"utterance":"Oh really?!"},{"season":1,"episode":1,"speaker":"Ross","emotion":"fear","emotion_code":2,"start":1265514,"end":1276983,"utterance":"Listen, do you think—and try not to let my intense vulnerability become any kind of a factor here—but do you think it would be okay if I asked you out?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1266807,"end":1270142,"utterance":"Oh, did you not want people to know that?"},{"season":1,"episode":1,"speaker":"Ross","emotion":"neutral","emotion_code":4,"start":1273105,"end":1275817,"utterance":"Sometime?"},{"season":1,"episode":1,"speaker":"Ross","emotion":"neutral","emotion_code":4,"start":1275817,"end":1277031,"utterance":"Maybe?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1278235,"end":1281821,"utterance":"Yeah, maybe..."},{"season":1,"episode":1,"speaker":"Ross","emotion":"joy","emotion_code":3,"start":1280529,"end":1291872,"utterance":"Okay... okay, maybe I will..."}];
+
+// ═══════════════════════════════════════════════════════════════
+//  CONSTANTS
+// ═══════════════════════════════════════════════════════════════
+const EMOTIONS = {
+  anger:    {color:'#e85555',label:'Anger'},
+  disgust:  {color:'#4ec994',label:'Disgust'},
+  fear:     {color:'#c366d4',label:'Fear'},
+  joy:      {color:'#f5c842',label:'Joy'},
+  neutral:  {color:'#6b7190',label:'Neutral'},
+  sadness:  {color:'#5b8dee',label:'Sadness'},
+  surprise: {color:'#f07c38',label:'Surprise'},
+};
+
+const SPEAKER_COLORS = {
+  Chandler:'#5b8dee', Joey:'#f07c38', Phoebe:'#f5c842',
+  Ross:'#4ec994', Monica:'#e85555', Rachel:'#c366d4',
+};
+
+const SHAPE_FNS = {
+  joy:(g,r)=>g.append('rect').attr('x',d=>d.cx-r(d)).attr('y',d=>d.cy-r(d)).attr('width',d=>r(d)*2).attr('height',d=>r(d)*2).attr('rx',2),
+  anger:(g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return`${d.cx},${d.cy-s} ${d.cx+s*.87},${d.cy+s*.5} ${d.cx-s*.87},${d.cy+s*.5}`}),
+  sadness:(g,r)=>g.append('circle').attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>r(d)),
+  fear:(g,r)=>g.append('polygon').attr('points',d=>{const s=r(d)*1.1;return[0,1,2,3].map(i=>{const a=(i/4)*Math.PI*2-Math.PI/4;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
+  surprise:(g,r)=>g.append('polygon').attr('points',d=>{const s=r(d)*1.2;return[0,1,2,3,4,5].map(i=>{const a=(i/6)*Math.PI*2-Math.PI/2,rad=i%2===0?s*.5:s;return`${d.cx+Math.cos(a)*rad},${d.cy+Math.sin(a)*rad}`}).join(' ')}),
+  neutral:(g,r)=>g.append('line').attr('x1',d=>d.cx-r(d)).attr('y1',d=>d.cy).attr('x2',d=>d.cx+r(d)).attr('y2',d=>d.cy).attr('stroke-linecap','round'),
+  disgust:(g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return[0,1,2,3,4,5,6,7].map(i=>{const a=(i/8)*Math.PI*2;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
+};
+
+const MARGIN = {top:12,right:24,bottom:38,left:90};
+const LANE_H = 60;
+
+// ═══════════════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════════════
+let currentSeason = 1, currentEpisode = 1;
+let activeSpeakers = new Set();
+let activeEmotions = new Set(Object.keys(EMOTIONS));
+let currentBrush = null; // [t0, t1]
+let xScale, brushBehavior, brushG, svgD3;
+let episodeData = [];
+
+// ═══════════════════════════════════════════════════════════════
+//  INIT: SEASON/EPISODE DROPDOWNS
+// ═══════════════════════════════════════════════════════════════
+function initSelectors() {
+  const seasons = [...new Set(ALL_DATA.map(d=>d.season))].sort((a,b)=>a-b);
+  const selS = document.getElementById('sel-season');
+  const selE = document.getElementById('sel-episode');
+
+  seasons.forEach(s=>{
+    const o=document.createElement('option');
+    o.value=s; o.textContent=`Season ${s}`;
+    selS.appendChild(o);
+  });
+  selS.value=1;
+  selS.addEventListener('change',()=>{
+    currentSeason=+selS.value;
+    updateEpisodeDropdown();
+    loadEpisode();
+  });
+  selE.addEventListener('change',()=>{
+    currentEpisode=+selE.value;
+    loadEpisode();
+  });
+  updateEpisodeDropdown();
+}
+
+function updateEpisodeDropdown(){
+  const selE=document.getElementById('sel-episode');
+  selE.innerHTML='';
+  const eps=[...new Set(ALL_DATA.filter(d=>d.season===currentSeason).map(d=>d.episode))].sort((a,b)=>a-b);
+  eps.forEach(e=>{
+    const o=document.createElement('option');
+    o.value=e; o.textContent=`Episode ${e}`;
+    selE.appendChild(o);
+  });
+  currentEpisode=eps[0]||1;
+  selE.value=currentEpisode;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LOAD EPISODE
+// ═══════════════════════════════════════════════════════════════
+function loadEpisode(){
+  episodeData=ALL_DATA.filter(d=>d.season===currentSeason&&d.episode===currentEpisode)
+    .sort((a,b)=>a.start-b.start);
+
+  // reset filters for new episode
+  const spSet=[...new Set(episodeData.map(d=>d.speaker))];
+  activeSpeakers=new Set(spSet);
+  activeEmotions=new Set(Object.keys(EMOTIONS));
+  currentBrush=null;
+
+  updateStats();
+  buildSpeakerPills(spSet);
+  buildEmotionPills();
+  render();
+  updatePreview([]);
+  updateWindowLabel();
+  document.getElementById('onboard').style.display='block';
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  STATS BAR
+// ═══════════════════════════════════════════════════════════════
+function updateStats(){
+  if(!episodeData.length) return;
+  document.getElementById('stat-count').textContent=episodeData.length;
+  const dur=(d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start))/1000;
+  const m=Math.floor(dur/60),s=Math.floor(dur%60);
+  document.getElementById('stat-dur').textContent=`${m}m ${s}s`;
+  document.getElementById('stat-sp').textContent=[...new Set(episodeData.map(d=>d.speaker))].length;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  FILTER PILLS
+// ═══════════════════════════════════════════════════════════════
+function buildSpeakerPills(speakers){
+  const cont=document.getElementById('speaker-pills');
+  cont.innerHTML='';
+  speakers.forEach(sp=>{
+    const btn=document.createElement('button');
+    btn.className='pill active';
+    btn.dataset.sp=sp;
+    btn.style.color=SPEAKER_COLORS[sp]||'#999';
+    btn.innerHTML=`<span class="dot" style="background:${SPEAKER_COLORS[sp]||'#999'}"></span>${sp}`;
+    btn.addEventListener('click',()=>{
+      if(activeSpeakers.has(sp)){
+        if(activeSpeakers.size===1) return; // keep at least one
+        activeSpeakers.delete(sp);
+        btn.classList.remove('active');
+      } else {
+        activeSpeakers.add(sp);
+        btn.classList.add('active');
+      }
+      const allActive=activeSpeakers.size===speakers.length;
+      document.getElementById('btn-all-sp').classList.toggle('active',allActive);
+      render();
+      if(currentBrush) triggerPreviewUpdate();
+    });
+    cont.appendChild(btn);
+  });
+}
+
+function buildEmotionPills(){
+  const cont=document.getElementById('emotion-pills');
+  cont.innerHTML='';
+  const presentEmos=[...new Set(episodeData.map(d=>d.emotion))];
+  presentEmos.forEach(emo=>{
+    const conf=EMOTIONS[emo];
+    if(!conf) return;
+    const btn=document.createElement('button');
+    btn.className='pill active';
+    btn.dataset.emo=emo;
+    btn.style.color=conf.color;
+    btn.innerHTML=`<span class="dot" style="background:${conf.color}"></span>${conf.label}`;
+    btn.addEventListener('click',()=>{
+      if(activeEmotions.has(emo)){
+        if(activeEmotions.size===1) return;
+        activeEmotions.delete(emo);
+        btn.classList.remove('active');
+      } else {
+        activeEmotions.add(emo);
+        btn.classList.add('active');
+      }
+      const allActive=activeEmotions.size===presentEmos.length;
+      document.getElementById('btn-all-emo').classList.toggle('active',allActive);
+      render();
+      if(currentBrush) triggerPreviewUpdate();
+    });
+    cont.appendChild(btn);
+  });
+}
+
+function toggleAllSpeakers(){
+  const pills=document.querySelectorAll('#speaker-pills .pill');
+  const speakers=[...new Set(episodeData.map(d=>d.speaker))];
+  const allActive=activeSpeakers.size===speakers.length;
+  if(allActive){
+    // keep only first
+    activeSpeakers=new Set([speakers[0]]);
+    pills.forEach((p,i)=>p.classList.toggle('active',i===0));
+    document.getElementById('btn-all-sp').classList.remove('active');
+  } else {
+    activeSpeakers=new Set(speakers);
+    pills.forEach(p=>p.classList.add('active'));
+    document.getElementById('btn-all-sp').classList.add('active');
+  }
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function toggleAllEmotions(){
+  const pills=document.querySelectorAll('#emotion-pills .pill');
+  const presentEmos=[...new Set(episodeData.map(d=>d.emotion))];
+  const allActive=activeEmotions.size===presentEmos.length;
+  if(allActive){
+    activeEmotions=new Set([presentEmos[0]]);
+    pills.forEach((p,i)=>p.classList.toggle('active',i===0));
+    document.getElementById('btn-all-emo').classList.remove('active');
+  } else {
+    activeEmotions=new Set(presentEmos);
+    pills.forEach(p=>p.classList.add('active'));
+    document.getElementById('btn-all-emo').classList.add('active');
+  }
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  RENDER TIMELINE
+// ═══════════════════════════════════════════════════════════════
+const wrap=document.getElementById('timeline-svg-wrap');
+const tooltip=document.getElementById('tooltip');
+
+function getFilteredData(){
+  return episodeData.filter(d=>activeSpeakers.has(d.speaker)&&activeEmotions.has(d.emotion));
+}
+
+function render(){
+  wrap.innerHTML='';
+  const fdata=getFilteredData();
+  if(!fdata.length){
+    wrap.innerHTML='<div class="no-data"><span>No data matches current filters.</span><span style="font-size:9px;font-family:\'IBM Plex Mono\',monospace;opacity:.5">Try enabling more speakers or emotions above</span></div>';
+    return;
+  }
+
+  const speakers=[...activeSpeakers].sort((a,b)=>a.localeCompare(b));
+  const W=wrap.clientWidth||900;
+  const H=speakers.length*LANE_H+MARGIN.top+MARGIN.bottom;
+
+  svgD3=d3.select(wrap).append('svg').attr('width',W).attr('height',H).style('display','block');
+
+  const tMin=d3.min(episodeData,d=>d.start);
+  const tMax=d3.max(episodeData,d=>d.end);
+  const maxDur=d3.max(episodeData,d=>d.end-d.start);
+
+  xScale=d3.scaleLinear().domain([tMin,tMax]).range([MARGIN.left,W-MARGIN.right]);
+  const rScale=d3.scaleSqrt().domain([0,maxDur]).range([4,LANE_H*.38]);
+
+  // Gridlines
+  svgD3.append('g').attr('class','gridlines')
+    .selectAll('line').data(xScale.ticks(8)).enter().append('line')
+      .attr('x1',d=>xScale(d)).attr('x2',d=>xScale(d))
+      .attr('y1',MARGIN.top).attr('y2',H-MARGIN.bottom)
+      .attr('stroke','var(--border)').attr('stroke-width',1)
+      .attr('stroke-dasharray','2 5');
+
+  // Lanes
+  speakers.forEach((sp,i)=>{
+    const y0=MARGIN.top+i*LANE_H;
+    svgD3.append('rect').attr('x',MARGIN.left).attr('y',y0)
+      .attr('width',W-MARGIN.left-MARGIN.right).attr('height',LANE_H)
+      .attr('fill',i%2===0?'rgba(255,255,255,.014)':'transparent');
+
+    // speaker label — clickable
+    svgD3.append('text')
+      .attr('x',MARGIN.left-10).attr('y',y0+LANE_H/2+1)
+      .attr('text-anchor','end').attr('dominant-baseline','middle')
+      .attr('font-family','IBM Plex Mono, monospace').attr('font-size','10px')
+      .attr('font-weight','600').attr('letter-spacing','.05em').attr('text-transform','uppercase')
+      .attr('fill',SPEAKER_COLORS[sp]||'#6b7190')
+      .style('cursor','pointer')
+      .text(sp.toUpperCase())
+      .on('click',()=>{
+        // solo this speaker
+        activeSpeakers=new Set([sp]);
+        document.querySelectorAll('#speaker-pills .pill').forEach(p=>{
+          p.classList.toggle('active',p.dataset.sp===sp);
+        });
+        document.getElementById('btn-all-sp').classList.remove('active');
+        render();
+        if(currentBrush) triggerPreviewUpdate();
+      })
+      .append('title').text('Click to solo this speaker');
+
+    svgD3.append('line')
+      .attr('x1',MARGIN.left).attr('x2',W-MARGIN.right)
+      .attr('y1',y0+LANE_H).attr('y2',y0+LANE_H)
+      .attr('stroke','var(--border)').attr('stroke-width',1);
+  });
+
+  // Events
+  const data=fdata.map(d=>({
+    ...d,
+    cx:xScale((d.start+d.end)/2),
+    cy:MARGIN.top+speakers.indexOf(d.speaker)*LANE_H+LANE_H/2,
+    r:rScale(d.end-d.start),
+  })).filter(d=>d.cy>0);
+
+  const emoGroups=d3.group(data,d=>d.emotion);
+  emoGroups.forEach((items,emo)=>{
+    const eConf=EMOTIONS[emo]; if(!eConf) return;
+    const isNeutral=emo==='neutral';
+    const g=svgD3.append('g');
+    const isel=g.selectAll('g').data(items).enter().append('g')
+      .style('opacity',.88).style('cursor','pointer')
+      .on('mousemove',(evt,d)=>{
+        tooltip.style.opacity='1';
+        tooltip.style.left=(evt.clientX+14)+'px';
+        tooltip.style.top=(evt.clientY-10)+'px';
+        const dur=((d.end-d.start)/1000).toFixed(1);
+        const ts=fmt(d.start);
+        tooltip.innerHTML=`
+          <div class="tt-sp" style="color:${SPEAKER_COLORS[d.speaker]}">${d.speaker}</div>
+          <div class="tt-txt">"${d.utterance}"</div>
+          <div class="tt-row"><span class="tt-dot" style="background:${eConf.color}"></span><span class="tt-emo" style="color:${eConf.color}">${eConf.label}</span></div>
+          <div class="tt-time">${ts} &nbsp;·&nbsp; ${dur}s</div>`;
+        g.selectAll('g').style('opacity',dd=>dd===d?1:.2);
+      })
+      .on('mouseleave',()=>{
+        tooltip.style.opacity='0';
+        g.selectAll('g').style('opacity',.88);
+      });
+
+    if(isNeutral){
+      SHAPE_FNS[emo](isel,d=>d.r)
+        .attr('stroke',eConf.color)
+        .attr('stroke-width',d=>Math.max(2,d.r*.5));
+    } else if(SHAPE_FNS[emo]){
+      SHAPE_FNS[emo](isel,d=>d.r).attr('fill',eConf.color).attr('stroke','none');
+    }
+  });
+
+  // Axis
+  svgD3.append('g').attr('class','axis')
+    .attr('transform',`translate(0,${H-MARGIN.bottom})`)
+    .call(d3.axisBottom(xScale).ticks(8)
+      .tickFormat(d=>fmt(d)).tickSize(4));
+  svgD3.select('.axis .domain').remove();
+
+  // Brush
+  brushBehavior=d3.brushX()
+    .extent([[MARGIN.left,MARGIN.top],[W-MARGIN.right,H-MARGIN.bottom]])
+    .on('brush',brushingLive)
+    .on('end',brushEnd);
+
+  brushG=svgD3.append('g').attr('class','brush').call(brushBehavior);
+
+  if(currentBrush){
+    brushG.call(brushBehavior.move,[xScale(currentBrush[0]),xScale(currentBrush[1])]);
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BRUSH HANDLERS
+// ═══════════════════════════════════════════════════════════════
+function brushingLive(evt){
+  if(!evt.selection) return;
+  document.getElementById('onboard').style.display='none';
+  const [x0,x1]=evt.selection;
+  const t0=xScale.invert(x0),t1=xScale.invert(x1);
+  updateWindowLabel(t1-t0);
+  const selected=getFilteredData().filter(d=>d.end>=t0&&d.start<=t1).sort((a,b)=>a.start-b.start);
+  updatePreview(selected);
+  updateWindowStats(selected);
+}
+
+function brushEnd(evt){
+  if(!evt.selection){
+    currentBrush=null;
+    updatePreview([]);
+    updateWindowLabel();
+    updateWindowStats([]);
+    return;
+  }
+  const [x0,x1]=evt.selection;
+  currentBrush=[xScale.invert(x0),xScale.invert(x1)];
+}
+
+function triggerPreviewUpdate(){
+  if(!currentBrush) return;
+  const selected=getFilteredData().filter(d=>d.end>=currentBrush[0]&&d.start<=currentBrush[1]).sort((a,b)=>a.start-b.start);
+  updatePreview(selected);
+  updateWindowStats(selected);
+  updateWindowLabel(currentBrush[1]-currentBrush[0]);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  WINDOW CONTROLS
+// ═══════════════════════════════════════════════════════════════
+function getStep(){
+  if(!episodeData.length) return 30000;
+  const span=d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start);
+  return span*.08; // 8% of total span
+}
+
+function moveWindow(dir){
+  if(!currentBrush||!xScale) return;
+  const step=getStep();
+  const [t0,t1]=currentBrush;
+  const w=t1-t0;
+  const tMin=d3.min(episodeData,d=>d.start);
+  const tMax=d3.max(episodeData,d=>d.end);
+  let nt0=Math.max(tMin,Math.min(tMax-w,t0+dir*step));
+  currentBrush=[nt0,nt0+w];
+  brushG.call(brushBehavior.move,[xScale(nt0),xScale(nt0+w)]);
+}
+
+function zoomWindow(dir){
+  if(!currentBrush||!xScale) return;
+  const [t0,t1]=currentBrush;
+  const center=(t0+t1)/2;
+  const span=d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start);
+  let w=t1-t0;
+  w=dir>0?w*1.4:w/1.4;
+  w=Math.max(span*.02,Math.min(span*.8,w));
+  const nt0=center-w/2, nt1=center+w/2;
+  currentBrush=[nt0,nt1];
+  brushG.call(brushBehavior.move,[xScale(nt0),xScale(nt1)]);
+}
+
+function clearBrush(){
+  if(!brushG||!brushBehavior) return;
+  currentBrush=null;
+  brushG.call(brushBehavior.move,null);
+  updatePreview([]);
+  updateWindowLabel();
+  updateWindowStats([]);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  PREVIEW UPDATE
+// ═══════════════════════════════════════════════════════════════
+function updatePreview(items){
+  const cont=document.getElementById('preview-transcript');
+  if(!items.length){
+    cont.innerHTML=`<div class="preview-empty">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="14" width="28" height="2" rx="1" fill="currentColor"/>
+        <rect x="8" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
+        <rect x="22" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
+        <rect x="13" y="5" width="6" height="6" rx="1" fill="currentColor"/>
+      </svg>
+      <span>Drag on the timeline to inspect a window</span>
+      <span style="font-size:9px;opacity:.6">← → arrow keys move the window</span>
+    </div>`;
+    return;
+  }
+  cont.innerHTML='';
+  items.forEach(d=>{
+    const eConf=EMOTIONS[d.emotion]||{color:'#999',label:d.emotion};
+    const row=document.createElement('div');
+    row.className='utt-row';
+    row.innerHTML=`
+      <div class="utt-meta">
+        <div class="utt-name" style="color:${SPEAKER_COLORS[d.speaker]||'#999'}">${d.speaker}</div>
+        <div class="utt-emo" style="color:${eConf.color}">${eConf.label}</div>
+        <div class="utt-ts">${fmt(d.start)}</div>
+      </div>
+      <div class="utt-text">"${d.utterance}"</div>`;
+    cont.appendChild(row);
+  });
+}
+
+function updateWindowStats(items){
+  const cont=document.getElementById('pstat-content');
+  if(!items.length){
+    cont.innerHTML='<span style="opacity:.6">Select a window to see emotion breakdown</span>';
+    cont.style.color='var(--muted)';
+    return;
+  }
+  cont.innerHTML='';
+  cont.style.color='';
+
+  // emotion breakdown bars
+  const emoCount={};
+  items.forEach(d=>{ emoCount[d.emotion]=(emoCount[d.emotion]||0)+1; });
+  const maxCount=Math.max(...Object.values(emoCount));
+
+  const title=document.createElement('div');
+  title.className='pstat-title';
+  title.textContent=`${items.length} utterance${items.length!==1?'s':''}`;
+  cont.appendChild(title);
+
+  const barDiv=document.createElement('div');
+  barDiv.className='pstat-bar-row';
+
+  Object.entries(emoCount).sort((a,b)=>b[1]-a[1]).forEach(([emo,count])=>{
+    const eConf=EMOTIONS[emo]||{color:'#999',label:emo};
+    const row=document.createElement('div');
+    row.className='pbar';
+    row.innerHTML=`
+      <span class="pbar-label" style="color:${eConf.color}">${eConf.label}</span>
+      <div class="pbar-track"><div class="pbar-fill" style="width:${(count/maxCount)*100}%;background:${eConf.color}"></div></div>
+      <span class="pbar-count">${count}</span>`;
+    barDiv.appendChild(row);
+  });
+  cont.appendChild(barDiv);
+
+  // speaker breakdown
+  const spCount={};
+  items.forEach(d=>{ spCount[d.speaker]=(spCount[d.speaker]||0)+1; });
+  const title2=document.createElement('div');
+  title2.className='pstat-title';
+  title2.style.marginTop='8px';
+  title2.textContent='By speaker';
+  cont.appendChild(title2);
+
+  const barDiv2=document.createElement('div');
+  barDiv2.className='pstat-bar-row';
+  const maxSp=Math.max(...Object.values(spCount));
+  Object.entries(spCount).sort((a,b)=>b[1]-a[1]).forEach(([sp,count])=>{
+    const row=document.createElement('div');
+    row.className='pbar';
+    row.innerHTML=`
+      <span class="pbar-label" style="color:${SPEAKER_COLORS[sp]||'#999'}">${sp}</span>
+      <div class="pbar-track"><div class="pbar-fill" style="width:${(count/maxSp)*100}%;background:${SPEAKER_COLORS[sp]||'#999'}"></div></div>
+      <span class="pbar-count">${count}</span>`;
+    barDiv2.appendChild(row);
+  });
+  cont.appendChild(barDiv2);
+}
+
+function updateWindowLabel(durMs){
+  const lbl=document.getElementById('window-size-lbl');
+  if(!durMs){ lbl.textContent='no window'; return; }
+  const s=(durMs/1000).toFixed(1);
+  lbl.textContent=`${s}s window`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  KEYBOARD NAV
+// ═══════════════════════════════════════════════════════════════
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT') return;
+  if(e.key==='ArrowLeft')  { e.preventDefault(); moveWindow(e.shiftKey?-.5:-1); }
+  if(e.key==='ArrowRight') { e.preventDefault(); moveWindow(e.shiftKey?.5:1); }
+  if(e.key==='Escape')     { clearBrush(); }
+  if(e.key==='+')          { zoomWindow(1); }
+  if(e.key==='-')          { zoomWindow(-1); }
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════════════
+function fmt(ms){
+  const s=ms/1000;
+  const m=Math.floor(s/60),sec=Math.floor(s%60);
+  return `${m}:${String(sec).padStart(2,'0')}`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LEGEND (inline in filter bar, handled by pills)
+// ═══════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════
+//  RESIZE
+// ═══════════════════════════════════════════════════════════════
+let resizeTimer;
+window.addEventListener('resize',()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>{ render(); if(currentBrush) triggerPreviewUpdate(); },120);
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════════════════════════
+initSelectors();
+loadEpisode();
+</script>
+</body>
+</html>
