@@ -577,7 +577,15 @@ select.ep-select:focus{border-color:var(--accent)}
 // ═══════════════════════════════════════════════════════════════
 //  DATA  (baked in – George's preprocessed output)
 // ═══════════════════════════════════════════════════════════════
-const ALL_DATA = [{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":79037,"end":85417,"utterance":"Alright, so I'm back in high school, I'm standing in the middle of the cafeteria, and I realize I am totally naked."},{"season":1,"episode":1,"speaker":"Chandler","emotion":"surprise","emotion_code":6,"start":87378,"end":91465,"utterance":"Then I look down, and I realize there's a phone... there."},{"season":1,"episode":1,"speaker":"Joey","emotion":"surprise","emotion_code":6,"start":94928,"end":95600,"utterance":"Instead of...?"},{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":95600,"end":96892,"utterance":"That's right."},{"season":1,"episode":1,"speaker":"Joey","emotion":"neutral","emotion_code":4,"start":97055,"end":97973,"utterance":"Never had that dream."},{"season":1,"episode":1,"speaker":"Phoebe","emotion":"neutral","emotion_code":4,"start":97973,"end":98629,"utterance":"No."},{"season":1,"episode":1,"speaker":"Chandler","emotion":"neutral","emotion_code":4,"start":98723,"end":102851,"utterance":"All of a sudden, the phone starts to ring."},{"season":1,"episode":1,"speaker":"Ross","emotion":"sadness","emotion_code":5,"start":202660,"end":205829,"utterance":"I don't want to be single, okay? I just... I just- I just wanna be married again!"},{"season":1,"episode":1,"speaker":"Chandler","emotion":"fear","emotion_code":2,"start":209959,"end":213086,"utterance":"And I just want a million dollars!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":214214,"end":215297,"utterance":"Rachel?!"},{"season":1,"episode":1,"speaker":"Joey","emotion":"neutral","emotion_code":4,"start":611861,"end":614990,"utterance":"Hey."},{"season":1,"episode":1,"speaker":"Phoebe","emotion":"neutral","emotion_code":4,"start":614990,"end":615133,"utterance":"Hey!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":622204,"end":624289,"utterance":"Oh my God!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":636427,"end":640680,"utterance":"My brother's going through that right now, he's such a mess. How did you get through it?"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":644560,"end":646144,"utterance":"-leg?"},{"season":1,"episode":1,"speaker":"Monica","emotion":"surprise","emotion_code":6,"start":650775,"end":652651,"utterance":"You actually broke her watch?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":653277,"end":654737,"utterance":"Barry, I'm sorry..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":654737,"end":656422,"utterance":"I am so sorry..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"sadness","emotion_code":5,"start":656614,"end":666706,"utterance":"I know you probably think that this is all about what I said the other day about you making love with your socks on, but it isn't... it isn't, it's about me, and I ju- Hi, machine cut me off again... anyway..."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1005504,"end":1006088,"utterance":"Oh, look, wish me luck!"},{"season":1,"episode":1,"speaker":"Monica","emotion":"neutral","emotion_code":4,"start":1006088,"end":1007192,"utterance":"What for?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1007339,"end":1010633,"utterance":"I'm gonna go get one of those job things."},{"season":1,"episode":1,"speaker":"Ross","emotion":"fear","emotion_code":2,"start":1243492,"end":1249080,"utterance":"You know you probably didn't know this, but back in high school, I had a, um, major crush on you."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1250540,"end":1251707,"utterance":"I knew."},{"season":1,"episode":1,"speaker":"Ross","emotion":"surprise","emotion_code":6,"start":1252084,"end":1258138,"utterance":"You did! Oh.... I always figured you just thought I was Monica's geeky older brother."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"neutral","emotion_code":4,"start":1258882,"end":1259684,"utterance":"I did."},{"season":1,"episode":1,"speaker":"Ross","emotion":"sadness","emotion_code":5,"start":1259684,"end":1260931,"utterance":"Oh."},{"season":1,"episode":1,"speaker":"Rachel","emotion":"surprise","emotion_code":6,"start":1262844,"end":1263970,"utterance":"Oh really?!"},{"season":1,"episode":1,"speaker":"Ross","emotion":"fear","emotion_code":2,"start":1265514,"end":1276983,"utterance":"Listen, do you think—and try not to let my intense vulnerability become any kind of a factor here—but do you think it would be okay if I asked you out?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1266807,"end":1270142,"utterance":"Oh, did you not want people to know that?"},{"season":1,"episode":1,"speaker":"Ross","emotion":"neutral","emotion_code":4,"start":1273105,"end":1275817,"utterance":"Sometime?"},{"season":1,"episode":1,"speaker":"Ross","emotion":"neutral","emotion_code":4,"start":1275817,"end":1277031,"utterance":"Maybe?"},{"season":1,"episode":1,"speaker":"Rachel","emotion":"joy","emotion_code":3,"start":1278235,"end":1281821,"utterance":"Yeah, maybe..."},{"season":1,"episode":1,"speaker":"Ross","emotion":"joy","emotion_code":3,"start":1280529,"end":1291872,"utterance":"Okay... okay, maybe I will..."}];
+let ALL_DATA = [];
+
+const DATA_FILES = {
+  speakers: 'speakers.csv',
+  emotions: 'emotions.csv',
+  episodesDir: 'emo_data_segmented',
+  maxSeason: 9,
+  maxEpisode: 25,
+};
 
 // ═══════════════════════════════════════════════════════════════
 //  CONSTANTS
@@ -620,6 +628,123 @@ let currentBrush = null; // [t0, t1]
 let xScale, brushBehavior, brushG, svgD3;
 let episodeData = [];
 
+function normalizeText(value){
+  return value==null?'':String(value).trim();
+}
+
+function parseNumeric(value){
+  const n=Number(normalizeText(value));
+  return Number.isFinite(n)?n:NaN;
+}
+
+function setLoadingState(message,isError=false){
+  document.getElementById('stat-count').textContent=isError?'ERR':'...';
+  document.getElementById('stat-dur').textContent=isError?'ERR':'Loading';
+  document.getElementById('stat-sp').textContent=isError?'ERR':'...';
+
+  document.getElementById('preview-transcript').innerHTML=`
+    <div class="preview-empty">
+      <span>${message}</span>
+      <span style="font-size:9px;opacity:.6">Use an HTTP server to allow CSV loading via d3.csv</span>
+    </div>`;
+}
+
+function getEpisodeCsvPaths(){
+  const paths=[];
+  for(let season=1;season<=DATA_FILES.maxSeason;season++){
+    for(let episode=1;episode<=DATA_FILES.maxEpisode;episode++){
+      const s=String(season).padStart(2,'0');
+      const e=String(episode).padStart(2,'0');
+      paths.push(`${DATA_FILES.episodesDir}/emo_data_s${s}_e${e}.csv`);
+    }
+  }
+  return paths;
+}
+
+async function loadCodeMap(path,labelKey,codeKey,labelTransform=v=>v){
+  const rows=await d3.csv(path);
+  const map=new Map();
+
+  rows.forEach(row=>{
+    const code=parseNumeric(row[codeKey]);
+    const labelRaw=normalizeText(row[labelKey]);
+    if(!Number.isFinite(code)||!labelRaw) return;
+
+    const label=labelTransform(labelRaw);
+    if(map.has(code)&&map.get(code)!==label){
+      console.warn(`Conflicting mapping in ${path} for code ${code}. Keeping first value.`);
+      return;
+    }
+    map.set(code,label);
+  });
+
+  return map;
+}
+
+async function loadAllDataFromCsv(){
+  const [speakerMap,emotionMap]=await Promise.all([
+    loadCodeMap(DATA_FILES.speakers,'Speaker','Code'),
+    loadCodeMap(DATA_FILES.emotions,'Emotion','Code',v=>v.toLowerCase()),
+  ]);
+
+  const csvPaths=getEpisodeCsvPaths();
+  const settled=await Promise.all(
+    csvPaths.map(path=>
+      d3.csv(path)
+        .then(rows=>({path,rows}))
+        .catch(()=>null)
+    )
+  );
+
+  const rows=[];
+  const missingSpeakerCodes=new Set();
+  const missingEmotionCodes=new Set();
+  let malformedCount=0;
+
+  settled.forEach(result=>{
+    if(!result||!Array.isArray(result.rows)||!result.rows.length) return;
+    result.rows.forEach(row=>{
+      const season=parseNumeric(row.Season);
+      const episode=parseNumeric(row.Episode);
+      const speakerCode=parseNumeric(row.Speaker_coded);
+      const emotionCode=parseNumeric(row.Emotion_coded);
+      const start=parseNumeric(row.StartTime_int);
+      const end=parseNumeric(row.EndTime_int);
+
+      if(!Number.isFinite(season)||!Number.isFinite(episode)||!Number.isFinite(speakerCode)||
+         !Number.isFinite(emotionCode)||!Number.isFinite(start)||!Number.isFinite(end)){
+        malformedCount++;
+        return;
+      }
+
+      const speaker=speakerMap.get(speakerCode)||`Speaker ${speakerCode}`;
+      let emotion=emotionMap.get(emotionCode)||'neutral';
+      if(!emotionMap.has(emotionCode)) missingEmotionCodes.add(emotionCode);
+      if(!speakerMap.has(speakerCode)) missingSpeakerCodes.add(speakerCode);
+      if(!EMOTIONS[emotion]) emotion='neutral';
+
+      rows.push({
+        season,
+        episode,
+        speaker,
+        emotion,
+        emotion_code:emotionCode,
+        start,
+        end,
+        utterance:normalizeText(row.Utterance),
+      });
+    });
+  });
+
+  rows.sort((a,b)=>a.season-b.season||a.episode-b.episode||a.start-b.start);
+
+  if(malformedCount>0) console.warn(`Skipped ${malformedCount} malformed row(s).`);
+  if(missingSpeakerCodes.size>0) console.warn('Missing speaker codes:',[...missingSpeakerCodes].sort((a,b)=>a-b));
+  if(missingEmotionCodes.size>0) console.warn('Missing emotion codes:',[...missingEmotionCodes].sort((a,b)=>a-b));
+
+  return rows;
+}
+
 // ═══════════════════════════════════════════════════════════════
 //  INIT: SEASON/EPISODE DROPDOWNS
 // ═══════════════════════════════════════════════════════════════
@@ -628,12 +753,17 @@ function initSelectors() {
   const selS = document.getElementById('sel-season');
   const selE = document.getElementById('sel-episode');
 
+  selS.innerHTML='';
+  selE.innerHTML='';
+  if(!seasons.length) return;
+
   seasons.forEach(s=>{
     const o=document.createElement('option');
     o.value=s; o.textContent=`Season ${s}`;
     selS.appendChild(o);
   });
-  selS.value=1;
+  currentSeason=seasons[0];
+  selS.value=currentSeason;
   selS.addEventListener('change',()=>{
     currentSeason=+selS.value;
     updateEpisodeDropdown();
@@ -1137,8 +1267,24 @@ window.addEventListener('resize',()=>{
 // ═══════════════════════════════════════════════════════════════
 //  BOOT
 // ═══════════════════════════════════════════════════════════════
-initSelectors();
-loadEpisode();
+async function boot(){
+  setLoadingState('Loading transcript and mapping CSV files...');
+
+  try{
+    ALL_DATA=await loadAllDataFromCsv();
+    if(!ALL_DATA.length){
+      throw new Error('No episode rows were loaded. Ensure you are serving this page over HTTP and CSV files exist.');
+    }
+
+    initSelectors();
+    loadEpisode();
+  }catch(err){
+    console.error(err);
+    setLoadingState('Failed to load dataset from CSV files.',true);
+  }
+}
+
+boot();
 </script>
 </body>
 </html>
