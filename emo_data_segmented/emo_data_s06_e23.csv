@@ -1,0 +1,102 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+6,23,29,4,2836,7089,"Pheebs, can you help me pick out an engagement ring for Monica?"
+6,23,29,0,5380,6465,I can’t figure this out!
+6,23,29,5,6465,7165,It’s so hard!
+6,23,29,5,7257,10718,Should I get her a  Tiffany cut or a Princess cut or a—ah-ah!
+6,23,29,5,10885,12803,Paper cut!
+6,23,178,4,13972,15347,"Now, have you told anyone else?"
+6,23,29,4,15515,18517,"No, I don’t want to tell anybody else because I don’t want Monica to find out."
+6,23,178,6,18685,19768,You told me.
+6,23,29,0,18685,25441,"Well, it’s because I trust you, you’re one of my best friends, and you walked in on me when I was looking at ring brochures."
+6,23,178,6,26526,32990,"Yeah well, once again not knocking pays off. I only wish you hadn’t been on the toilet."
+6,23,29,4,29696,32990,Me too.
+6,23,108,4,35326,36244,Hey.
+6,23,29,4,36244,36388,Hey.
+6,23,178,3,36494,39122,"Hey! So Chandler, wanna go to the coffeehouse?"
+6,23,29,4,39122,39562,Oh all right.
+6,23,197,4,39664,42041,"Oh perfect, we were just gonna see if you wanted to go."
+6,23,29,4,42208,45711,"Oh well, we don’t because we got…the…other pl-place."
+6,23,197,1,48631,50841,How rude.
+6,23,108,6,51551,52843,"Oh, I’m sorry. You wanna bite?"
+6,23,173,4,296629,298505,Okay.
+6,23,173,4,301301,302433,When I was six years old.
+6,23,185,4,302433,303137,Hm-mm
+6,23,173,4,303261,305220,I wanted a big wheel.
+6,23,173,0,305471,312311,And instead my parents got me this little plastic chicken that you hop around on.
+6,23,173,5,312979,315105,"It was embarrassing, kids made fun of me."
+6,23,173,5,315273,317107,That was a pretty tough year.
+6,23,185,3,318484,319569,That’s-that’s great!
+6,23,185,4,319569,320877,See?
+6,23,185,3,320987,323129,I already feel like I know you a little better!
+6,23,185,3,323129,324209,Thank you.
+6,23,185,4,324324,325075,"Okay, come on."
+6,23,185,4,325075,325667,Now we can go eat.
+6,23,185,4,325667,327423,Let’s go.
+6,23,173,5,330163,336752,It was horrible. They called me chicken boy.
+6,23,54,4,355897,358190,"First of all, it's on your ass."
+6,23,197,6,359150,360525,"Well then, what is it?!"
+6,23,197,4,397468,400096,"Oh uh, I’m sorry."
+6,23,185,2,400263,405268,No Ross! Ross! Ross! My child has no father!
+6,23,185,6,432473,434182,Oh!
+6,23,197,0,539914,543375,Yeah!
+6,23,197,4,544418,548255,"Anyway, I-I still think we should try to patch things up, y’know?"
+6,23,197,4,548422,551716,"Like uh, maybe we could get him to get tickets to another Knicks game and invite him."
+6,23,108,3,551884,556179,Oh wow that’s a great idea! And
+6,23,80,4,556347,557556,Here you go.
+6,23,108,3,557723,559105,"Hey-hey-hey-ho-ho, I got this one."
+6,23,108,4,559105,560903,Here you go.
+6,23,108,4,564772,569401,"Y’know, me and him do stuff all the time without you and you don’t get all upset."
+6,23,197,5,571946,572868,All the time?
+6,23,108,0,572868,574422,All the time!
+6,23,185,5,576325,578785,Oh my God! Oh my God!!
+6,23,144,6,579787,580747,Still crying?
+6,23,185,4,580747,582899,Like a
+6,23,144,4,596804,601182,"Y’know, I only know of two surefire ways to shut a man up. And one of them is sex."
+6,23,185,4,601809,603059,What’s the other one?
+6,23,144,4,601809,604811,"I don’t know, I’ve never had to use the other one."
+6,23,144,4,605938,609149,"I’m just saying y’know, if we’re having sex, he’s not gonna be talking."
+6,23,185,3,609317,610409,Oh that’s right.
+6,23,185,4,610409,612049,You’re the talker.
+6,23,185,3,615906,617866,"Anyway uh, great idea!"
+6,23,185,4,618034,621369,"Umm, I gotta go to the store; I told him that I would buy him some more tissues."
+6,23,144,4,621537,622372,"Oh, we have some"
+6,23,185,0,622372,623428,No you don’t!
+6,23,178,3,785201,787327,"Chandler, I found the perfect ring."
+6,23,29,4,787495,790497,"Oh, that’s uh, that’s pretty nice but I’m gonna go with the one I picked first."
+6,23,178,0,790664,794626,"Oh my God Chandler, the one you picked is gone. It’s over!"
+6,23,29,6,795419,796878,What?
+6,23,178,5,797046,800925,Some guy bought it. I’m sorry. I tired to stop it but they  put me in jail!
+6,23,29,6,800925,801117,They put you in jail?
+6,23,178,0,802343,806221,The little jail between the doors!
+6,23,29,0,806597,809641,"Phoebe, I asked you to guard the ring!"
+6,23,178,0,806597,813370,"I know, I’m sorry! But y’know, this ring is better! Monica never even saw the other ring."
+6,23,29,5,813938,818483,Yeah but when he proposed to me with the ring I got goose bumps.
+6,23,178,4,819318,820153,Maybe it was the guy.
+6,23,29,0,820153,821764,It was the ring!
+6,23,197,4,824573,826826,"Hey! So uh, was he excited about the tickets?"
+6,23,108,0,826826,828638,No! He blew us off!
+6,23,197,6,828744,829166,What?!
+6,23,108,6,829166,830750,I know!
+6,23,197,0,830871,837919,I can’t believe it.  Can I tell you something? I’m a little mad at him now.
+6,23,108,0,833415,841339,Can I tell you something? Me too.
+6,23,197,0,846762,852392,"Y’know what? He didn’t want to talk to us about being angry, well maybe we don’t talk to him"
+6,23,108,3,855187,856522,Ooooh! Freeze him out.
+6,23,197,3,856522,856663,That’s right!
+6,23,108,3,856772,858356,I like it!
+6,23,178,4,1157865,1161951,"Yes, and it is my dying wish to have that ring."
+6,23,178,4,1157865,1165204,"See, if I’m not buried with that ring then my spirit is going to wander the nether world for all eternity"
+6,23,29,4,1165372,1166706,"Okay, that’s enough honey!"
+6,23,36,4,1168375,1174964,I don’t know.  Let me see the ring.
+6,23,29,3,1172129,1174964,"Great! Okay, here."
+6,23,36,4,1177342,1179934,All right.
+6,23,29,3,1179934,1180074,Thank you. Thank you. Thank you!  And
+6,23,197,2,1275011,1276596,No-no. We
+6,23,97,6,1276805,1278181,What?!
+6,23,29,3,1291581,1292623,Check out the ring.
+6,23,185,3,1292791,1295876,Nice! One and a half carat easy.
+6,23,178,4,1297713,1298464,Hi.
+6,23,197,3,1298464,1298939,Hey-hey Pheebs!
+6,23,197,3,1299047,1300923,Chandler’s gonna ask Monica to marry him!
+6,23,178,4,1301091,1302925,"Oh I know, I helped pick out the ring."
+6,23,197,6,1306346,1309265,You told her before you told us?
+6,23,29,2,1310100,1322069,"Well, she walked in when I was looking at the ring brochures. You can understand that, right?  Guys? Guys?"

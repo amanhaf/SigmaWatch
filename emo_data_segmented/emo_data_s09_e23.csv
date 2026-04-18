@@ -1,0 +1,120 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+9,23,144,4,222138,227017,"David, can you help me?! I'm trying to explain to Chandler how a plane stays in the air."
+9,23,39,4,227185,233732,"Oh, certainly. That's a combination of Bernoulli's principle and Newton's third law of motion."
+9,23,144,4,230188,233732,See?
+9,23,29,2,233900,237361,"Yeah, that's the same as ""it has something to do with wind""."
+9,23,144,4,237862,240113,"Alright, I'm gonna go pick up a few things for the trip."
+9,23,178,4,240281,244868,"Oh, I should go, too."
+9,23,178,4,245036,257506,"Oh, now... tomorrow do you guys wanna share a cab to the airport or should Mike and I just meet you there."
+9,23,39,4,376125,378585,"Well, I was probably going to do it at some point."
+9,23,29,4,378753,379635,I didn't mean
+9,23,39,3,380762,381796,It's brilliant!
+9,23,39,3,381881,385008,"Goodbye Mike, we'll see you at the wedding, fella!"
+9,23,39,4,385176,387844,"well, we probably won't invite you to the wedding..."
+9,23,39,4,388012,389484,"Thank you, Chandler."
+9,23,39,4,389484,391448,Sincerely.
+9,23,29,3,391557,393183,"Well, you're welcome! Glad I could help."
+9,23,29,4,396313,398091,"David, I'm pretending to"
+9,23,144,6,503586,511426,Wow! That Mike thing was interesting! I don't know what's gonna happen with Phoebe and David.
+9,23,29,3,506839,511426,"I do! Want a hint? huh? ""I do""  ""I do""."
+9,23,144,4,520228,523188,"Ok, I'm sensing that this is some kind of word play, because you are pink with barely controlled glee."
+9,23,29,3,524083,525668,David is going to propose to Phoebe.
+9,23,144,6,525668,528470,What?  Why?
+9,23,144,0,534575,536952,"Chandler, we have talked about this."
+9,23,144,0,537119,539871,You are not supposed to give people advice!
+9,23,144,0,541541,544209,Now couldn't you just have made some sort of inappropriate joke?
+9,23,29,4,544377,546503,I
+9,23,144,0,549924,556555,They've only been going out for a few weeks and Phoebe is completely hung up on Mike!
+9,23,144,0,556722,566356,"She'll say ""No"", David's heart will be broken, it will be too hard for them to recover from and then Phoebe will end up alone"
+9,23,29,6,564146,566356,"Man, that's some"
+9,23,108,5,1078118,1084290,"I'm so bored! Stupid rain, we... we can't do anything."
+9,23,185,4,1084458,1087168,"Well, I've brought some books. We could read."
+9,23,108,3,1087336,1089295,"Hey, it hasn't come to that yet."
+9,23,108,3,1090672,1092632,Hey hey hey! Don't mind if I do!
+9,23,254,4,1092800,1096260,"I'm sorry sir, these are for the pharmaceutical convention"
+9,23,108,4,1098806,1101015,"Hey Rach, do you feel like going to a convention?"
+9,23,185,5,1101517,1104894,We can't. We're not pharmacists!
+9,23,108,4,1105062,1109315,"I know we're not, but  Frank Medeio and...  Eva Trorro... womba..."
+9,23,185,4,1114196,1115197,Kate Miller?
+9,23,108,4,1115197,1117309,Kate Miller it is.
+9,23,185,3,1119952,1123830,And... that's the most sex I'm gonna have this weekend.
+9,23,108,4,1123997,1127667,In that case should I make sure it's on real good?
+9,23,185,4,1133590,1135341,Thank you.
+9,23,30,4,1137761,1145560,"And then, and then you said that thing about, about bringing the Mesozoic era in the 21st century."
+9,23,197,6,1143767,1144989,"Yeah, that's it?"
+9,23,30,4,1144989,1145624,Yeah.
+9,23,29,3,1651483,1655736,"Oh, ain't this nice? It's so quiet, I could just lie here all day."
+9,23,144,4,1655904,1657738,I know
+9,23,185,3,1659491,1661368,Open your drapes! Open your drapes!
+9,23,29,3,1661368,1664553,I'm so glad we've got adjoining rooms!
+9,23,144,3,1665747,1669339,The sun is out!
+9,23,29,0,1669339,1670185,Hey! Remember when I had corneas?
+9,23,144,4,1670293,1676590,"Ok listen, you go down to the pool and reserve the chairs, and I'll get the magazines and the lotion."
+9,23,29,4,1672253,1676590,Ladies? Ross's speech is in 45 minutes.
+9,23,197,0,1679928,1682388,"Walls are pretty thin, guys!"
+9,23,197,4,1688269,1699196,Then we have to await the data from recent MRI scans and DNA testing which call into question information gathered from years of simple carbon dating.
+9,23,185,5,1699364,1706787,"Look at that woman sitting by the pool getting tan... so leathery and wrinkled, I'm so"
+9,23,197,4,1829953,1838126,"Oh, that's not what you want..."
+9,23,30,3,1841798,1842840,You blew them away!
+9,23,197,3,1843007,1846635,"Oh, I can't tell you how great it was to look at the crowd and see your face!"
+9,23,197,4,1846803,1850764,"I mean... uh, did you know you were  mouthing the words along with me?"
+9,23,30,6,1850932,1852558,I was
+9,23,197,3,1852725,1855686,"No, it's ok! Made me feel like a rock star!"
+9,23,30,6,1856271,1859106,Oh my God!  I'm your
+9,23,197,3,1859691,1862421,I'd better not found you naked in my hotel room!
+9,23,197,3,1866823,1868740,"Look, I took it too far!"
+9,23,144,0,1874998,1878083,"I can't believe it's raining again! Oh, it's so unfair!!!"
+9,23,178,4,1880962,1884172,"Well, on the bright side, now you won't have to see all these paleontologists with their shirts off."
+9,23,178,4,1886551,1888594,Not you guys.
+9,23,178,3,1889220,1891680,You got it going on!
+9,23,144,4,1894976,1897769,"So, what are we gonna do today?"
+9,23,139,4,1894976,1899479,They have a game room downstairs! Ping pong and stuff.
+9,23,144,6,1899647,1904109,"Ping pong?  Honey, they have ping pong! Let's play!"
+9,23,29,3,1902025,1904109,I don't think so!
+9,23,144,4,1905570,1907654,Why not?
+9,23,29,4,1907822,1910949,"Because you know how competitive you get and well, I say it's cute, others disagree, and I'm lying!"
+9,23,144,4,1912785,1914797,I'm not always that bad!
+9,23,29,4,1914797,1915559,"Oh,"
+9,23,144,6,1918291,1920208,I punched you...?
+9,23,29,6,1920752,1921644,And...?
+9,23,144,6,1921644,1923438,... Phoebe...?
+9,23,178,4,1923438,1924409,... and...?
+9,23,144,4,1924547,1927841,I clunked your heads together!
+9,23,108,6,2200364,2202824,But then who? The waitress I went out with last month?
+9,23,185,5,2204368,2206578,You know? Forget it!
+9,23,108,6,2204368,2209122,"No-no-no-no, no! Who, who were you talking about?"
+9,23,185,2,2209290,2211791,"No, I-I-I-I don't, I actually don't know"
+9,23,108,4,2212376,2213543,Ok!
+9,23,108,4,2213545,2215000,"All right, well..."
+9,23,185,4,2219425,2221439,"Yeah, sure!"
+9,23,197,0,2529652,2533488,Get Out!
+9,23,30,4,2535032,2536908,"Ross, can I talk to you for a minute?"
+9,23,197,4,2537117,2543998,"Yes, please!  So, what's going on?"
+9,23,30,5,2546126,2549754,"Uh, well... Joey and I broke up."
+9,23,197,6,2550464,2555885,"Oh my God, wh-what happened?"
+9,23,30,5,2556053,2564561,"Joey is a great guy, but we're just... so different! I mean, during your speech he kept laughing at homo erectus!"
+9,23,197,0,2562059,2564561,I knew that was him!
+9,23,30,5,2566313,2570108,"Anyway I just, uh, I think it's for the best."
+9,23,197,4,2571068,2572950,"Hey, you ok?"
+9,23,30,5,2572950,2575208,I guess.
+9,23,30,4,2577866,2585915,There was hum...  there was another reason that I thought it was time to end it with Joey.
+9,23,30,4,2586667,2592547,I started to realize that I was having feelings for someone  else.
+9,23,171,4,2594174,2599220,"Ok Geller. Last day of the conference, you know what happens to the keynote speaker."
+9,23,197,4,2599388,2602765,"Oh, professor Clerk we're kind of in the middle of a conversation, here."
+9,23,30,4,2602933,2604905,"Yeah, can you guys just throw him in the pool later?"
+9,23,184,3,2604905,2607073,Or we could throw you both in
+9,23,197,0,2607187,2608147,"Ok, gentlemen!"
+9,23,197,0,2608147,2608699,Please!
+9,23,197,0,2608699,2610985,Aren't we a little old for this?
+9,23,197,4,2611066,2612788,"I mean, we're scientists, right?"
+9,23,197,0,2612788,2613798,We're academics.
+9,23,197,3,2613902,2617780,And most importantly I... you-you will have to catch us first.
+9,23,197,3,2617948,2620366,"GO, GO, GO!"
+9,23,139,4,2629376,2631836,"Ok, so it's a tie again, 41 to 41."
+9,23,29,0,2633797,2636758,"Ok, look! Enough is enough!"
+9,23,144,3,2636925,2638886,"No, I have just to have two more points to beat him!"
+9,23,29,4,2638886,2641287,"Monica, that was also true an"
+9,23,144,0,2660366,2663159,I can't just walk away! I've put in four hours!
+9,23,144,4,2663702,2666079,You knew this about me when you married me!
+9,23,144,4,2666246,2669207,You agreed to take me in sickness and in health.
+9,23,144,0,2669375,2671668,"Well, this is my sickness!"

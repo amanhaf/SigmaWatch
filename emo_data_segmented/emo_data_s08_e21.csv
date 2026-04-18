@@ -1,0 +1,85 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,21,108,4,226185,233817,"Sure, I can hang out ‘til I have to meet ya.  What uh—How come you’re not going?"
+8,21,29,4,230105,233817,I have a job interview I have to get ready for.
+8,21,108,4,233984,235152,I thought you already have a job.
+8,21,29,4,235152,239031,And people say you don’t pay attention.
+8,21,29,4,239114,242076,"No, this is a much better job."
+8,21,29,4,242243,246580,It’s vice-president of a company that does data reconfiguration and statistical factoring for other companies.
+8,21,108,6,248666,250838,Wow! How do you know how to do that?!
+8,21,29,4,250838,253467,That’s what I do now.
+8,21,144,4,254630,256402,"Hey Joey, come taste this."
+8,21,108,4,256402,256986,What is it?
+8,21,144,0,257091,263264,Remember that guy that gave me a bad review? Well…  I’m getting my revenge!
+8,21,108,6,264098,266183,You cooked him?
+8,21,144,4,266350,270229,No.
+8,21,144,4,266350,273816,"He teaches a course on food criticism at the New School, so before we go to the movies I wanna go by there and make him try my bouillabaisse again."
+8,21,144,3,273983,277194,"Oh, I cannot wait to read the front page of the Post tomorrow!"
+8,21,144,3,277361,282199,"""Restaurant reviewer admits: I was wrong about Monica."""
+8,21,29,5,282366,287329,"The front page? You really do live in your own little world, don’t ya?"
+8,21,144,4,515224,518227,"Hi! Umm, I’m Monica Geller, I’m the chef at Alessandro’s."
+8,21,230,6,518393,520479,Still?
+8,21,144,4,520646,529404,"I think the things that you said about me are really unfair, and I would like for you to give my bouillabaisse another chance."
+8,21,230,3,526443,529404,I don’t see any reason why I would do that to myself again.
+8,21,108,0,529571,532282,"Either eat it, or be in it."
+8,21,144,3,539706,542292,"Spoon?  So, what do you think?"
+8,21,230,1,542459,551426,"I’m torn, between my integrity and my desire to avoid a beating. But I must be honest, your soap is abysmal."
+8,21,108,3,554054,559518,Thata girl! Huh? We should get out of here.. there’s a new class comin’ in.
+8,21,225,4,559685,566316,"Welcome to introduction to cooking. Now, before we start, can anyone tell me the difference between a hollandaise sauce and a bearnaise sauce?"
+8,21,144,4,568902,569664,I can.
+8,21,225,4,569664,571124,"Okay, go ahead."
+8,21,144,4,571238,582874,"Well umm, they both have a egg yolk and butter base, but a bearnaise has shallots, shirvel, and most importantly tarragon."
+8,21,225,4,580080,582352,"That’s very good, what’s your name?"
+8,21,144,4,582352,582918,Monica.
+8,21,225,4,583041,585002,"Monica, you go to the head of the class."
+8,21,144,3,585002,587088,Okay.
+8,21,118,4,609192,612029,"Well, the delivery went out to you and I realized they forgot this."
+8,21,197,4,612195,616575,"Ah, must’ve been fairly obvious since it was the only thing left in your store."
+8,21,118,4,618201,624124,"Listen, to be honest, home deliveries are really a part of my job description."
+8,21,197,4,624291,625709,Oh.
+8,21,118,2,626668,631340,Oh uh…I actually came here to ask you out.
+8,21,197,3,631506,635927,"Oh! Wow! Uh, yeah! That sounds great. I’m just gonna put this  back in my pocket, pretend"
+8,21,118,3,645479,648732,Sure!
+8,21,185,0,645479,659201,Horny bitch.  No! You’re a horny bitch! Noooo! You’re the horny bitch! No! You’re a horny bitch!
+8,21,108,4,780030,781072,Hi.
+8,21,225,4,781281,784409,"Your Fettuccini Alfredo looks a little dry, did you use all your cheese?"
+8,21,108,4,784618,789790,"When you say used, do you mean eat as a pre-cooking snack?"
+8,21,225,4,790415,791333,And the cream?
+8,21,108,4,791333,793739,Cheese makes me thirsty.
+8,21,225,4,795420,797312,Okay. Let’s move on.
+8,21,108,4,797312,799112,All right.
+8,21,225,6,799216,809059,Oh! Something smells good over at Monica’s station!  Oh my God! This is absolutely amazing! You’ve never made this before?
+8,21,144,6,809226,809977,Oh no!
+8,21,144,4,809977,811625,I don’t know anything about cooking.
+8,21,144,4,813146,817484,"I had to ask someone what it’s called when the, when the water makes those little bubbles."
+8,21,225,3,818151,819986,"Well, hats off to the chef."
+8,21,144,4,820153,825450,"I-I-I’m sorry, your-your mouth was full, I didn’t hear what you said. Umm, hats off to who now?"
+8,21,225,3,823365,825450,The chef!
+8,21,144,3,825617,827953,That’s right.
+8,21,29,4,845846,855230,"What I do do…is manage to uh, create an atmosphere of support for the people working with me."
+8,21,178,4,855397,858066,I see. Nice sidestep on the do do thing by the way.
+8,21,29,4,858233,859568,Hardest thing I’ve ever done in my life.
+8,21,178,4,859568,861840,You gotta go!
+8,21,29,4,861840,862091,Oh!
+8,21,178,4,862153,864085,"Okay, don’t worry. You’re ready."
+8,21,29,6,864085,864970,Really?
+8,21,178,4,865073,868869,Absolutely! Just fight all your natural instincts and you’ll be great.
+8,21,29,4,976059,981731,also I was the point person on my company’s transition from the KL-5 to GR-6 system.
+8,21,235,4,981940,983442,You must’ve had your hands full.
+8,21,29,4,983442,986389,That I did. That I did.
+8,21,235,4,986820,989572,So let’s talk a little bit about your duties.
+8,21,29,6,994452,1000917,My duties?  All right.
+8,21,235,4,1001126,1004337,"Now you’ll be heading a whole division, so you’ll have a lot of duties."
+8,21,29,4,1008800,1011886,I see.
+8,21,235,4,1008800,1014514,But there’ll be perhaps 30 people under you so you can dump a certain amount on them.
+8,21,29,4,1019477,1020478,Good to know.
+8,21,235,4,1020478,1022719,We can go into detail
+8,21,29,2,1022856,1024858,No don’t I beg of you!
+8,21,235,4,1025025,1033324,"All right then, we’ll have a definite answer for you on Monday, but I think I can say with some confidence, you’ll fit in well here."
+8,21,29,6,1033491,1036536,Really?!
+8,21,235,4,1037579,1040707,Absolutely.  You can relax
+8,21,108,3,1274524,1286828,"Well I had a great time! Learned how to bake, ate great food, that’s the first A I’ve gotten since seventh grade,"
+8,21,144,2,1283741,1290832,"Oh, look! Acting for Beginners! Want to feel good about yourself?"
+8,21,108,6,1288830,1289882,What the hell!
+8,21,144,4,1289882,1290879,Okay.
+8,21,220,4,1290999,1299299,"All right, let’s start with some basics. Can anybody tell me what the difference between upstage and downstage is?"
+8,21,108,1,1305305,1308182,"Yeah, this was a stupid idea."

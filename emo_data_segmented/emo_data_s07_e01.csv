@@ -1,0 +1,29 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,1,108,4,500666,507255,‘Sup? ‘Sup dude?
+7,1,29,2,507882,510550,"Take whatever you want, just please don’t hurt me."
+7,1,108,4,512762,532948,So you’re playing a little
+7,1,29,1,533241,539829,"Yes, on a scale from 1 to 10, 10 being the dumbest a person can look, you are definitely 19."
+7,1,108,6,541290,542874,"Come on man, really how old?!"
+7,1,29,1,543084,554177,"Young! You’re a man-child okay?! Now go get changed because everybody’s ready and please, oh please, keep my underwear!"
+7,1,108,3,551801,554177,Wow thanks!
+7,1,29,2,557848,558810,Joe?
+7,1,108,3,558810,560452,Yeah!
+7,1,29,4,560601,566439,"Uh, you’ve had a lot of sex right?"
+7,1,108,6,569527,576199,"When? Today? Some, not a lot."
+7,1,29,2,581956,588920,"Well, it’s just the reason that I’m asking is because I kind of eh, uh, I was unable to—I mean I really wanted to, but I couldn’t…."
+7,1,29,2,589130,591298,"There huh—hmm, there-there was an incident."
+7,1,108,4,592758,595844,"Don’t worry about that man, that happens."
+7,1,29,6,596304,597606,It’s happened to you?
+7,1,108,4,597606,599654,Yeah! Once.
+7,1,29,6,600182,601104,"Well, what’d you do?"
+7,1,108,4,601104,603938,I did it anyway.
+7,1,178,4,844426,846052,Would she?
+7,1,108,0,847263,851808,Would she?  You ate my candy bar!
+7,1,144,1,896854,899314,"I can’t believe her, y’know it’s just—it’s so typical."
+7,1,29,4,899565,903860,"Now Monica, I know you’re upset, but don’t forget."
+7,1,29,4,899565,908156,"There is going to be a wedding, you are going to throw the bouquet, and"
+7,1,144,4,908407,911826,Paris?
+7,1,29,4,912036,916664,We will take a moonlit walk on the Rue de la .
+7,1,144,4,919919,921002,Keep talking.
+7,1,29,3,921211,929135,"Then we will sprinkle rose pedals on the bed and make love. Not just because it’s romantic, but because I can!"
+7,1,144,3,930721,931971,I love you!

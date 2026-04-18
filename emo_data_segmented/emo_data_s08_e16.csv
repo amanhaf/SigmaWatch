@@ -1,0 +1,30 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,16,185,3,140974,143892,"Oh-oh! Okay, she’s kicking!"
+8,16,29,4,144811,147354,Oh!  She’s growing inside you.
+8,16,185,6,147564,148276,Whoa!!
+8,16,29,6,148276,148653,Oh!
+8,16,185,6,148815,149858,Wow that was a big one.
+8,16,29,3,149858,153425,I think that’s the youngest girl ever to reject me.
+8,16,178,3,154279,155779,Oh hey you guys!
+8,16,29,4,228561,233148,"Luckily, the guy she settled for can’t hear what you’re talking about."
+8,16,178,5,233566,234738,"Oh, I’m so sorry."
+8,16,178,5,234738,236213,"Um, and maybe I’m wrong!"
+8,16,178,4,236402,239321,"I but—y’know I’m gonna go out with him again, I’ll find out more."
+8,16,29,6,239530,242291,You believe that this guy is destined for someone else and you’re still gonna date him?
+8,16,178,4,242700,245953,"Well, he may not be my soul mate, but a girl’s gotta eat."
+8,16,108,4,451534,453126,Hey.
+8,16,197,4,453126,454415,Hey.
+8,16,108,5,455580,459374,"Look, I understand if you came by to hit me, I deserve it."
+8,16,197,4,459584,461877,"No, I don’t want to hit you."
+8,16,108,0,462086,464588,Oh what then? Kick me?
+8,16,197,4,464922,466173,No.
+8,16,108,6,598507,599891,What do I do?
+8,16,108,4,782406,786288,Okay.
+8,16,108,4,786288,786590,"Okay, I can do this."
+8,16,108,4,786590,786972,I can tell her how I feel.
+8,16,108,2,787119,789454,"Just uh, just stand up straight."
+8,16,108,2,789705,792582,Take a couple deep breaths.
+8,16,108,2,794210,796085,Look confident.
+8,16,185,4,799965,801925,Joey? What’s up?
+8,16,108,2,802176,806554,"I uh, I just came by because I-I want to talk to you about something."
+8,16,185,4,806764,807847,Okay what’s up?

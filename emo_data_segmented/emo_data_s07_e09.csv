@@ -1,0 +1,99 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,9,29,4,125208,127042,Hey! What are you guys doing?
+7,9,144,4,127252,129336,Making holiday candy for the neighbors.
+7,9,185,4,216257,219635,"Hi. Tag, I have a conference call today is that correct?"
+7,9,217,4,219844,221638,"Yes, at 4:00."
+7,9,185,4,221638,222310,"Okay, thank you."
+7,9,185,4,222310,222983,That’ll be all.
+7,9,185,6,223598,224160,Wait!
+7,9,185,6,224160,224687,Wait!
+7,9,185,6,229187,230229,Did you see that?
+7,9,185,6,230438,233565,That mail guy had no idea there was something going on between us.
+7,9,217,4,241241,244743,I’d better get back to my desk.
+7,9,185,3,246746,248747,"Okay, you hard worker! I’ll remember to put that in your evaluation."
+7,9,217,6,249249,252042,My what?
+7,9,185,4,252252,255921,"Well, you’ve been here for two months now and your boss is required to hand in a performance evaluation."
+7,9,185,4,256130,260008,"But y’know, there is one thing that I have yet to evaluate."
+7,9,217,6,266849,270852,Are you serious?
+7,9,185,4,271521,273355,"No, I’ve just always wanted to do that. Can you help me clean this up?"
+7,9,144,6,279195,282281,"The basket is totally empty! My God, the neighbors ate all the candy!"
+7,9,29,4,282448,284074,"Well, either that or uh"
+7,9,144,0,286703,287744,Joey!!
+7,9,108,4,289956,290998,Yeah?
+7,9,144,0,291207,294334,Did you eat all the neighbor candy?!
+7,9,108,0,294544,297796,"Uh well yeah, that was the plan, but by the time I got to it there was only a couple of pieces left!"
+7,9,178,3,298006,300132,"Yeah, and they’ve been coming by all day. They love it!"
+7,9,144,3,300800,306221,They love my candy? Oh man!!! I’ve gotta go make more!!
+7,9,108,4,306431,311393,"Hey Mon, you might wanna make some more lasagna too, because something might’ve happened to a huge chunk of it."
+7,9,144,3,312312,314479,Ross! The neighbors ate all my candy!!
+7,9,197,0,314689,318066,Mine stole my newspaper! It’s like a
+7,9,178,4,324615,326408,Sure!
+7,9,197,4,326576,335375,"Yeah, ever since you uh, told me that story about that bike I-I couldn’t stop thinking about it."
+7,9,197,4,331664,335375,"I mean, everyone should have a-a"
+7,9,178,6,339213,342049,Oh my God Ross!!
+7,9,197,3,342342,343218,You like it?
+7,9,178,4,343218,344234,I
+7,9,197,4,344427,346678,Yeah?
+7,9,144,6,380922,382047,Who is that?!
+7,9,29,5,382840,383883,"Don’t worry, I’m brave!"
+7,9,29,2,383883,384968,I am brave!
+7,9,29,2,384968,387033,I…I am brave!
+7,9,29,2,388471,390263,No-no-no-no!!
+7,9,29,4,391557,393809,Can you tell me who is there please?
+7,9,76,3,399899,401191,Hi!
+7,9,144,4,399899,403902,Hi. Do you know what time it is?
+7,9,76,3,405446,408573,It’s candy time! My roommate says that they taste like little drops of heaven.
+7,9,144,3,408783,413829,Oh please!  Did you hear that? Little drops of heaven.
+7,9,29,4,415415,416957,4:00 A.M.
+7,9,76,4,417208,419376,"So, can I get some candy?"
+7,9,29,4,419627,423839,"I am sorry, but some of us have to"
+7,9,144,5,429720,432722,"Umm, listen I am sorry, but I’ll put some out first thing in the morning."
+7,9,76,4,432932,437394,"Well okay, I’ll swing by later. Do you live in this building?"
+7,9,144,4,435560,437394,Um-hmm.
+7,9,76,6,437562,440480,Mm! Seems like I would’ve remembered you!
+7,9,29,4,442608,445527,Mm! Night Gar’!
+7,9,245,3,690648,693900,"Yes! Yes! Please, just give it to me!"
+7,9,29,4,694151,696319,"Yeah, that’s her."
+7,9,245,4,697154,699155,Thank you.
+7,9,144,6,699365,701783,It’s unbelievable! I-I can’t believe that sign didn’t work!
+7,9,29,4,701992,702743,Y’know what would work?
+7,9,29,0,702743,705063,Stop making candy!
+7,9,29,4,708082,709499,You mean they like you.
+7,9,144,4,710793,711835,Maybe.
+7,9,29,6,712211,715463,Is that why you became a chef? So that people would like you?
+7,9,144,0,715673,719759,"Oh, you really want to talk about getting people to like you huh, funny man?"
+7,9,197,4,839588,843967,"Hey, there’s uh, some people outside, askin’ about candy."
+7,9,144,0,844176,847512,"Well, they’re just gonna have to wait aren’t they? I’ve only got two hands!!"
+7,9,197,4,847972,851057,Need some help?
+7,9,144,0,847972,853768,No! You don’t know the system! There’ll be nobody messing with the system!
+7,9,197,4,854603,858690,"By the way, the week before your wedding you may not see a lot of me."
+7,9,178,0,869201,871035,"Oh, hello liar."
+7,9,197,5,873664,877500,"Look, I-I’m really sorry I let go of the bike."
+7,9,178,0,877710,879752,I could’ve been killed I hope you know!
+7,9,197,5,881714,889971,"I know. I know. But, can we please try it again? Huh? I mean, you were"
+7,9,178,3,890180,896769,"Well, I would love to but…the bike got stolen and the police have no suspects."
+7,9,197,4,903193,904485,Phoebe.
+7,9,178,0,907573,909449,What?!  What the hell?!
+7,9,197,0,910951,911993,"All right, y’know what?"
+7,9,197,0,912202,917707,"If you are not going to learn how to ride this bike then I’m sorry, I’m just gonna have to take it back."
+7,9,178,6,915539,917707,What?! Why?!
+7,9,197,0,917875,930553,"Because! Because, it-it-it’s… It’d be like you having this guitar  and-and never playing it. Okay, this guitar"
+7,9,178,0,950616,955119,"All right. If you care enough to make up that load of crap, okay."
+7,9,197,3,955621,961626,Great! Great!  You’re making the bike very happy.
+7,9,178,0,961835,967840,Okay Ross!  Please don’t die!
+7,9,185,4,971428,978685,"Okay, I think we can get the evaluation back before they see it, but we’re gonna have to get into Mr. Zelner’s office."
+7,9,185,4,978894,982939,"Now, he doesn’t get in until 10, so he’s no problem, but his assistant, Betty, she comes in early to eat her breakfast at her desk."
+7,9,217,5,983148,986401,That’s kinda sad.
+7,9,185,4,986819,994200,"Yeah, well Betty is kinda sad. Which is why I believe I can lure her away with these chocolates.  Now, while I distract her,"
+7,9,217,3,994410,994962,Got it!
+7,9,185,3,994962,995840,Let’s roll!
+7,9,155,4,997496,999706,"Hello Rachel, you uh, got a minute?"
+7,9,185,4,1005546,1007130,"Yeah, sure Mr. Zelner, for you anything—minute. Okay. Fine.  Abort the plan, abort the plan."
+7,9,155,4,1007923,1010591,"Uh actually, I’d like to speak with both of you."
+7,9,185,4,1011051,1017849,"Okay. Uh, well can we, can we get you anything Mr. Zelner? Maybe some chocolates?"
+7,9,178,6,1284783,1286494,I can’t believe it!
+7,9,178,3,1286494,1287676,I did it!
+7,9,178,3,1287676,1288010,I rode a bike!
+7,9,178,3,1288120,1290342,I never thought I’d be able to do that!
+7,9,178,3,1290342,1291300,Thank you Ross.
+7,9,197,3,1291456,1297837,"Oh hey, don’t thank me, thank yourself. You’re the one who faced her fears and ultimately overcame them."

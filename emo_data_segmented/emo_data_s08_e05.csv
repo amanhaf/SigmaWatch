@@ -1,0 +1,48 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,5,29,4,154362,157698,Hey Bob.
+8,5,17,3,443484,446736,Hey! How’s my pal Toby doing today?
+8,5,29,4,446904,449364,"If I see him, I’ll ask."
+8,5,17,3,449532,452033,Toby!
+8,5,29,3,456664,457166,Yeah!
+8,5,148,4,457166,458543,Oh then you know each other.
+8,5,29,4,458666,461126,We’re on a semi-first name basis.
+8,5,148,4,461711,463837,What do you think of adding him to our team?
+8,5,29,6,464005,471761,"Bob? Ooh, working here with us? Everyday? Yeah, I don’t know if he has what it takes."
+8,5,148,6,471929,475807,Really? They love him down on six.
+8,5,29,4,476601,484024,But this is eleven. It’s almost twice as hard up here.
+8,5,148,4,479937,484024,"Okay, I hear you loud and clear. Bob will stay put."
+8,5,29,4,481606,484024,I think it’s best sir.
+8,5,148,4,484192,486364,But we really do need to find someone up here.
+8,5,148,4,486364,487948,The work is starting to pile up.
+8,5,148,4,488070,491156,I’ve got a stack of documents on my desk this high.
+8,5,29,4,493659,498997,"Y’know what you should do, just toss ‘em in the shedder and claim you never got ‘em."
+8,5,148,4,496996,498997,That’s a good one.
+8,5,29,4,499499,504044,What does a guy have to
+8,5,185,5,1172129,1175256,I’m guess I’m just done with the whole dating thing.
+8,5,185,5,1175799,1180261,It’s one more thing in my life that’s suddenly completely different.
+8,5,185,5,1180512,1181680,This is hard.
+8,5,197,4,1181680,1184006,Yeah I know.
+8,5,197,4,1186351,1197278,"On the other hand in um, in about seven months you’re gonna have something that you’re gonna love more than any guy you’ve ever gone out with."
+8,5,197,4,1199489,1202366,Just wait.
+8,5,197,3,1199489,1206454,"Wait until uh, wait until the first time your baby grabs your finger."
+8,5,197,3,1207623,1209123,You have no idea.
+8,5,185,4,1211501,1214003,Thanks sweetie.
+8,5,197,4,1217841,1219593,"You wanna, you wanna grab some coffee?"
+8,5,185,5,1219593,1223697,"Oh no, I think I’m gonna go home and eat ten candy bars."
+8,5,197,4,1223889,1225848,"Hey, I thought I cheered you up."
+8,5,185,4,1223889,1228601,"Oh you did, there are twenty in here."
+8,5,197,4,1229519,1230479,Right. Good night.
+8,5,185,4,1230479,1232003,Good night.
+8,5,142,4,1239238,1239781,Ross?
+8,5,197,4,1239781,1240456,Yeah?
+8,5,142,3,1240572,1243074,Hey it’s Mona! From the wedding.
+8,5,197,3,1243242,1244953,Oh hi!
+8,5,142,3,1244953,1245907,Hi!
+8,5,197,6,1247371,1249497,Wow! Uh…how are you?
+8,5,142,4,1249665,1256170,"I’m good except umm, you still owe me a dance."
+8,5,197,3,1251458,1256170,"Oh that’s right. Well uh, would you be interested in seeing a Ukrainian film?"
+8,5,142,6,1258465,1260383,Oh you’re serious. Sure!
+8,5,197,3,1261885,1264178,Great! Well umm
+8,5,142,4,1265180,1267390,I think I might need one more cup of coffee.
+8,5,197,4,1267557,1269101,"Sure! Uh, let me get it for ya."
+8,5,142,4,1269101,1270791,Okay.

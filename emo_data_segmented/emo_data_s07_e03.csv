@@ -1,0 +1,35 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,3,185,3,207081,209292,"Y’know Joey, I could teach you to sail if you want."
+7,3,108,6,209292,209438,You could?
+7,3,185,3,212170,215214,Yeah! I’ve been sailing my whole life. When I was fifteen my dad bought me my own boat.
+7,3,178,6,216674,218800,Your own boat?
+7,3,185,6,219010,220886,What?! What?! He was trying to cheer me up! My pony was sick.
+7,3,108,3,379045,380295,Look at this clown!
+7,3,108,1,380463,383799,Just because he’s got a bigger boat he thinks he can take up the whole river.
+7,3,108,0,383966,386676,Get out of the way jackass!
+7,3,108,1,388429,391056,Who names their boat Coast Guard anyway?
+7,3,185,4,393810,396812,That
+7,3,108,6,393810,399231,What are they doing out here? The coast’s all the way over there.
+7,3,144,4,483733,485615,"All right, I definitely taste nutmeg."
+7,3,178,6,485615,486571,You do?
+7,3,144,6,486694,491531,"You don’t?  Well, that’s the difference between a professional and a layman."
+7,3,178,0,493242,494951,That and arrogance.
+7,3,108,4,497121,498163,Hey.
+7,3,144,3,497121,499915,Hey! How was sailing?
+7,3,144,4,807223,810266,"Okay, here’s batch 22."
+7,3,144,0,810434,812477,"Oh, maybe these’ll taste a little like your grandmother’s."
+7,3,144,4,812645,815396,"This has a little bit of orange peel, but no nutmeg."
+7,3,197,4,815564,817482,Let’s give it a shot.
+7,3,178,6,820402,822113,"Oh, what was that for? Like a bake sale?"
+7,3,144,4,822113,824177,"No, just a Friday night."
+7,3,197,4,1085000,1090338,"That’s the day you’re gonna die? See—darnit, I’ve got shuffleboard that day."
+7,3,178,4,1091256,1093216,That’s what you think.
+7,3,144,4,1096887,1099847,"Well, I mean what about friends of your grandmother’s? Wouldn’t they have the recipe?"
+7,3,178,4,1100015,1109357,"Well, y’know I may have relatives in France who would know. My grandmother said she got the recipe from her grandmother, Nesele Tolouse."
+7,3,144,4,1111235,1112276,What was her name?
+7,3,178,4,1113028,1116280,Nestley Toulouse.
+7,3,144,4,1117491,1119867,Nestlé Toll House?
+7,3,178,4,1125207,1127792,"Oh, you Americans always butcher the French language."
+7,3,178,6,1134758,1140429,Yes!!  Oh.
+7,3,144,0,1141014,1146811,I cannot believe that I just spent the last two days trying to figure out the recipe and it was in my cupboard the whole time!
+7,3,178,0,1146979,1153651,I know! You see it is stuff like this which is why  you’re burning in hell!!
