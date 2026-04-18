@@ -1,0 +1,13 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+2,1,197,3,530571,533448,"Oh, that is so sweet."
+2,1,197,3,537161,539246,"No, no, ok, you hang up."
+2,1,197,3,541290,550966,"Ok, ok, one, two, three."
+2,1,197,3,547672,549234,Well you didn't hang up either.
+2,1,185,3,549234,551022,She didn't hang up either...
+2,1,197,3,555221,560600,"Ok, no, no, you hang up. You, you, y—"
+2,1,178,4,1288704,1290376,You wanna do it right now?
+2,1,114,3,1290376,1291308,Great!
+2,1,178,4,1295460,1303342,"Ok, I just wanna be really sure this time. Andie McDowell's the girl from"
+2,1,185,4,1304428,1315354,No. No no no no no. That's Rodney McDowell. Andie McDowell is the guy from
+2,1,178,4,1316315,1320234,"Oh, yeah. Ok, thank you."
+2,1,185,4,1318317,1320234,You're welcome.

@@ -1,0 +1,8 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,19,185,5,591299,593231,"Oh God, Ross, I cannot do this."
+1,19,197,4,593231,595353,"Okay, quick and painful."
+1,19,185,2,604228,610150,"Oh God... Okay. Alright. Alright. Okay. Ross, please don't hate me."
+1,19,197,6,611193,612235,"Oh, what? What-what?"
+1,19,185,4,615114,616990,Y'know Marcel?
+1,19,197,4,617783,620201,...Yeah?
+1,19,185,5,617783,623997,"Well, I kind of... I kind of lost him."

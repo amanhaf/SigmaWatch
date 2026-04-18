@@ -1,0 +1,110 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+3,15,29,3,153236,156446,Come on Chloe! Finish up with your customer first. Come on Chloe! Come on Chloe!!
+3,15,93,4,159826,160868,Can I help you?
+3,15,29,2,161244,163162,Uh-oh.
+3,15,108,4,164622,174756,"Uh, y'know what, we’re having second thoughts about our copying needs. And we’ll need a little more time to think about it."
+3,15,93,4,171337,174756,"Chloe, switch with me, there’s some guys here that got a crush on you."
+3,15,29,3,176384,178427,"Okay, that hurt us."
+3,15,33,4,179053,182139,Hi guys. I haven’t seen you since this morning.
+3,15,29,4,182849,187936,"Well ah, ........y'know."
+3,15,33,4,189272,191481,"Hey, what are you guys doing tomorrow night?"
+3,15,108,6,191983,193358,Both of us?
+3,15,33,4,193735,196028,Maybe. Does that scare ya?
+3,15,33,4,200909,205996,Relax. It’s just Issac’s D.J.-ing at the Philly. You should come.
+3,15,108,3,204037,205996,We’ll be there.
+3,15,33,3,206164,208457,"Great. I’ll ah, see ya then."
+3,15,29,3,208625,210334,"All right, rock on."
+3,15,178,4,228311,230313,Me too.
+3,15,178,4,230313,231960,"Although this city is my home, so."
+3,15,178,4,232065,235317,"So that’s dumb what I said, don’t tell him I said that."
+3,15,178,4,235485,237903,"Umm, you make something up."
+3,15,178,3,248081,250040,"Nice,  thank you."
+3,15,178,4,250833,251675,This is me.
+3,15,178,4,251675,252391,Here.
+3,15,141,3,262512,265138,Your eyes are very pretty.
+3,15,178,3,266057,268350,"Thank you, very much! Oh!  Thank you!"
+3,15,141,4,279195,280862,He would like to kiss you.
+3,15,178,4,284659,286702,"Okay, y'know what, you don’t have to do that now."
+3,15,178,3,284659,289454,No-no-no-no!!
+3,15,178,6,288204,289454,"Not him, you don’t!"
+3,15,178,4,293668,296378,Well the moment’s over.
+3,15,178,4,305305,306430,Oh.
+3,15,141,4,306597,308098,Oy!
+3,15,197,4,611027,615405,"Okay, that’s a fire. Oh yeah. Oh yeah."
+3,15,185,4,615573,619200,"Excuse me, I’m sorry, I’m gonna have to call you back, I’ve got a Schemp in my office."
+3,15,185,4,622455,623837,What are you doing?
+3,15,197,4,623837,624589,I’m sorry.
+3,15,197,4,624707,631296,"But ah, hey, oh, somebody’s off the phone, how ‘bout a glass of wine by the fire, I could get it going again."
+3,15,185,4,631464,635050,"Ross you’re not listening to me, I don’t have time to stop."
+3,15,197,4,635217,637189,"Come on Rach, you don’t have what, ten minutes?"
+3,15,185,0,637189,638183,I don’t have ten minutes!!
+3,15,197,4,638304,639889,"What?  Sophie, does she have ten minutes?"
+3,15,185,0,639889,642063,"Hey, Ross!!! I told you I don’t!"
+3,15,197,5,642183,645644,"Don’t yell at me okay, this is the most I’ve seen you all week."
+3,15,185,4,645811,652233,"Look, I cannot do this right now, okay, I’ve got a deadline, would you just go home, I’ll talk to you later."
+3,15,197,4,652401,652993,"Yeah, but wait..."
+3,15,185,4,652993,654450,Good bye!
+3,15,206,4,661577,664245,"Actually, that’s our three hole punch."
+3,15,197,4,670086,672629,Hey.
+3,15,185,5,670086,674839,"Hi. Look um, about what happened earlier..."
+3,15,197,4,675007,678927,"No, hey, well, I-I completely understand. You were, you were stressed."
+3,15,185,1,682431,685433,I was gonna give you a chance to apologise to me.
+3,15,197,0,686018,688645,For what? For letting you throw me out of your office?
+3,15,185,0,688938,691981,You had no
+3,15,197,0,700616,705745,"Yeah, well excuse me for wanting to be with my girlfriend on our anniversary, boy what an ass am I."
+3,15,185,0,707206,709958,"But I told you, I didn’t have the time!"
+3,15,197,0,710126,714587,"Yeah, well you never have the time. I mean, I don’t feel like I even have a girlfriend anymore, Rachel."
+3,15,185,0,714755,716423,"Wh, Ross what do you want from me?"
+3,15,185,0,716590,719467,"You want me, you want me to quit my job so you can feel like you have a girlfriend?"
+3,15,185,0,728060,735442,Ross do you realise this is the first time in my life I’m doing something I actually care about.
+3,15,185,0,732314,735442,This is the first time in my life I’m doing something that I’m actually good at.
+3,15,185,4,735609,735921,I mean.
+3,15,185,0,735921,736997,if you don’t get that...
+3,15,197,0,737111,739654,"No, hey, I get that, okay, I get that big time."
+3,15,197,0,737111,742323,"And I’m happy for ya, but I’m tired of having a relationship with your answering machine!"
+3,15,197,5,742491,743910,"Okay, I don’t know what to do anymore."
+3,15,185,3,743910,745816,Well neither do I!
+3,15,144,3,852393,861192,"Oh, and I can also speak a little French. Voulez-vous coucher avec moi ce soir?  Why? What did I say?"
+3,15,141,4,861360,864779,"Well, you just asked if I wanted to go to bed with you tonight."
+3,15,144,6,868534,873872,Oh my God! No wonder I get such great service at Cafe Maurice.
+3,15,178,4,872454,873872,"Knock, knock, knock, knock, hi."
+3,15,178,4,874123,882088,"Um, could you please tell Sergei that um, I was fascinated by what Boutros Boutros Gali said in the New York Times."
+3,15,178,4,885676,887698,You didn’t say Boutros Boutros Gali.
+3,15,141,4,887698,888557,Boutros Boutros Gali.
+3,15,141,4,893058,894225,He says he was too.
+3,15,178,4,894393,896311,Interesting.
+3,15,141,4,897521,899772,So I was wondering....
+3,15,178,3,899940,909282,"Okay, ah, before you get all talky again, umm, could you also please tell Sergei that I really like his suit."
+3,15,141,3,922838,928343,"Eh, he said, thank you very much, he thinks you look very pretty tonight, your hair, golden like the sun."
+3,15,141,4,925925,928343,So you're a chef?
+3,15,144,3,929845,932221,I’m also thinking about opening up my own restaurant.
+3,15,141,6,932389,933890,"Oh, really."
+3,15,178,4,934058,936017,"Monica, can I talk to you behind my menu, please.  What are you doing?"
+3,15,144,4,939271,942398,"Well, I was having a conversation."
+3,15,178,0,942566,950990,"Yeah but, Mischa is so interested in you, that Sergei and I haven’t been able to say two words to each other."
+3,15,144,0,947821,950990,What do you want me to do? Just sit here silently while you three have a conversation?
+3,15,178,4,951158,952867,That would be great. Thank you.
+3,15,185,6,966924,970677,"No! Sorry, I just thought you were somebody else. Hi!"
+3,15,135,4,970844,975515,"Hi. Well, look, I was just gonna leave a message, isn’t tonight your, your big anniversary dinner?"
+3,15,185,5,975683,978559,"Yeah. Well, umm....."
+3,15,135,6,978727,980436,"Rach, are you okay?"
+3,15,185,5,980604,982772,"Yeah, I’m fine."
+3,15,135,4,983524,985358,"You wanna talk, I mean I can come over?"
+3,15,185,5,985526,988236,"No! Really, no, please, please, that’s, that’s okay."
+3,15,135,4,988404,990655,"All right, all right, I’m coming over, and I’m bringing Chinese food."
+3,15,185,5,990823,992617,"Oh, yeah, I’m not, I’m not hungry."
+3,15,135,4,992617,993343,It’s for me.
+3,15,185,4,993450,997412,"Oh. Okay, bye."
+3,15,108,4,1001250,1002834,So what are you gonna do?
+3,15,197,5,1001250,1005336,"What can I do? One person wants to break-up, you break-up."
+3,15,29,5,1005504,1009247,"Hey, no way! Come on, this is you guys, call her and work it out."
+3,15,197,5,1009425,1012635,"Oh come on, we just had this huge fight, all right, don’t I have to wait a while?"
+3,15,29,0,1012886,1017223,"Hey, this isn’t like swimming after you eat, pick up the phone!!"
+3,15,29,4,1021770,1023980,Y'know that whole swimming thing is a myth.
+3,15,108,4,1024148,1026691,"Yeah, tell that to my Uncle Lenny."
+3,15,29,4,1026859,1028985,Why? What happened to him?
+3,15,108,4,1029153,1032280,"Nothing, he’s just really believes in that."
+3,15,178,4,1338545,1340297,Ameri-can.
+3,15,108,4,1340297,1340476,Ameri-ccan.
+3,15,178,4,1340589,1343507,Ameri-can. Y'know it’s a
+3,15,202,6,1345844,1348679,Everybody!!

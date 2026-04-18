@@ -1,0 +1,79 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+3,12,102,4,332165,337502,Night Mon. Night Julio.
+3,12,115,4,335376,337502,Adiós.
+3,12,144,6,348222,350807,"Look Julio, someone left their book here."
+3,12,115,4,350975,352726,"Ah actually, that is mine."
+3,12,144,4,352894,355812,"Oh yeah, what are you reading?"
+3,12,115,4,355980,359524,"Flowers of Evil, by Beaudalire. Have you read it?"
+3,12,144,4,363654,365864,"Have I read it?  No, are you enjoying it?"
+3,12,115,4,367158,369951,"I thought I would, but the translation's no good."
+3,12,144,4,371329,373080,Your a poet and don't know it.
+3,12,115,4,376959,380212,"Actually I ah, I am a poet."
+3,12,144,4,382799,393350,"Oh, then you do know it.  So um what kind of things do you write about?"
+3,12,115,4,393518,403360,"Things that move me. The, the shadow of a tree, a child laughing, or this lip."
+3,12,144,4,406030,407656,Mine?  Right here?
+3,12,115,3,408950,413453,I can write an epic poem about this lip.
+3,12,144,3,418960,435392,"How would that go?  Well, it didn't rhyme, but I liked it."
+3,12,178,6,616115,618450,"Oh my God, oh my God! Poor Monica!"
+3,12,29,6,618618,619750,"What, what, what?!"
+3,12,178,6,619750,620966,What?!
+3,12,178,4,621078,623496,He was with her when he wrote this poem.
+3,12,178,4,623664,626499,"Look,  'My vessel so empty with nothing inside."
+3,12,178,4,626667,629586,"Now that I've touched you, you seem emptier still.'"
+3,12,178,6,629754,632672,"He thinks Monica is empty, she is the empty vase!"
+3,12,178,5,636385,639137,"Oh, totally. Oh, God, oh, she seemed so happy too."
+3,12,108,4,639680,641181,Done.
+3,12,108,6,751667,753001,Mark's a genius!
+3,12,197,6,753169,757048,Why?! How?! How is he a genius?
+3,12,29,0,757048,757188,"Look, don't you see what's happening here."
+3,12,29,0,757298,760425,"Instead of hitting on her right away, he's becoming her confidant."
+3,12,29,4,760593,764053,Now he's gonna be the guy she goes too to complain about you.
+3,12,197,2,764221,765430,What am I going to do?
+3,12,29,4,765598,769976,"Well, why don't you send her a musical bug, op, no you already did that."
+3,12,29,4,771937,777776,"All right look, you're going to have to go there yourself now, okay, make a few surprise visits."
+3,12,197,2,775149,777776,I don't know you guys.
+3,12,29,1,777943,784949,"All right fine, don't do anything, just sit here and talk to us, meanwhile she is talking to him about you."
+3,12,29,1,785117,789287,"And he's being Mr. Joe Sensitive, and she starts thinking 'Maybe this is the guy for me, because he understands me.'"
+3,12,108,0,789455,791456,"And before you know it, she's with him."
+3,12,108,0,791624,794459,"And you'll be all, 'Ohh, man!'"
+3,12,108,0,794960,796795,"And he'll be all, 'Yes!'"
+3,12,108,3,799006,801633,"And us, we'll be like, 'Wh-whoa, dude.'"
+3,12,108,1,803636,814229,"And pretty soon you'll be like,  'Hhiii,' and, and, and, 'I can't go, Rachel and Mark might be there.'"
+3,12,108,1,814647,818149,"And we'll be like, 'Man get over it, it's been four years!!'"
+3,12,29,4,820611,823279,He paints quite a picture doesn't he?
+3,12,185,3,839713,842799,Ohhh! That is soo sweet!
+3,12,135,3,843759,854018,"Okay, okay look, I know I'm being Mr. Inappropriate today, but it's just so tough, I mean see you walking around and I just wanna touch you and hold you, come on no one's around, just, just kiss me."
+3,12,197,0,854186,856248,"All right that's, that's it!! Get off her!"
+3,12,135,6,856248,857920,What is going on?
+3,12,197,0,858023,860817,What's going on?!  That's what's going on!!
+3,12,185,6,861026,862861,Ross!
+3,12,197,0,867408,871953,I have been down in your store for twenty minutes trying to get a tie!
+3,12,197,0,874081,876791,What do I have to do to get some service?!
+3,12,197,4,878711,880420,Hi Rach.
+3,12,144,6,972471,974863,"So! I'm just an empty vase, huh?"
+3,12,115,6,974863,976568,What?
+3,12,144,0,976684,986526,"Y'know, so I don't read as many important books as you do, and I don't write trick poems that seem to be about one thing but are actually about something else."
+3,12,144,4,983983,989070,"And y'know what, I get excited about stupid stuff, like when I my"
+3,12,115,6,999039,1000851,"Whoa, whoa, whoa."
+3,12,144,0,1000851,1001003,You don't even know me...
+3,12,115,6,1001125,1003251,"Whoa, whoa, whoa, the poem is not about you."
+3,12,144,6,1004795,1008381,What?
+3,12,115,5,1004795,1013094,"The Empty Vase is not about you. My baby, you make me so sad that you would think this."
+3,12,144,5,1015973,1019976,"I'm sorry, my friend Phoebe..."
+3,12,115,4,1020144,1030403,"No, it's about all women. Well, all American women. You feel better now?"
+3,12,144,4,1030988,1033031,Oh yeah.
+3,12,197,5,1254878,1255640,"Ahh, no."
+3,12,185,4,1255640,1257439,Oh.
+3,12,197,6,1262135,1263177,Are you jealous?
+3,12,185,0,1264471,1268224,"Noo, I y'know I don't see why she has to play with you, that's all."
+3,12,185,0,1270269,1273813,I mean doesn't she have any y'know other stripper moms friends of her own?
+3,12,197,3,1277025,1278777,You are totally jealous.
+3,12,185,0,1278777,1281089,I'm not jealous.
+3,12,185,4,1281196,1290288,"All right this is about, umm, people feeling certain things y'know about strippers."
+3,12,185,4,1291790,1294522,"And y'know, and um, I..."
+3,12,197,4,1294522,1295844,"Honey, I love you too."
+3,12,185,5,1295961,1298421,"Ugh. Wait, wait, wait."
+3,12,197,6,1298588,1300047,What?
+3,12,197,6,1307097,1308347,Huh.
+3,12,185,3,1313228,1316272,"Well, there's a kiss that he won't forget for a couple of hours, y'know."
+3,12,29,4,1317899,1321444,"Yeah. Either that, or you just turned him on and sent him off to a stripper."

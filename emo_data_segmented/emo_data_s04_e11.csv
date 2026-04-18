@@ -1,0 +1,58 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,11,108,3,145728,148981,"Hey! You guys! Check it out, check it out!  Guess which job I got."
+4,11,29,4,151442,155612,"I don’t know, but Donald Trump wants his blue blazer black."
+4,11,197,4,156781,157823,What?
+4,11,29,4,158241,161910,Blue blazer back. He-he wants it back.
+4,11,185,4,162912,166623,But you-you said black. Why would he want his blue blazer black?
+4,11,29,4,168418,170210,"Well, you-you know what I meant."
+4,11,144,0,170420,175299,"No, you messed it up. You’re stupid."
+4,11,29,4,178178,179928,So what job did you get Joe?
+4,11,108,4,180430,183265,"Oh, ah, tour guide at the museum. Yeah, Ross got it for me."
+4,11,185,4,183433,186685,"Well, how can you be a tour guide, don’t you have to be a dinosaur expert or something?"
+4,11,108,4,615281,618950,"Uhh, do you mind sitting there. I’m-I’m saving this for my friend Ross."
+4,11,249,4,619201,620577,You mean Dr. Geller?
+4,11,108,6,620870,623955,Doctor? Wow! I didn’t know he had a nickname.
+4,11,249,4,625374,627167,"Oh, he won’t sit here."
+4,11,249,4,627376,634758,"Only the people in the white coats sit over there,  and only the people in the blue blazers sit here."
+4,11,197,4,738112,739338,"Okay, Mon, back me up here."
+4,11,197,4,739488,742657,"Where you work the uh, waiters eat with the waiters, right?"
+4,11,197,4,742867,745368,"And the chefs eat with the other chefs, right?"
+4,11,144,5,745661,749998,I eat by myself in the alley because everybody hates me.
+4,11,108,4,752293,758339,"Look, Ross, really it’s-it’s no big deal."
+4,11,108,5,755880,762302,"Y’know you wear a white coat, I wear a blue blazer, if that means we can’t be friends at work, then so be it."
+4,11,108,4,762511,763683,"Y’know, hey I understand."
+4,11,108,4,763683,763984,Y’know?
+4,11,108,4,764221,768933,"Hey, when I’m in a play and you’re in the audience, I don’t talk to you, right?"
+4,11,108,4,769852,772187,"So it’s y’know, it’s uh, it’s cool."
+4,11,108,4,772438,773938,I’ll see you tomorrow.
+4,11,185,4,777067,780069,"Yeah, when we’re in the audience he doesn’t talk to us, but he does wave."
+4,11,169,4,992783,995118,"Dr. Geller, there’s a seat over here."
+4,11,197,4,996078,1003835,"Thank you, Dr. Phillips, but I’m having my lunch at this table, here in the middle."
+4,11,197,4,998789,1005753,"I’m having lunch right here, with my good friend Joey, if he’ll sit with me."
+4,11,108,4,1017599,1019600,I will sit with you Dr. Geller.
+4,11,197,4,1024773,1037118,"Y'know, we work in a museum of natural history, and yet there is something unnatural about the way we eat lunch."
+4,11,197,5,1038787,1042999,"Now, I look around this cafeteria, and y’know what I see, I see-I see division."
+4,11,197,2,1043208,1050673,"Division, between people in white coats and people in blue blazers, and I ask myself, ""My God why?!"""
+4,11,197,4,1052843,1061976,"Now, I say we shed these-these coats that separate us, and we get to know the people underneath."
+4,11,197,3,1065189,1066272,I’m Ross!
+4,11,197,3,1066940,1069776,"I’m divorced, and I have a kid!"
+4,11,108,3,1075991,1081871,I’m Joey! I’m an actor! I don’t know squat about dinosaurs!
+4,11,12,0,1084458,1089587,"I’m Ted, and I just moved here a month ago, and New York really scares me."
+4,11,197,3,1089838,1090965,"All right, there you go!"
+4,11,108,0,1090965,1092819,"Yeah, you hang in there Teddy!"
+4,11,169,4,1094051,1098471,"I’m Andrew, and I didn’t pay for this pear."
+4,11,197,3,1100599,1102391,"Okay, good-good for you."
+4,11,249,4,1103185,1107438,"I’m Rhonda,  and these aren’t real!"
+4,11,197,6,1111860,1113569,"Wow, Rhonda."
+4,11,11,4,1115614,1116532,I’m Scott.
+4,11,197,4,1116532,1118404,"Yeah, okay, Scott!"
+4,11,11,2,1119076,1125248,And I need to flip the light switch on and off 17 times before I leave a room or my family will die.
+4,11,144,4,1291248,1292999,Would you ever be a surrogate for anyone?
+4,11,185,4,1293458,1294709,It depends on who asked.
+4,11,144,4,1295502,1296627,What if I asked?
+4,11,185,4,1297296,1299463,"Oh, Mon, sure."
+4,11,144,6,1299673,1301924,Really?
+4,11,185,6,1305679,1307281,Yes.  You’re not asking are you?
+4,11,144,4,1307281,1307856,No.
+4,11,185,3,1308432,1310182,Yes! Totally!
+4,11,117,3,1314396,1320693,Oh! Thank you! Thank you! Thank you! Yes! Thank you!

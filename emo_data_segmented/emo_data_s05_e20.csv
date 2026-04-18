@@ -1,0 +1,18 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,20,108,4,921003,922675,I know it doesn't make much sense
+5,20,29,4,922675,924225,Much
+5,20,108,0,924340,927675,"Look Chandler, it was instinct! Okay? I just went for it!"
+5,20,29,3,927927,930345,"So you risked your life, for a sandwich!"
+5,20,108,3,930554,937310,"I know it sounds crazy, but Chandler this is  the greatest sandwich in the world!"
+5,20,29,5,939438,942190,"So you didn't uh, choose Ross before me."
+5,20,108,5,942441,947028,No! I would never do that! You-you're like my brother!
+5,20,29,6,947905,949989,Really?!
+5,20,108,4,950282,960375,"Yeah! In fact, to prove how much you mean to me,  here."
+5,20,29,3,961418,961970,Thanks.
+5,20,108,0,961970,964192,"No, eh, oh-oi, easy, it's not a hot dog!"
+5,20,108,4,970386,972095,How good is that?
+5,20,29,3,972346,974055,"Oh-oi-ho, yeah!"
+5,20,108,4,974890,976182,See?
+5,20,108,6,976350,977642,"Oh-whoa-hey, dude, what are you doing?!"
+5,20,29,6,979395,981604,I thought you were showing me how much you mean to me.
+5,20,108,3,981814,994784,Yeah. With a bite!  Gee-e-e-eez!

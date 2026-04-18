@@ -1,0 +1,41 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,4,108,3,440982,443817,How ya doin'? Welcome. Good to see ya!
+5,4,207,4,444777,446403,This will be your phone.
+5,4,108,4,450283,454870,"That's great. But uh, I'm not really expecting a lot of calls."
+5,4,207,4,455371,457539,No you answer it and take pledges.
+5,4,108,6,457707,459040,But I'm the host!
+5,4,207,4,459208,463086,"No, Gary Collins is the host. You'll be answering the phones."
+5,4,108,4,464297,468425,"You don't seem to understand. See, I was Dr. Drake Remoray."
+5,4,207,4,468593,471136,"Well, here's your phone doctor."
+5,4,62,4,738279,744409,"Now maybe you just like wanna but the whole duck in there! Who cares, y'know? Now I got the legs"
+5,4,29,4,747121,752167,"How many times have I told you guys, you"
+5,4,144,4,753043,753895,Hi Chandler.
+5,4,29,4,753895,754772,Hey!
+5,4,144,4,754879,757714,"Uh, listen, I need that broiling pan that Joey borrowed the other day."
+5,4,29,5,757882,767432,"Oh that was yours? Uh, yeah, we used it when the duck was throwing up caterpillars."
+5,4,144,4,764430,767432,William Sonoma
+5,4,29,4,767600,769225,Expect it in 4-6 weeks.
+5,4,29,4,770936,779277,"Umm, hey, umm, Joey's gonna be at the telethon for the rest of the day, we have the whole place to ourselves."
+5,4,144,4,777777,779277,"Yeah, so?"
+5,4,29,4,779445,784574,"Well I just, thought maybe you'd wanna book some time with the best you'd ever had."
+5,4,144,4,785618,789037,"Y'know what, champ? I think I'll pass."
+5,4,29,6,789538,790050,Why?
+5,4,144,4,790050,792099,Why?
+5,4,29,4,805054,806679,What's your point?
+5,4,108,0,822071,824447,What?! What good is that gonna do anybody?
+5,4,178,5,824615,831704,"Well, it helps the bee look tough in front of his bee friends. The bee is happy and I am definitely not."
+5,4,108,4,831872,835542,"Now, y'know the bee probably died after he stung ya."
+5,4,178,6,840422,842340,"Aw, dammit!"
+5,4,207,4,843717,846052,Back on in 30 seconds people!
+5,4,108,4,853060,856187,"Hey, excuse me, would you mind switching with me?"
+5,4,170,0,856355,858648,"Hey, no way, I'm in the shot man."
+5,4,108,0,859358,861194,Come on man! You've been here all day!
+5,4,170,4,861194,862509,"Yeah, I-I'm taking pledges here, eh?"
+5,4,207,4,862611,865405,"We're on in 3, 2,"
+5,4,77,4,865906,870910,Welcome back to our fall telethon. Now if you've been enjoying the performance of
+5,4,108,4,982147,983940,PBS Telethon.
+5,4,178,4,984108,985149,Hi Joey.
+5,4,108,3,985317,986442,Hey Pheebs!
+5,4,178,4,988320,990405,I
+5,4,108,6,990572,994867,"$200? Are you sure Pheebs? I mean, after what"
+5,4,178,0,995035,1007880,"Oh, I'm still mad at them but I also now that they bring happiness to lots of kids who's moms didn't kill themselves, so by supporting them, I'm doing a good thing, but I'm not"

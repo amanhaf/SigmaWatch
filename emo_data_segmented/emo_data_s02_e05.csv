@@ -1,0 +1,49 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+2,5,29,4,111903,114738,What've you been up to?
+2,5,94,4,114948,121203,"Oh, you know, the usual, teaching aerobics, partying way too much."
+2,5,94,4,121621,127459,"Oh, and in case you were wondering, those are my legs on the new James Bond poster."
+2,5,29,3,130547,134758,Can you hold on a moment? I have another call.  I love her.
+2,5,197,4,133091,134758,I know.
+2,5,29,4,136261,136903,I'm back.
+2,5,94,4,136903,139185,"So, are we gonna get together or what?"
+2,5,29,4,139347,145561,"Um, absolutely. Uh, how 'bout tomorrow afternoon? Do you know uh, Central Perk in the Village, say, five-ish?"
+2,5,94,4,145770,148647,"Great, I'll see you then."
+2,5,29,3,152318,154528,Ok.  Ok. Having a phone has finally paid off.
+2,5,197,4,156823,163620,"Even though you do do a good Bob impression, I'm thinkin' when she sees you tomorow, she's probably gonna realize, ""Hey, you're not Bob."""
+2,5,29,4,167375,172337,"I'm hoping that when Bob doesn't show up, she will seek comfort in the open arms of the wry stranger at the next table."
+2,5,197,1,172547,175299,Oh my god. You are pure evil.
+2,5,29,0,176634,185058,"Ok, pure evil , horny and alone . I've done this"
+2,5,197,4,191566,196820,"Yeah, yeah, everybody's here. Hey, everybody, say hi to Julie in New Mexico."
+2,5,7,3,194360,196820,"Hi, Julie!"
+2,5,185,4,294544,295627,What?
+2,5,144,4,295837,301008,"I'm at work, ordinary day, you know, chop chop chop, sauti, sauti, sauti."
+2,5,144,4,301884,304970,"All of a sudden, Leon, the manager, calls me into his office."
+2,5,144,3,305221,308181,"It turns out they fired the head lunch chef, and guess who got the job."
+2,5,108,5,308433,311184,"If it's not you, this is a horrible story."
+2,5,144,3,312603,314730,"Fortunately, it is me."
+2,5,144,3,314897,317735,"And, they made me head of purchasing, thank you very much."
+2,5,144,3,319694,322612,"Anyway, I just ran into Ross and Chandler downstairs, and they think we should go out and celebrate."
+2,5,144,4,322822,323782,"Y'know, someplace nice."
+2,5,108,4,323782,323919,"Yeah, someplace nice."
+2,5,185,3,330371,331872,Yeah!
+2,5,108,4,332248,334833,How much do you think I can get for my kidney?
+2,5,178,0,670795,672921,I don’t have time for this.
+2,5,144,4,673089,676758,"No, that is what the game is."
+2,5,144,5,1049131,1052091,You know what? I'm not gonna be able to enjoy this.
+2,5,197,5,1052301,1055595,"Yeah, I know, it's my birthday. We all should be here."
+2,5,29,4,1056305,1057805,"So, let's go."
+2,5,197,4,1064354,1066689,"Well maybe, you know, maybe we should stay for one song."
+2,5,29,4,1066940,1069776,"Yeah, I mean, it would be rude to them  for us to leave now."
+2,5,144,4,1069985,1071986,"You know, the guys are probably having a great time."
+2,5,144,6,1102392,1104769,Do I know you?
+2,5,144,6,1105687,1109649,"Oh my god, little Stevie Fisher? How've you been?"
+2,5,210,4,1109900,1111567,"Good, good, I'm a lawyer now."
+2,5,144,6,1112152,1114070,You can't be a lawyer. You're eight.
+2,5,210,3,1114988,1117406,"Listen, it was nice to see you. I gotta run backstage."
+2,5,144,6,1117616,1118741,"Uh, wait, backstage?"
+2,5,210,4,1118951,1120576,"Oh, yeah, my firm represents the band."
+2,5,197,4,1120828,1121380,Ross.
+2,5,29,4,1121380,1122344,Chandler.
+2,5,210,4,1123872,1126791,"Look, you guys wanna meet the group?"
+2,5,210,4,1126959,1128000,Come on.
+2,5,210,6,1128252,1131504,"So, are you one of the ones who fooled around with my dad?"

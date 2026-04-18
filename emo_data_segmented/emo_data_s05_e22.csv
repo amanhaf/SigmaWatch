@@ -1,0 +1,59 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,22,178,3,300758,302634,Oh hey Joey! What's up?
+5,22,108,4,303428,308432,"I can't decide which route to take to Vegas. Hey, you've traveled a lot right?"
+5,22,178,4,308641,310309,"Yeah, I've been around."
+5,22,108,4,310518,313854,"Okay, so-so which route should I take the northern route or the southern route?"
+5,22,178,4,314063,317649,"Ooh, if you take the northern route there's a man in Illinois with a beard of bees."
+5,22,108,3,319485,322279,Great! Problem solved!
+5,22,197,1,393184,394226,What's with her?
+5,22,108,4,394477,395145,I don't know.
+5,22,108,4,395145,396670,"But hey, I know we can decide."
+5,22,108,4,396813,399195,"Okay, I'm gonna ask you questions and you answer real quick."
+5,22,108,4,399195,399577,Okay?
+5,22,197,4,399577,400028,Okay.
+5,22,108,4,400149,401501,What do you like better action or comedy?
+5,22,197,4,401501,401835,Action.
+5,22,108,4,401984,404778,Who would you rather sleep with Monica or Rachel?
+5,22,197,1,409200,411201,"Dude, you are sick."
+5,22,108,6,412995,417624,"Oh, I'm sorry. I forgot you had that whole Rachel thing."
+5,22,144,4,428136,429930,Oh that's an eye removal machine.
+5,22,185,0,429930,430709,"All right, I'm outta here!"
+5,22,144,3,430847,432472,I'm kidding! I'm kidding!
+5,22,185,0,438062,438774,So were done then!
+5,22,52,4,438774,441242,"Almost! But first, we gotta start."
+5,22,52,4,441524,442906,This is a glaucoma test.
+5,22,185,4,442906,443468,Uh-huh.
+5,22,52,4,443468,444656,Sit down.
+5,22,185,4,444735,446695,Okay.
+5,22,52,4,448698,451491,"But your chin here.  Now, you'll feel a small puff of air in each eye."
+5,22,185,6,451659,453326,What?!
+5,22,144,0,453953,457080,"A small puff of air, now come on!"
+5,22,178,0,1098555,1101265,You said I was boring--Ohh!
+5,22,197,4,1104269,1105770,When did I say you were boring?!
+5,22,178,6,1105979,1109065,"Oh my God, I remember now! We were playing chess!"
+5,22,197,4,1109274,1112235,Phoebe! You and I have
+5,22,178,3,1112444,1113486,"Oh, come on!"
+5,22,178,4,1113654,1117615,"Yes, remember that time on the frozen lake?"
+5,22,178,0,1117783,1121744,"We were playing chess, you said I was boring, and then you took off your energy mask and you were Cameron Diaz!"
+5,22,178,4,1124832,1127333,"Okay, there's a"
+5,22,108,3,1154987,1161033,Hey-hey! Stanley! Hey-hey! You're leading man is here! Let's get to work.
+5,22,208,5,1161201,1165371,"Umm, slight change of plans. We've shut down."
+5,22,108,6,1166331,1167478,Wh-what?! Why?!
+5,22,208,5,1167666,1170001,"It's a money thing, we don't have any."
+5,22,108,6,1172296,1174348,You're kidding right?
+5,22,208,4,1174348,1174814,No.
+5,22,108,6,1175424,1178926,What?!
+5,22,208,4,1179178,1182471,"It-it's probably just temporary. We're hoping to get some more money soon, so if could just uh, hang out."
+5,22,108,5,1182723,1184640,"Uh, hang out?! How long?"
+5,22,208,4,1184808,1185700,I don't know.
+5,22,208,0,1185700,1186118,A week?
+5,22,208,4,1186118,1187050,Maybe two?
+5,22,208,4,1187050,1188700,The money will turn up!
+5,22,208,4,1188770,1190532,People will always wanna invest in movies!
+5,22,208,4,1190532,1192248,"Hey, you're not rich are ya?"
+5,22,108,0,1192441,1194192,No!
+5,22,208,4,1192441,1199322,"Eh, worth a shot.  Look Joey, let me know where you're staying, okay?"
+5,22,231,4,1201909,1204011,"Hey pal, are you Joey Tribbiani?"
+5,22,108,4,1204011,1204641,Yeah.
+5,22,231,4,1204828,1206245,These got left for ya.
+5,22,108,5,1206496,1212877,Thanks.   Congratulations on your big break.

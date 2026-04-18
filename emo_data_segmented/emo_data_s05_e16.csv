@@ -1,0 +1,30 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,16,108,4,8174,9236,Hey!
+5,16,29,4,9236,9458,Hey!
+5,16,144,4,9458,9600,Hey!
+5,16,108,6,10635,13929,What are you guys doing up?
+5,16,29,4,10635,17766,"Oh, we wanted to finish the crossword before we went to bed. Hey, do you know a six-letter word for red?"
+5,16,29,4,21604,29111,"Yeah, I think that's wrong, but there's a Connect the Dots in here for you later.  Hey, how about maroon?"
+5,16,144,3,30363,32865,"Yes, you are so smart!"
+5,16,108,3,33366,36076,"Aww, you guys are so cute!"
+5,16,144,4,36244,37953,I know.
+5,16,108,4,38496,40205,"All right, I'll see you in the morning."
+5,16,144,4,40373,41999,Okay.
+5,16,178,4,393726,399940,"Oh. Oh! Ma'am? Excuse me, ma'am?"
+5,16,178,0,395603,399940,You can't put your cigarette out on a tree!
+5,16,243,4,400108,401817,"Yeah I can, it worked real well."
+5,16,178,0,402652,405737,No but you shouldn't! Don't ever do that again.
+5,16,243,0,405947,408865,I won't!  Until I have my next cigarette.
+5,16,178,0,409117,412494,Hold it!  N.Y.P.D! Freeze punk!
+5,16,243,6,412662,414121,What?!
+5,16,178,0,414288,419334,Yeah that's right you are so busted.  Book 'em.
+5,16,243,6,421170,424089,Who are you talking too?
+5,16,178,1,424465,428385,"Save it Red! Unless you wanna spend the night in the slammer, you apologize to the tree."
+5,16,243,4,428970,431430,I am
+5,16,178,0,432014,435642,You apologize to the tree right now or I am calling for backup.   Backup! Backup!!
+5,16,243,2,439480,441189,I-I'm sorry! Sorry.
+5,16,178,4,441399,444526,"Okay, cancel backup! Cancel backup!"
+5,16,197,4,920502,925924,"Come here to me. No-no, you come here to me."
+5,16,185,3,927072,932513,Hey Ross! I brought reinforcements.
+5,16,197,3,929470,932513,"Oh great! What, you brought Joey?"
+5,16,185,4,932765,934223,"Well, I brought the next best thing."

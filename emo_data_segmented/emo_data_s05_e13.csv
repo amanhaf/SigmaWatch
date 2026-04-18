@@ -1,0 +1,33 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,13,144,4,2460,7339,I can't
+5,13,29,3,13680,14722,"Oh! Look at that, time's up! My turn!"
+5,13,144,6,16933,18325,That was a half an hour?
+5,13,29,4,18325,19409,It's your timer.
+5,13,144,4,22731,27234,"Y'know, I don't like to brag about it, but I give the"
+5,13,29,3,27485,30320,"All right, then massage me up right nice!"
+5,13,29,3,32240,35242,Ah! Ahh!! Ahh!!
+5,13,144,4,35410,36952,"It's so good, isn't it?"
+5,13,29,3,37203,39413,It's so good I don't know what I've done to deserve it!
+5,13,144,3,41458,42543,Say good-bye to sore muscles!
+5,13,29,3,42543,43190,Good-bye muscles!!
+5,13,108,4,1254378,1255419,Hi.
+5,13,29,4,1255629,1257421,"Hey man, how did the audition go?"
+5,13,108,5,1257839,1259257,Estelle said I didn't get it.
+5,13,185,6,1259508,1262718,What?! Why? Joey you were so ready for it!
+5,13,108,3,1263011,1268641,"Yeah, I thought so too but, she said the casting people had some problems with me."
+5,13,197,6,1267474,1268641,What kind of problem?
+5,13,108,5,1268976,1274021,"Well to tell you the truth, they uh,  they had a problem with the bag!"
+5,13,29,6,1271821,1274021,Oh my God!
+5,13,108,5,1275565,1278109,Y'know what? It was a stupid play anyway!
+5,13,144,5,1279069,1280820,"Y'know, Joey, I think it's time to give up the bag."
+5,13,108,5,1281280,1282842,I don't wanna give up the bag.
+5,13,108,0,1282842,1283670,I don't have to give up the bag!
+5,13,108,5,1284116,1286617,Do I Rach?
+5,13,108,0,1290038,1292456,"Oh, you think I should give up the bag!"
+5,13,185,4,1292749,1297169,"Honey wait, Joey, I’m sorry I mean as terrific as I think you are with it"
+5,13,185,5,1299339,1304051,I just don't know if the world is ready for you and your bag.
+5,13,108,5,1306555,1308139,I can't believe I'm hearing this!
+5,13,185,5,1308390,1309242,Wait a minute!
+5,13,185,4,1308390,1319275,"I'm not saying that you shouldn’t have a bag, I just—it's just there are other bags that are a little less umm,  controversial."
+5,13,185,0,1309242,1311612,Wait a minute!
+5,13,29,4,1320319,1322987,"Yeah umm, they're called wallets."
