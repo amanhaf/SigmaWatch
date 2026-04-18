@@ -336,14 +336,20 @@ select.ep-select:focus{border-color:var(--accent)}
 /* ── TIMELINE ── */
 #timeline-wrap{
   flex:1;
-  overflow:hidden;
+  overflow-y:auto;
+  overflow-x:hidden;
   position:relative;
+  min-height:0;
 }
 
 #timeline-svg-wrap{
   width:100%;
-  height:100%;
+  min-height:100%;
 }
+
+#timeline-wrap::-webkit-scrollbar{width:8px}
+#timeline-wrap::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+#timeline-wrap::-webkit-scrollbar-track{background:transparent}
 
 /* axis */
 .axis text{
@@ -525,28 +531,6 @@ select.ep-select:focus{border-color:var(--accent)}
   <div id="emotion-pills"></div>
 </div>
 
-<!-- PREVIEW PANEL -->
-<div id="preview-panel">
-  <div id="preview-transcript">
-    <div class="preview-empty">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="14" width="28" height="2" rx="1" fill="currentColor"/>
-        <rect x="8" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
-        <rect x="22" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
-        <rect x="13" y="5" width="6" height="6" rx="1" fill="currentColor"/>
-      </svg>
-      <span>Drag on the timeline to inspect a window</span>
-      <span style="font-size:9px;opacity:.6">← → arrow keys move the window</span>
-    </div>
-  </div>
-  <div id="preview-stats">
-    <div class="pstat-title">Window summary</div>
-    <div id="pstat-content" style="color:var(--muted);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.03em;opacity:.6">
-      Select a window to see emotion breakdown
-    </div>
-  </div>
-</div>
-
 <!-- TIMELINE -->
 <div id="timeline-wrap">
   <div id="timeline-svg-wrap"></div>
@@ -562,11 +546,16 @@ select.ep-select:focus{border-color:var(--accent)}
   <span class="window-size" id="window-size-lbl">no window</span>
   <button class="ctrl-btn" onclick="zoomWindow(1)" title="Expand window">+ Widen</button>
   <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="zoomTimelineAt(0.85)" title="Zoom in timeline">Time +</button>
+  <button class="ctrl-btn" onclick="zoomTimelineAt(1.15)" title="Zoom out timeline">Time −</button>
+  <button class="ctrl-btn" onclick="resetTimelineZoom()" title="Reset timeline view">Reset Time</button>
+  <div class="ctrl-divider"></div>
   <button class="ctrl-btn" onclick="clearBrush()">✕ Clear</button>
   <div class="ctrl-divider"></div>
   <div class="kbd-hint">
     <span class="kbd"><kbd>←</kbd><kbd>→</kbd> move window</span>
     <span class="kbd"><kbd>shift</kbd>+<kbd>←→</kbd> resize</span>
+    <span class="kbd"><kbd>mouse wheel</kbd> zoom timeline</span>
     <span class="kbd"><kbd>esc</kbd> clear</span>
   </div>
 </div>
@@ -617,6 +606,9 @@ const SHAPE_FNS = {
 
 const MARGIN = {top:12,right:24,bottom:38,left:90};
 const LANE_H = 60;
+const BASE_LANE_LABEL_BAND = 56;
+const LANE_LABEL_OFFSET = 9;
+const LABEL_ROW_H = 12;
 
 // ═══════════════════════════════════════════════════════════════
 //  STATE
@@ -627,6 +619,10 @@ let activeEmotions = new Set(Object.keys(EMOTIONS));
 let currentBrush = null; // [t0, t1]
 let xScale, brushBehavior, brushG, svgD3;
 let episodeData = [];
+let renderedData = [];
+let laneLabelBand = BASE_LANE_LABEL_BAND;
+let lanePitch = LANE_H + laneLabelBand;
+let timelineViewDomain = null;
 
 function normalizeText(value){
   return value==null?'':String(value).trim();
@@ -642,11 +638,169 @@ function setLoadingState(message,isError=false){
   document.getElementById('stat-dur').textContent=isError?'ERR':'Loading';
   document.getElementById('stat-sp').textContent=isError?'ERR':'...';
 
-  document.getElementById('preview-transcript').innerHTML=`
-    <div class="preview-empty">
-      <span>${message}</span>
-      <span style="font-size:9px;opacity:.6">Use an HTTP server to allow CSV loading via d3.csv</span>
-    </div>`;
+  const timeline=document.getElementById('timeline-svg-wrap');
+  timeline.innerHTML=`<div class="no-data"><span>${message}</span><span style="font-size:9px;font-family:'IBM Plex Mono',monospace;opacity:.6">Use an HTTP server to allow CSV loading via d3.csv</span></div>`;
+}
+
+function estimateLabelWidth(text){
+  return Math.max(24,text.length*6.1);
+}
+
+function buildSelectedLabelLayout(items,minX,maxX){
+  const placedItems=[];
+  let maxRows=0;
+  const bySpeaker=d3.group(items,d=>d.speaker);
+
+  bySpeaker.forEach(spItems=>{
+    const sorted=spItems.slice().sort((a,b)=>a.cx-b.cx);
+    const rowRightEdges=[];
+
+    sorted.forEach(item=>{
+      const text=normalizeText(item.utterance);
+      const width=estimateLabelWidth(text);
+      const x=Math.max(minX,Math.min(maxX,item.cx));
+      const left=x-width/2;
+      const right=x+width/2;
+
+      let rowIndex=rowRightEdges.findIndex(edge=>left>edge+6);
+      if(rowIndex===-1){
+        rowIndex=rowRightEdges.length;
+        rowRightEdges.push(right);
+      } else {
+        rowRightEdges[rowIndex]=right;
+      }
+
+      maxRows=Math.max(maxRows,rowIndex+1);
+      placedItems.push({
+        ...item,
+        labelText:text,
+        labelX:x,
+        labelRow:rowIndex,
+      });
+    });
+  });
+
+  return {placedItems,maxRows};
+}
+
+function getRequiredLaneLabelBand(maxRows){
+  if(!maxRows) return BASE_LANE_LABEL_BAND;
+  return Math.max(BASE_LANE_LABEL_BAND,LANE_LABEL_OFFSET+maxRows*LABEL_ROW_H+6);
+}
+
+function applyDynamicLaneSpacing(items){
+  if(!xScale) return false;
+  const minX=xScale.range()[0]+8;
+  const maxX=xScale.range()[1]-8;
+  const {maxRows}=buildSelectedLabelLayout(items,minX,maxX);
+  const requiredBand=getRequiredLaneLabelBand(maxRows);
+  if(requiredBand===laneLabelBand) return false;
+  laneLabelBand=requiredBand;
+  lanePitch=LANE_H+laneLabelBand;
+  return true;
+}
+
+function getSelectedRenderedData(t0,t1){
+  return renderedData.filter(d=>d.end>=t0&&d.start<=t1).sort((a,b)=>a.start-b.start);
+}
+
+function getEpisodeBounds(){
+  if(!episodeData.length) return [0,1];
+  return [d3.min(episodeData,d=>d.start),d3.max(episodeData,d=>d.end)];
+}
+
+function clampTimelineView(min,max){
+  const [b0,b1]=getEpisodeBounds();
+  const total=Math.max(1,b1-b0);
+  const minSpan=Math.max(20000,total*0.04);
+
+  let lo=Math.max(b0,min);
+  let hi=Math.min(b1,max);
+  let span=hi-lo;
+
+  if(span<minSpan){
+    const mid=(lo+hi)/2;
+    lo=mid-minSpan/2;
+    hi=mid+minSpan/2;
+  }
+
+  if(hi-lo>total){
+    lo=b0;
+    hi=b1;
+  }
+
+  if(lo<b0){
+    hi=Math.min(b1,hi+(b0-lo));
+    lo=b0;
+  }
+  if(hi>b1){
+    lo=Math.max(b0,lo-(hi-b1));
+    hi=b1;
+  }
+
+  return [lo,hi];
+}
+
+function zoomTimelineAt(factor,anchorRatio=0.5){
+  if(!episodeData.length) return;
+
+  const [b0,b1]=getEpisodeBounds();
+  const [v0,v1]=timelineViewDomain||[b0,b1];
+  const span=v1-v0;
+  const anchor=v0+span*Math.max(0,Math.min(1,anchorRatio));
+
+  const nextSpan=span*factor;
+  const nextMin=anchor-nextSpan*anchorRatio;
+  const nextMax=nextMin+nextSpan;
+  timelineViewDomain=clampTimelineView(nextMin,nextMax);
+
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function resetTimelineZoom(){
+  if(!episodeData.length) return;
+  const [b0,b1]=getEpisodeBounds();
+  timelineViewDomain=[b0,b1];
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function clearSelectedUtteranceLabels(){
+  if(!svgD3) return;
+  svgD3.selectAll('.selected-label-layer').remove();
+}
+
+function renderSelectedUtteranceLabels(items){
+  if(!svgD3){
+    return;
+  }
+
+  clearSelectedUtteranceLabels();
+  if(!items.length) return;
+
+  const minX=xScale.range()[0]+8;
+  const maxX=xScale.range()[1]-8;
+  const {placedItems}=buildSelectedLabelLayout(items,minX,maxX);
+
+  const labelLayer=svgD3.append('g').attr('class','selected-label-layer');
+  labelLayer.selectAll('text')
+    .data(placedItems,d=>`${d.speaker}-${d.start}-${d.end}-${d.utterance}`)
+    .enter()
+    .append('text')
+    .attr('x',d=>d.labelX)
+    .attr('y',d=>d.labelY+d.labelRow*LABEL_ROW_H)
+    .attr('fill',d=>(EMOTIONS[d.emotion]||EMOTIONS.neutral).color)
+    .attr('font-family','IBM Plex Mono, monospace')
+    .attr('font-size','10px')
+    .attr('font-weight','500')
+    .attr('text-anchor','middle')
+    .attr('dominant-baseline','hanging')
+    .attr('opacity',0.95)
+    .attr('pointer-events','none')
+    .text(d=>d.labelText);
+
+  labelLayer.selectAll('text').append('title').text(d=>d.utterance);
 }
 
 function getEpisodeCsvPaths(){
@@ -796,6 +950,10 @@ function loadEpisode(){
   episodeData=ALL_DATA.filter(d=>d.season===currentSeason&&d.episode===currentEpisode)
     .sort((a,b)=>a.start-b.start);
 
+  laneLabelBand=BASE_LANE_LABEL_BAND;
+  lanePitch=LANE_H+laneLabelBand;
+  timelineViewDomain=getEpisodeBounds();
+
   // reset filters for new episode
   const spSet=[...new Set(episodeData.map(d=>d.speaker))];
   activeSpeakers=new Set(spSet);
@@ -806,7 +964,7 @@ function loadEpisode(){
   buildSpeakerPills(spSet);
   buildEmotionPills();
   render();
-  updatePreview([]);
+  clearSelectedUtteranceLabels();
   updateWindowLabel();
   document.getElementById('onboard').style.display='block';
 }
@@ -930,20 +1088,21 @@ function getFilteredData(){
 
 function render(){
   wrap.innerHTML='';
+  renderedData=[];
   const fdata=getFilteredData();
   if(!fdata.length){
+    clearSelectedUtteranceLabels();
     wrap.innerHTML='<div class="no-data"><span>No data matches current filters.</span><span style="font-size:9px;font-family:\'IBM Plex Mono\',monospace;opacity:.5">Try enabling more speakers or emotions above</span></div>';
     return;
   }
 
   const speakers=[...activeSpeakers].sort((a,b)=>a.localeCompare(b));
   const W=wrap.clientWidth||900;
-  const H=speakers.length*LANE_H+MARGIN.top+MARGIN.bottom;
+  const H=speakers.length*lanePitch+MARGIN.top+MARGIN.bottom;
 
   svgD3=d3.select(wrap).append('svg').attr('width',W).attr('height',H).style('display','block');
 
-  const tMin=d3.min(episodeData,d=>d.start);
-  const tMax=d3.max(episodeData,d=>d.end);
+  const [tMin,tMax]=timelineViewDomain||getEpisodeBounds();
   const maxDur=d3.max(episodeData,d=>d.end-d.start);
 
   xScale=d3.scaleLinear().domain([tMin,tMax]).range([MARGIN.left,W-MARGIN.right]);
@@ -959,7 +1118,7 @@ function render(){
 
   // Lanes
   speakers.forEach((sp,i)=>{
-    const y0=MARGIN.top+i*LANE_H;
+    const y0=MARGIN.top+i*lanePitch;
     svgD3.append('rect').attr('x',MARGIN.left).attr('y',y0)
       .attr('width',W-MARGIN.left-MARGIN.right).attr('height',LANE_H)
       .attr('fill',i%2===0?'rgba(255,255,255,.014)':'transparent');
@@ -992,12 +1151,21 @@ function render(){
   });
 
   // Events
-  const data=fdata.map(d=>({
+  const visibleData=fdata.filter(d=>d.end>=tMin&&d.start<=tMax);
+
+  const data=visibleData.map(d=>({
     ...d,
+    laneTop:MARGIN.top+speakers.indexOf(d.speaker)*lanePitch,
     cx:xScale((d.start+d.end)/2),
-    cy:MARGIN.top+speakers.indexOf(d.speaker)*LANE_H+LANE_H/2,
     r:rScale(d.end-d.start),
-  })).filter(d=>d.cy>0);
+  })).map(d=>(
+    {
+      ...d,
+      cy:d.laneTop+LANE_H/2,
+      labelY:d.laneTop+LANE_H+LANE_LABEL_OFFSET,
+    }
+  )).filter(d=>d.cy>0);
+  renderedData=data;
 
   const emoGroups=d3.group(data,d=>d.emotion);
   emoGroups.forEach((items,emo)=>{
@@ -1050,6 +1218,8 @@ function render(){
 
   if(currentBrush){
     brushG.call(brushBehavior.move,[xScale(currentBrush[0]),xScale(currentBrush[1])]);
+  } else {
+    clearSelectedUtteranceLabels();
   }
 }
 
@@ -1062,28 +1232,33 @@ function brushingLive(evt){
   const [x0,x1]=evt.selection;
   const t0=xScale.invert(x0),t1=xScale.invert(x1);
   updateWindowLabel(t1-t0);
-  const selected=getFilteredData().filter(d=>d.end>=t0&&d.start<=t1).sort((a,b)=>a.start-b.start);
-  updatePreview(selected);
-  updateWindowStats(selected);
+  const selected=getSelectedRenderedData(t0,t1);
+  renderSelectedUtteranceLabels(selected);
 }
 
 function brushEnd(evt){
   if(!evt.selection){
     currentBrush=null;
-    updatePreview([]);
+    laneLabelBand=BASE_LANE_LABEL_BAND;
+    lanePitch=LANE_H+laneLabelBand;
+    render();
+    clearSelectedUtteranceLabels();
     updateWindowLabel();
-    updateWindowStats([]);
     return;
   }
   const [x0,x1]=evt.selection;
   currentBrush=[xScale.invert(x0),xScale.invert(x1)];
+  triggerPreviewUpdate();
 }
 
 function triggerPreviewUpdate(){
   if(!currentBrush) return;
-  const selected=getFilteredData().filter(d=>d.end>=currentBrush[0]&&d.start<=currentBrush[1]).sort((a,b)=>a.start-b.start);
-  updatePreview(selected);
-  updateWindowStats(selected);
+  let selected=getSelectedRenderedData(currentBrush[0],currentBrush[1]);
+  if(applyDynamicLaneSpacing(selected)){
+    render();
+    selected=getSelectedRenderedData(currentBrush[0],currentBrush[1]);
+  }
+  renderSelectedUtteranceLabels(selected);
   updateWindowLabel(currentBrush[1]-currentBrush[0]);
 }
 
@@ -1124,104 +1299,26 @@ function zoomWindow(dir){
 function clearBrush(){
   if(!brushG||!brushBehavior) return;
   currentBrush=null;
+  laneLabelBand=BASE_LANE_LABEL_BAND;
+  lanePitch=LANE_H+laneLabelBand;
   brushG.call(brushBehavior.move,null);
-  updatePreview([]);
+  render();
+  clearSelectedUtteranceLabels();
   updateWindowLabel();
-  updateWindowStats([]);
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  PREVIEW UPDATE
-// ═══════════════════════════════════════════════════════════════
-function updatePreview(items){
-  const cont=document.getElementById('preview-transcript');
-  if(!items.length){
-    cont.innerHTML=`<div class="preview-empty">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="2" y="14" width="28" height="2" rx="1" fill="currentColor"/>
-        <rect x="8" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
-        <rect x="22" y="8" width="2" height="16" rx="1" fill="currentColor" opacity=".5"/>
-        <rect x="13" y="5" width="6" height="6" rx="1" fill="currentColor"/>
-      </svg>
-      <span>Drag on the timeline to inspect a window</span>
-      <span style="font-size:9px;opacity:.6">← → arrow keys move the window</span>
-    </div>`;
-    return;
-  }
-  cont.innerHTML='';
-  items.forEach(d=>{
-    const eConf=EMOTIONS[d.emotion]||{color:'#999',label:d.emotion};
-    const row=document.createElement('div');
-    row.className='utt-row';
-    row.innerHTML=`
-      <div class="utt-meta">
-        <div class="utt-name" style="color:${SPEAKER_COLORS[d.speaker]||'#999'}">${d.speaker}</div>
-        <div class="utt-emo" style="color:${eConf.color}">${eConf.label}</div>
-        <div class="utt-ts">${fmt(d.start)}</div>
-      </div>
-      <div class="utt-text">"${d.utterance}"</div>`;
-    cont.appendChild(row);
-  });
-}
+document.getElementById('timeline-wrap').addEventListener('wheel',evt=>{
+  if(!xScale||!episodeData.length) return;
+  if(evt.target.closest('#timeline-svg-wrap')===null) return;
 
-function updateWindowStats(items){
-  const cont=document.getElementById('pstat-content');
-  if(!items.length){
-    cont.innerHTML='<span style="opacity:.6">Select a window to see emotion breakdown</span>';
-    cont.style.color='var(--muted)';
-    return;
-  }
-  cont.innerHTML='';
-  cont.style.color='';
-
-  // emotion breakdown bars
-  const emoCount={};
-  items.forEach(d=>{ emoCount[d.emotion]=(emoCount[d.emotion]||0)+1; });
-  const maxCount=Math.max(...Object.values(emoCount));
-
-  const title=document.createElement('div');
-  title.className='pstat-title';
-  title.textContent=`${items.length} utterance${items.length!==1?'s':''}`;
-  cont.appendChild(title);
-
-  const barDiv=document.createElement('div');
-  barDiv.className='pstat-bar-row';
-
-  Object.entries(emoCount).sort((a,b)=>b[1]-a[1]).forEach(([emo,count])=>{
-    const eConf=EMOTIONS[emo]||{color:'#999',label:emo};
-    const row=document.createElement('div');
-    row.className='pbar';
-    row.innerHTML=`
-      <span class="pbar-label" style="color:${eConf.color}">${eConf.label}</span>
-      <div class="pbar-track"><div class="pbar-fill" style="width:${(count/maxCount)*100}%;background:${eConf.color}"></div></div>
-      <span class="pbar-count">${count}</span>`;
-    barDiv.appendChild(row);
-  });
-  cont.appendChild(barDiv);
-
-  // speaker breakdown
-  const spCount={};
-  items.forEach(d=>{ spCount[d.speaker]=(spCount[d.speaker]||0)+1; });
-  const title2=document.createElement('div');
-  title2.className='pstat-title';
-  title2.style.marginTop='8px';
-  title2.textContent='By speaker';
-  cont.appendChild(title2);
-
-  const barDiv2=document.createElement('div');
-  barDiv2.className='pstat-bar-row';
-  const maxSp=Math.max(...Object.values(spCount));
-  Object.entries(spCount).sort((a,b)=>b[1]-a[1]).forEach(([sp,count])=>{
-    const row=document.createElement('div');
-    row.className='pbar';
-    row.innerHTML=`
-      <span class="pbar-label" style="color:${SPEAKER_COLORS[sp]||'#999'}">${sp}</span>
-      <div class="pbar-track"><div class="pbar-fill" style="width:${(count/maxSp)*100}%;background:${SPEAKER_COLORS[sp]||'#999'}"></div></div>
-      <span class="pbar-count">${count}</span>`;
-    barDiv2.appendChild(row);
-  });
-  cont.appendChild(barDiv2);
-}
+  evt.preventDefault();
+  const rect=wrap.getBoundingClientRect();
+  const plotLeft=rect.left+MARGIN.left;
+  const plotRight=rect.right-MARGIN.right;
+  const ratio=(evt.clientX-plotLeft)/Math.max(1,plotRight-plotLeft);
+  const factor=evt.deltaY<0?0.85:1.15;
+  zoomTimelineAt(factor,ratio);
+},{passive:false});
 
 function updateWindowLabel(durMs){
   const lbl=document.getElementById('window-size-lbl');
