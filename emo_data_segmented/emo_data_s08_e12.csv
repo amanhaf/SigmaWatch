@@ -1,0 +1,78 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,12,1,3,115115,120202,They made you head of the department!
+8,12,2,3,115115,124373,"No, I get to teach one of his advanced classes!  Why didn’t I get head of the department?"
+8,12,0,4,125375,126877,"Oh! Hey Rach, listen umm"
+8,12,1,4,126877,127381,Yeah.
+8,12,0,4,127502,130003,"I got a big date coming up, do you know a good restaurant?"
+8,12,1,4,130588,135259,"Uh, Paul’s Café. They got great food and it’s really romantic."
+8,12,0,3,135426,136844,"Ooh, great! Thanks!"
+8,12,1,4,137011,140556,"Yeah! Oh, and then afterwards you can take her to the"
+8,12,0,4,147438,151066,"You sure are naming a lot of ways to postpone sex, I’ll tell ya"
+8,12,1,5,151568,153737,"Ooh, I miss dating."
+8,12,1,4,153737,156343,Gettin’ all dressed up and going to a fancy restaurant.
+8,12,1,3,157157,161410,"I’m not gonna be able to do that for so long, and it’s so much fun!"
+8,12,1,4,162120,166248,I mean not that sitting at home worrying about giving birth to a sixteen pound baby is not fun.
+8,12,0,4,167959,168881,"Hey, y’know what?"
+8,12,1,4,168881,171403,Huh?
+8,12,0,4,171403,171592,Why don’t I take you out?
+8,12,1,6,172046,175007,"What?! Joey, you don’t want to go on a date with a pregnant lady."
+8,12,0,3,175175,178051,Yes I do!
+8,12,0,3,175175,185100,"And we’re gonna go out, we’re gonna have a good time, and take your mind off of childbirth and c-sections and-and giant baby heads stretching out"
+8,12,1,3,185268,186768,Okay! I’ll go with ya! I’ll go! I’ll go with ya.
+8,12,0,4,186936,187979,I’ll be fun.
+8,12,1,4,187979,189508,All right?
+8,12,3,4,189606,190278,No.
+8,12,3,0,190278,191090,No!
+8,12,3,3,193067,194902,"Oh, would you look at that Monica?"
+8,12,3,3,195069,197112,"I just knocked off all of your top scores, how sad."
+8,12,4,0,198448,203410,"Okay, I’m next.  Don’t! Don’t start another game! I said I’m next! Phoebe!"
+8,12,3,3,203578,206830,"Oh, I’m sorry. I didn’t hear you over all the winning."
+8,12,4,0,207624,211210,Chandler! Phoebe’s hogging the game!
+8,12,1,6,250458,268016,Joey? Could you get that?  What are you doing here? I thought you were in your room?
+8,12,0,4,268184,271648,"No, I’m picking you up for our date. These are for you."
+8,12,1,3,272188,276900,"Ohh, Lilies. Joey, they’re my favorite. Thank you."
+8,12,0,3,277068,278860,"And, a brownie!"
+8,12,0,4,281197,283615,"Well, half a brownie."
+8,12,0,4,283783,285909,"Actually, it’s just bag."
+8,12,0,4,286077,289705,It’s been a long walk from the flower shop and I was startin’ to feel faint so
+8,12,1,3,290290,292710,Oh man!
+8,12,1,3,292710,293744,This is so great!
+8,12,1,3,293835,296295,I actually feel like I’m going on a real date!
+8,12,1,4,296462,301758,"Although, I have a hint of morning sickness, and I’m wearing underwear that goes up to about……there."
+8,12,0,4,303303,306513,"Hey come on now, this is a real date."
+8,12,0,4,306681,308807,"Uh, so…nice place you got here."
+8,12,0,6,310018,311729,"Foosball, huh?"
+8,12,0,4,311729,313548,Pizza box.
+8,12,0,6,313646,317399,"Oh, a subscription to"
+8,12,1,4,318067,319568,"Yeah, actually that’s my roommate’s."
+8,12,0,4,319736,323530,I would like to meet him. He sounds like a stand up guy.
+8,12,1,4,323698,327909,"Ah yes, but he’s very protective of me so you’d better watch yourself."
+8,12,0,3,328077,330954,"Ah… Hey, so this roommate of yours…is he good looking?"
+8,12,1,4,331122,333248,Hm-mmm
+8,12,0,4,331122,336251,"Oh yeah, it must be tough to keep your hands of him, huh?"
+8,12,1,4,336753,338628,"Yeah, but I’m pretty sure he’s gay."
+8,12,0,0,339547,348930,"No-no-no-no, he’s not! No! Why are you trying to ruin the game? Come on!"
+8,12,2,4,345553,348930,"which brings us back, of course, to Greely’s theory of dominance."
+8,12,2,4,350475,351516,"Okay, that-that’s all for today."
+8,12,2,4,351684,355187,"Oh, uh does anyone know where the Freeman building is?"
+8,12,87,4,355355,357689,"Yeah, it’s the new building on Avenue A."
+8,12,2,6,359484,361943,"What?! That-that’s all the way cross town, I’m supposed to teach a graduate seminar there in ten minutes."
+8,12,87,4,362111,364321,"Ooh, dude. That’s not gonna happen."
+8,12,2,0,367492,371953,Move it! Move it! Move it!! Hey!!! I’m the teacher!!
+8,12,2,4,385676,387219,Hello.
+8,12,2,4,391391,393058,I’m sorry I’m a little late.
+8,12,0,6,393226,393852,Whoa
+8,12,2,4,395645,401650,"Let me start by uh, by introducing myself, I am Professor Geller."
+8,12,2,4,403444,407532,"So to sum up, I’m Professor Geller."
+8,12,0,4,958749,961542,"Oh yeah-yeah, the lobster."
+8,12,1,4,961710,965089,"Yeah, I mean I was up sick all night."
+8,12,0,4,965089,965409,"Yeah me too, all night."
+8,12,1,6,965506,968049,Really?! How come we didn’t cross paths?
+8,12,0,4,968217,977475,"Yeah well that’s because uh…I stayed in my room. Yeah, you don’t want to look in my hamper."
+8,12,0,3,1239821,1247286,"All right, I know! I know. Yeah, it’ll be okay."
+8,12,1,2,1247537,1250165,Oh my God….What’s he gonna do now?
+8,12,1,2,1250165,1251542,I can’t watch!
+8,12,1,4,1251542,1251685,Oh.
+8,12,1,5,1254586,1257798,"Seriously, how can you watch this?"
+8,12,1,2,1257798,1257936,Aren’t you scared?
+8,12,0,2,1261969,1264011,Terrified.

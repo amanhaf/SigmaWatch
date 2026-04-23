@@ -1,0 +1,38 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,3,0,2,453494,456955,I still can’t believe they took away my key. You trust me with yours.
+8,3,3,4,457165,466798,Of course I do! And I’m gonna give it back to you as soon as they’re done with it at the key shining place.
+8,3,0,0,467091,469676,What the hell is that?
+8,3,0,6,470553,472985,"Whoa! Whoa! Whoa! Treeger, what are you doing?"
+8,3,18,4,472985,474437,You said there was a gas leak in here.
+8,3,3,4,474599,475981,Well why don’t you use your key?
+8,3,18,4,475981,479528,"Because by the time I find it on this thing , the whole place might have exploded."
+8,3,18,4,479729,483523,"If that happens at another building that I manage, people are gonna start asking questions."
+8,3,18,0,483733,484285,Come on!
+8,3,18,5,484285,485377,Hurry up.
+8,3,3,4,488196,491031,Oh! We could have done that.
+8,3,4,6,493409,498955,Look at that! Look at that! They’re going into the first class lounge! Do you know what they have in there?
+8,3,5,4,496746,498955,No.
+8,3,4,6,499207,501750,Me neither! We have to get in!
+8,3,5,4,503419,505130,Just act like you belong.
+8,3,4,6,505130,506319,Oh my God! Oranges!
+8,3,5,4,506464,514179,Shh!  Nice to see you again.
+8,3,174,4,509091,514179,"Uh sir, may I see your tickets please?"
+8,3,5,4,514430,516056,"Yes, of course."
+8,3,174,4,517266,519768,"I’m sorry, would you move your thumb? I can’t see the seat number."
+8,3,5,4,519977,523813,"Oh that’s all right, I have it memorized. It’s 1A."
+8,3,4,3,921629,923173,I can’t believe we’re here.
+8,3,5,6,923173,925429,Oh you’ve got to be kidding me.
+8,3,4,6,925591,927091,What?
+8,3,194,4,928677,932722,"As a wedding gift to you, the hotel would like to give you the honeymoon suite."
+8,3,4,0,932973,936392,No!! You have been screwing us all day!
+8,3,47,6,936685,937520,Who are you?
+8,3,5,4,937520,940742,We’re you just ten seconds later!
+8,3,4,0,942316,944736,You already got the first class tickets.. you got the lounge!
+8,3,4,0,944736,946293,I mean we should get free stuff too!
+8,3,4,0,946487,949530,I mean you’re not the only ones on your honeymoon!
+8,3,29,4,950658,952827,Well you can have the suite if you want.
+8,3,29,4,952827,955061,We don’t care about where we stay.
+8,3,29,0,955245,957177,We’re here to celebrate our love together.
+8,3,29,0,957177,959641,We don’t have to get free stuff.
+8,3,29,3,959792,962043,We just want to be together.
+8,3,5,4,964713,966673,We need the stuff.

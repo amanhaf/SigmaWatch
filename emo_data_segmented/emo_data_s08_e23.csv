@@ -1,0 +1,105 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+8,23,1,4,70934,74687,Okay. Just give us a second. Ross!
+8,23,2,4,76064,77065,Yeah?
+8,23,1,4,77232,78454,Give her some money.
+8,23,2,4,78454,81670,I really think they’re out of rooms.
+8,23,1,0,81819,86616,"They’re not!! Ross, they’re just saving them for the important people!! Okay?! What-what if I was the president?!"
+8,23,2,4,86866,89994,"Well then we’d be in a lot of trouble, you don’t know where any countries are."
+8,23,2,4,92413,93915,Okay.
+8,23,2,4,94582,105760,"Uh, say would you umm… Would you mind checking again to see if any umm, private rooms may have  opened up?"
+8,23,69,4,103758,105760,This is a hospital.
+8,23,1,4,105969,106861,Y’know what?
+8,23,1,0,106861,109490,I’d have to say I really don’t care for your tone.
+8,23,1,0,109597,115478,And this is not the only hospital in this city and we have no problem to—Whoa!
+8,23,1,6,114000,115478,Oh gosh!
+8,23,2,6,115645,117407,What-what?
+8,23,1,6,117407,117545,Ow! Ow! Contraction.  Ow-ow! Ow-ow!
+8,23,69,4,121359,123487,Would you like to see a semi-private room?
+8,23,1,4,123487,124758,"Yeah, it couldn’t hurt to look."
+8,23,2,4,256327,259122,"Oh. Okay, just breathe."
+8,23,20,6,259330,262917,"Oh honey, I think I’m having one too!"
+8,23,180,3,266337,271092,Look at this!  There we go!
+8,23,1,4,370942,374237,"Oh, that’s very—Really very-very okay."
+8,23,180,3,374445,384205,"Julie’s cervix is dilated a seven centimeters, that’s about four fingers. The doctor let me feel it myself."
+8,23,1,1,384413,385845,"No, I don’t think we’ll be doing that."
+8,23,2,1,385845,387763,We’re not gonna do that.
+8,23,20,4,387875,390795,"Well, if you like you can feel Rachel’s and then feel mine to compare."
+8,23,22,4,392547,394099,Am I interrupting?
+8,23,2,3,394099,395150,Uh yes! Thank you.
+8,23,1,4,395258,397177,Oh. Oh wait no.
+8,23,2,4,397177,397314,Later.
+8,23,2,3,405434,411065,"Hi! I’m so glad you’re here, but it’s gonna be a while. I-I wished you’d called first."
+8,23,22,4,411274,413694,"Oh that’s all right, I’m coming back later with your father."
+8,23,2,3,413694,413982,Oh good.
+8,23,22,4,414068,417080,I actually needed to talk to you before the birth.
+8,23,2,4,417080,418293,"Okay, what’s up?"
+8,23,22,4,418406,424787,"I brought something that I want to give you, assuming of course that you want it."
+8,23,2,6,425454,428624,"Ma, you’re asking me to marry you?"
+8,23,22,3,429750,434130,"This is your grandmother’s engagement ring, I want you to give it to Rachel."
+8,23,2,6,434380,436972,"Mom no, come on! Thank you."
+8,23,22,2,436972,437902,Just hear me out!
+8,23,2,4,526472,528784,Hey. Who’s that?
+8,23,1,4,528784,529118,New people.
+8,23,2,4,530893,533104,What happened to the Disgustingtons?
+8,23,1,0,533854,535773,They’re having their baby!
+8,23,1,0,535773,539319,It’s not fair Ross we got here first!
+8,23,1,4,539402,542071,Right after you left they wheeled her off into delivery.
+8,23,1,4,542238,548411,Oh but not before she gave me a juicy shot of little Jamie just crowning away.
+8,23,2,6,548619,553040,"Wow! Sorry. So uh, how are the new people?"
+8,23,1,5,553249,556961,"Well they have uh, some unusual pet names for each other."
+8,23,1,1,557128,562425,"Including umm, evil bitch and uh, sick bastard."
+8,23,1,6,563884,568056,Oh God oh!
+8,23,1,6,568056,568515,Contraction!
+8,23,83,0,568723,569905,Are you looking at her?!
+8,23,175,0,569905,570772,No!
+8,23,83,0,570933,572644,Don’t you look at her you sick bastard!
+8,23,175,2,572644,576213,Honey I swear! I wasn’t looking at her!
+8,23,83,0,576397,580067,She’s in labor! You like that you sick son of a bitch!
+8,23,2,4,584405,585614,"Umm. Umm, I’m-I’m just gonna—"
+8,23,83,0,585781,588993,See? See? It was because you were looking fat pervert!
+8,23,2,4,589785,593831,"No-no, I’m…I’m sure no one was looking. Just want some privacy."
+8,23,83,4,597793,599670,You miss your girlfriend?
+8,23,2,4,600963,603799,Just ignore them.
+8,23,1,4,611098,612183,Ross.
+8,23,2,2,612183,612328,What? What?
+8,23,1,4,612433,616103,He’s looking at me.
+8,23,2,0,616270,621859,Hey! You wanna live to see your baby?!
+8,23,83,0,618439,621859,Don’t you talk to my husband like that you stupid bastard!
+8,23,3,3,966036,971125,"Ooh, this is it!  Oh, that’s him! That’s him!"
+8,23,0,3,968455,971125,Great! Go get him.
+8,23,3,4,971834,975003,"Wait a second, or maybe you can go in first."
+8,23,0,4,975921,977548,He’s not really my type.
+8,23,3,4,978632,986723,"No not you, Dr. Drake Remoray. You can ask him questions and see what’s he like. People tell doctors everything."
+8,23,3,5,986932,991353,"But lately all the guys I meet seem really nice at first, then they turn out to be the biggest jerks."
+8,23,0,5,991562,994815,You do attract some stinkers.
+8,23,0,4,1050037,1055042,Hi! I’m Dr. Drake Remoray and I have a few routine questions I need to ask you.
+8,23,47,6,1055959,1058253,Really? I’ve been dealing with Dr. Wells.
+8,23,0,4,1058462,1061548,"I know, but I’m a neurologist."
+8,23,0,4,1061715,1066803,"And just to be on the safe side, Dr. Wells wanted a more comprehensive overview of you status so he sent me."
+8,23,47,6,1067221,1068972,Dr. Wells is a woman.
+8,23,0,4,1070891,1078732,"That was a test. Good response. All right, full name."
+8,23,47,4,1075437,1078732,Clifford Burnett.
+8,23,0,4,1078899,1080151,Date of birth?
+8,23,65,4,1080151,1082312,November 16
+8,23,0,4,1082402,1083654,Age?
+8,23,65,0,1085239,1087742,Can’t you figure that out based on my date of birth?
+8,23,0,4,1087742,1090723,"I’m a doctor Cliff, not a mathematician."
+8,23,65,4,1091662,1094540,I’m 33.
+8,23,0,4,1094000,1097000,"Okay. And uh, are you married."
+8,23,65,4,1097000,1097876,No.
+8,23,0,6,1098085,1104758,"Oh really? So, 33 and still single, would you say you have commitment issues?"
+8,23,65,6,1106051,1109096,Are all the questions this personal?
+8,23,0,4,1109263,1110806,Yes.
+8,23,65,5,1112015,1115269,Well uh if you must know I’m a widower.
+8,23,0,5,1115435,1118147,Oh that’s terrible. I’m-I’m really sorry.
+8,23,65,4,1118147,1119566,Yeah.
+8,23,0,4,1119940,1123235,Hmm. Do you sleep with women and never call them again?
+8,23,65,4,1125279,1127155,No.
+8,23,6,6,1270757,1274761,"So? Congratulations you two, I didn’t even know you got married."
+8,23,1,3,1275011,1276596,Oh we-we didn’t.
+8,23,2,4,1278432,1282894,"Um uh…We’re-we’re just having this baby together but uh, uh that’s all."
+8,23,6,6,1284020,1285814,Why?!!
+8,23,2,4,1287441,1294322,"Uh well umm…we’re just not in that place, y’know? But we’re very excited about this."
+8,23,6,4,1294531,1297367,Oh. Well then shut me up.
+8,23,1,4,1298452,1299494,Just tell me how.
+8,23,6,2,1301455,1303707,"Uh-oh, I feel another one coming."
