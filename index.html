@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transcript Emotion Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --bg:       #0c0d10;
+  --surf:     #13151b;
+  --surf2:    #1a1d26;
+  --surf3:    #20232e;
+  --border:   #242733;
+  --border2:  #2e3242;
+  --text:     #dde0ec;
+  --muted:    #52566a;
+  --muted2:   #3a3d4f;
+  --accent:   #5b8dee;
+  --accent-d: #3a6acc;
+
+  --joy:      #f5c842;
+  --anger:    #e85555;
+  --sadness:  #5b8dee;
+  --fear:     #c366d4;
+  --surprise: #f07c38;
+  --disgust:  #4ec994;
+  --neutral:  #6b7190;
+
+  --lane-h: 60px;
+  --header-h: 52px;
+  --controls-h: 48px;
+  --filters-h: 44px;
+  --preview-h: 200px;
+  --footer-h: 36px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:13px;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  user-select:none;
+}
+
+/* ── HEADER ── */
+header{
+  height:var(--header-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:16px;
+  flex-shrink:0;
+}
+.logo{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--text);
+  white-space:nowrap;
+}
+.logo em{color:var(--accent);font-style:normal}
+.sep{width:1px;height:20px;background:var(--border2);flex-shrink:0}
+
+/* episode selector */
+.ep-group{display:flex;align-items:center;gap:8px}
+.ep-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+select.ep-select{
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  color:var(--text);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:3px;
+  cursor:pointer;
+  outline:none;
+  appearance:none;
+  -webkit-appearance:none;
+  padding-right:22px;
+  background-image:url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%235a5e72'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 7px center;
+  transition:border-color .15s;
+}
+select.ep-select:hover{border-color:var(--accent)}
+select.ep-select:focus{border-color:var(--accent)}
+
+/* stats badge */
+.stats{
+  margin-left:auto;
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+.stat{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  letter-spacing:.04em;
+}
+.stat b{color:var(--text);font-weight:500}
+
+/* ── FILTER BAR ── */
+#filter-bar{
+  height:var(--filters-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:6px;
+  flex-shrink:0;
+  overflow-x:auto;
+}
+#filter-bar::-webkit-scrollbar{height:3px}
+#filter-bar::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.filter-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--muted);
+  white-space:nowrap;
+  flex-shrink:0;
+  margin-right:4px;
+}
+.filter-sep{width:1px;height:20px;background:var(--border2);margin:0 6px;flex-shrink:0}
+
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  padding:4px 10px 4px 8px;
+  border-radius:20px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:all .15s;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.pill .dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  flex-shrink:0;
+}
+.pill.active{
+  border-color:currentColor;
+  color:var(--text);
+  background:rgba(255,255,255,.04);
+}
+.pill.active .dot{box-shadow:0 0 0 2px rgba(255,255,255,.15)}
+.pill:hover{border-color:var(--muted);color:var(--text)}
+
+.pill-all{
+  padding:4px 10px;
+  border-radius:20px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:all .15s;
+  flex-shrink:0;
+}
+.pill-all:hover,.pill-all.active{
+  border-color:var(--muted);
+  color:var(--text);
+  background:rgba(255,255,255,.04);
+}
+
+/* ── PREVIEW PANEL ── */
+#preview-panel{
+  height:var(--preview-h);
+  background:var(--surf);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  flex-shrink:0;
+  overflow:hidden;
+}
+
+#preview-transcript{
+  flex:1;
+  overflow-y:auto;
+  padding:14px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+#preview-transcript::-webkit-scrollbar{width:4px}
+#preview-transcript::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+
+.utt-row{
+  display:flex;
+  gap:12px;
+  align-items:baseline;
+  animation:slideIn .18s ease;
+  padding:6px 8px;
+  border-radius:4px;
+  transition:background .1s;
+  cursor:default;
+}
+.utt-row:hover{background:var(--surf2)}
+@keyframes slideIn{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
+
+.utt-meta{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  min-width:80px;
+  flex-shrink:0;
+}
+.utt-name{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.utt-emo{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.65;
+}
+.utt-ts{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:8px;
+  color:var(--muted);
+}
+.utt-text{
+  font-size:13px;
+  font-weight:300;
+  line-height:1.6;
+  color:var(--text);
+  font-style:italic;
+}
+
+.preview-empty{
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  letter-spacing:.04em;
+  text-align:center;
+}
+.preview-empty svg{opacity:.3}
+
+/* stats sidebar */
+#preview-stats{
+  width:180px;
+  flex-shrink:0;
+  border-left:1px solid var(--border);
+  padding:14px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  overflow-y:auto;
+}
+.pstat-title{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  color:var(--muted);
+  margin-bottom:2px;
+}
+.pstat-bar-row{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.pbar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.pbar-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  color:var(--muted);
+  width:52px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-transform:uppercase;
+}
+.pbar-track{
+  flex:1;
+  height:4px;
+  background:var(--surf3);
+  border-radius:2px;
+  overflow:hidden;
+}
+.pbar-fill{height:100%;border-radius:2px;transition:width .3s ease}
+.pbar-count{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:8px;
+  color:var(--muted);
+  min-width:14px;
+  text-align:right;
+}
+
+/* ── TIMELINE ── */
+#timeline-wrap{
+  flex:1;
+  overflow-y:auto;
+  overflow-x:hidden;
+  position:relative;
+  min-height:0;
+}
+
+#timeline-svg-wrap{
+  width:100%;
+  min-height:100%;
+}
+
+#timeline-wrap::-webkit-scrollbar{width:8px}
+#timeline-wrap::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+#timeline-wrap::-webkit-scrollbar-track{background:transparent}
+
+/* axis */
+.axis text{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  fill:var(--muted);
+}
+.axis .domain{stroke:none}
+.axis .tick line{stroke:var(--border2)}
+
+/* brush */
+.brush .selection{
+  fill:rgba(91,141,238,.15);
+  stroke:var(--accent);
+  stroke-width:1.5;
+}
+.brush .overlay{cursor:crosshair}
+.brush .handle{fill:var(--accent);rx:2}
+
+/* ── CONTROLS ── */
+#controls{
+  height:var(--controls-h);
+  background:var(--surf);
+  border-top:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+  gap:12px;
+  flex-shrink:0;
+}
+
+.ctrl-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:6px 14px;
+  border-radius:4px;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .15s;
+}
+.ctrl-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ctrl-btn.primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+.ctrl-btn.primary:hover{background:var(--accent-d);border-color:var(--accent-d)}
+.ctrl-btn:disabled{opacity:.3;cursor:not-allowed;pointer-events:none}
+
+.ctrl-divider{width:1px;height:22px;background:var(--border2)}
+
+.kbd-hint{
+  margin-left:auto;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.kbd{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:9px;
+  color:var(--muted);
+  letter-spacing:.03em;
+}
+.kbd kbd{
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  border-radius:3px;
+  padding:1px 5px;
+  font-family:inherit;
+  font-size:9px;
+  color:var(--text);
+}
+
+/* window size display */
+.window-size{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  padding:4px 10px;
+  border:1px solid var(--border2);
+  border-radius:3px;
+  background:var(--surf2);
+  min-width:90px;
+  text-align:center;
+}
+
+/* tooltip */
+#tooltip{
+  position:fixed;
+  pointer-events:none;
+  background:var(--surf2);
+  border:1px solid var(--border2);
+  border-radius:5px;
+  padding:10px 14px;
+  font-size:12px;
+  max-width:260px;
+  line-height:1.55;
+  opacity:0;
+  transition:opacity .1s;
+  z-index:9999;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+.tt-sp{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;font-weight:600}
+.tt-txt{font-style:italic;font-weight:300;margin-bottom:5px}
+.tt-row{display:flex;align-items:center;gap:5px;margin-top:3px}
+.tt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tt-emo{font-family:'IBM Plex Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.04em}
+.tt-time{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--muted);margin-top:4px}
+
+/* onboarding pulse */
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+.onboard-hint{
+  position:absolute;
+  bottom:52px;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:10px;
+  color:var(--accent);
+  letter-spacing:.06em;
+  animation:pulse 1.8s ease infinite;
+  pointer-events:none;
+  white-space:nowrap;
+}
+
+/* no-data */
+.no-data{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  color:var(--muted);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;
+  gap:8px;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Transcript <em>Emotion</em> Explorer</div>
+  <div class="sep"></div>
+  <div class="ep-group">
+    <span class="ep-label">Season</span>
+    <select class="ep-select" id="sel-season"></select>
+    <span class="ep-label">Episode</span>
+    <select class="ep-select" id="sel-episode"></select>
+  </div>
+  <div class="sep"></div>
+  <div class="stats">
+    <span class="stat">Utterances: <b id="stat-count">—</b></span>
+    <span class="stat">Duration: <b id="stat-dur">—</b></span>
+    <span class="stat">Speakers: <b id="stat-sp">—</b></span>
+  </div>
+</header>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <span class="filter-label">Speakers</span>
+  <button class="pill-all active" id="btn-all-sp" onclick="toggleAllSpeakers()">All</button>
+  <div id="speaker-pills"></div>
+  <div class="filter-sep"></div>
+  <span class="filter-label">Emotions</span>
+  <button class="pill-all active" id="btn-all-emo" onclick="toggleAllEmotions()">All</button>
+  <div id="emotion-pills"></div>
+</div>
+
+<!-- TIMELINE -->
+<div id="timeline-wrap">
+  <div id="timeline-svg-wrap"></div>
+  <div class="onboard-hint" id="onboard">↔ drag to select · hover shapes for detail</div>
+</div>
+
+<!-- CONTROLS -->
+<div id="controls">
+  <button class="ctrl-btn" id="btn-prev" onclick="moveWindow(-1)" title="Move window left (←)">◀ Prev</button>
+  <button class="ctrl-btn" id="btn-next" onclick="moveWindow(1)" title="Move window right (→)">Next ▶</button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="zoomWindow(-1)" title="Shrink window">− Narrow</button>
+  <span class="window-size" id="window-size-lbl">no window</span>
+  <button class="ctrl-btn" onclick="zoomWindow(1)" title="Expand window">+ Widen</button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="zoomTimelineAt(0.85)" title="Zoom in timeline">Time +</button>
+  <button class="ctrl-btn" onclick="zoomTimelineAt(1.15)" title="Zoom out timeline">Time −</button>
+  <button class="ctrl-btn" onclick="resetTimelineZoom()" title="Reset timeline view">Reset Time</button>
+  <div class="ctrl-divider"></div>
+  <button class="ctrl-btn" onclick="clearBrush()">✕ Clear</button>
+  <div class="ctrl-divider"></div>
+  <div class="kbd-hint">
+    <span class="kbd"><kbd>←</kbd><kbd>→</kbd> move window</span>
+    <span class="kbd"><kbd>shift</kbd>+<kbd>←→</kbd> resize</span>
+    <span class="kbd"><kbd>mouse wheel</kbd> zoom timeline</span>
+    <span class="kbd"><kbd>esc</kbd> clear</span>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  DATA  (baked in – George's preprocessed output)
+// ═══════════════════════════════════════════════════════════════
+let ALL_DATA = [];
+
+const DATA_FILES = {
+  speakers: 'speakers.csv',
+  emotions: 'emotions.csv',
+  episodesDir: 'emo_data_segmented',
+  maxSeason: 9,
+  maxEpisode: 25,
+};
+
+// ═══════════════════════════════════════════════════════════════
+//  CONSTANTS
+// ═══════════════════════════════════════════════════════════════
+const EMOTIONS = {
+  anger:    {color:'#e85555',label:'Anger'},
+  disgust:  {color:'#4ec994',label:'Disgust'},
+  fear:     {color:'#c366d4',label:'Fear'},
+  joy:      {color:'#f5c842',label:'Joy'},
+  neutral:  {color:'#6b7190',label:'Neutral'},
+  sadness:  {color:'#5b8dee',label:'Sadness'},
+  surprise: {color:'#f07c38',label:'Surprise'},
+};
+
+const SPEAKER_COLORS = {
+  Chandler:'#5b8dee', Joey:'#f07c38', Phoebe:'#f5c842',
+  Ross:'#4ec994', Monica:'#e85555', Rachel:'#c366d4',
+};
+
+const SHAPE_FNS = {
+  joy:     (g,r)=>g.append('rect').attr('x',d=>d.cx-r(d)).attr('y',d=>d.cy-r(d)).attr('width',d=>r(d)*2).attr('height',d=>r(d)*2).attr('rx',2),
+  anger:   (g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return`${d.cx},${d.cy-s} ${d.cx+s*.87},${d.cy+s*.5} ${d.cx-s*.87},${d.cy+s*.5}`}),
+  sadness: (g,r)=>g.append('circle').attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>r(d)),
+  fear:    (g,r)=>g.append('polygon').attr('points',d=>{const s=r(d)*1.1;return[0,1,2,3].map(i=>{const a=(i/4)*Math.PI*2-Math.PI/4;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
+  // surprise → cross/plus shape: clearly distinct from triangle & star
+  surprise:(g,r)=>g.append('path').attr('d',d=>{const s=r(d),t=s*.38;return`M${d.cx-t},${d.cy-s}h${t*2}v${s-t}h${s-t}v${t*2}h${-(s-t)}v${s-t}h${-t*2}v${-(s-t)}h${-(s-t)}v${-t*2}h${s-t}z`}),
+  // neutral → pentagon (closed, no implied direction)
+  neutral: (g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return[0,1,2,3,4].map(i=>{const a=(i/5)*Math.PI*2-Math.PI/2;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
+  disgust: (g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return[0,1,2,3,4,5,6,7].map(i=>{const a=(i/8)*Math.PI*2;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
+};
+
+const MARGIN = {top:12,right:24,bottom:38,left:160};
+const LANE_H = 60;
+const BASE_LANE_LABEL_BAND = 56;
+const LANE_LABEL_OFFSET = 9;
+const LABEL_ROW_H = 12;
+
+// ═══════════════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════════════
+let currentSeason = 1, currentEpisode = 1;
+let activeSpeakers = new Set();
+let activeEmotions = new Set(Object.keys(EMOTIONS));
+let currentBrush = null; // [t0, t1]
+let xScale, brushBehavior, brushG, svgD3;
+let episodeData = [];
+let renderedData = [];
+let laneLabelBand = BASE_LANE_LABEL_BAND;
+let lanePitch = LANE_H + laneLabelBand;
+let timelineViewDomain = null;
+
+function normalizeText(value){
+  return value==null?'':String(value).trim();
+}
+
+function parseNumeric(value){
+  const n=Number(normalizeText(value));
+  return Number.isFinite(n)?n:NaN;
+}
+
+function setLoadingState(message,isError=false){
+  document.getElementById('stat-count').textContent=isError?'ERR':'...';
+  document.getElementById('stat-dur').textContent=isError?'ERR':'Loading';
+  document.getElementById('stat-sp').textContent=isError?'ERR':'...';
+
+  const timeline=document.getElementById('timeline-svg-wrap');
+  timeline.innerHTML=`<div class="no-data"><span>${message}</span><span style="font-size:9px;font-family:'IBM Plex Mono',monospace;opacity:.6">Use an HTTP server to allow CSV loading via d3.csv</span></div>`;
+}
+
+function estimateLabelWidth(text){
+  return Math.max(24,text.length*6.1);
+}
+
+function buildSelectedLabelLayout(items,minX,maxX){
+  const placedItems=[];
+  let maxRows=0;
+  const bySpeaker=d3.group(items,d=>d.speaker);
+
+  bySpeaker.forEach(spItems=>{
+    const sorted=spItems.slice().sort((a,b)=>a.cx-b.cx);
+    const rowRightEdges=[];
+
+    sorted.forEach(item=>{
+      const text=normalizeText(item.utterance);
+      const width=estimateLabelWidth(text);
+      const x=Math.max(minX,Math.min(maxX,item.cx));
+      const left=x-width/2;
+      const right=x+width/2;
+
+      let rowIndex=rowRightEdges.findIndex(edge=>left>edge+6);
+      if(rowIndex===-1){
+        rowIndex=rowRightEdges.length;
+        rowRightEdges.push(right);
+      } else {
+        rowRightEdges[rowIndex]=right;
+      }
+
+      maxRows=Math.max(maxRows,rowIndex+1);
+      placedItems.push({
+        ...item,
+        labelText:text,
+        labelX:x,
+        labelRow:rowIndex,
+      });
+    });
+  });
+
+  return {placedItems,maxRows};
+}
+
+function getRequiredLaneLabelBand(maxRows){
+  if(!maxRows) return BASE_LANE_LABEL_BAND;
+  return Math.max(BASE_LANE_LABEL_BAND,LANE_LABEL_OFFSET+maxRows*LABEL_ROW_H+6);
+}
+
+function applyDynamicLaneSpacing(items){
+  if(!xScale) return false;
+  const minX=xScale.range()[0]+8;
+  const maxX=xScale.range()[1]-8;
+  const {maxRows}=buildSelectedLabelLayout(items,minX,maxX);
+  const requiredBand=getRequiredLaneLabelBand(maxRows);
+  if(requiredBand===laneLabelBand) return false;
+  laneLabelBand=requiredBand;
+  lanePitch=LANE_H+laneLabelBand;
+  return true;
+}
+
+function getSelectedRenderedData(t0,t1){
+  return renderedData.filter(d=>d.end>=t0&&d.start<=t1).sort((a,b)=>a.start-b.start);
+}
+
+function getEpisodeBounds(){
+  if(!episodeData.length) return [0,1];
+  const b0=d3.min(episodeData,d=>d.start);
+  const b1=d3.max(episodeData,d=>d.end);
+  const pad=(b1-b0)*0.06;
+  return [b0-pad, b1+pad];
+}
+
+function clampTimelineView(min,max){
+  const [b0,b1]=getEpisodeBounds();
+  const total=Math.max(1,b1-b0);
+  const minSpan=Math.max(20000,total*0.04);
+
+  let lo=min;
+  let hi=max;
+  let span=hi-lo;
+
+  if(span<minSpan){
+    const mid=(lo+hi)/2;
+    lo=mid-minSpan/2;
+    hi=mid+minSpan/2;
+  }
+
+  // Only clamp to padded bounds
+  if(lo<b0) lo=b0;
+  if(hi>b1) hi=b1;
+
+  return [lo,hi];
+}
+
+function zoomTimelineAt(factor,anchorRatio=0.5){
+  if(!episodeData.length) return;
+
+  const [b0,b1]=getEpisodeBounds();
+  const [v0,v1]=timelineViewDomain||[b0,b1];
+  const span=v1-v0;
+  const anchor=v0+span*Math.max(0,Math.min(1,anchorRatio));
+
+  const nextSpan=span*factor;
+  const nextMin=anchor-nextSpan*anchorRatio;
+  const nextMax=nextMin+nextSpan;
+  timelineViewDomain=clampTimelineView(nextMin,nextMax);
+
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function resetTimelineZoom(){
+  if(!episodeData.length) return;
+  const [b0,b1]=getEpisodeBounds();
+  timelineViewDomain=[b0,b1];
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function clearSelectedUtteranceLabels(){
+  if(!svgD3) return;
+  svgD3.selectAll('.selected-label-layer').remove();
+}
+
+function renderSelectedUtteranceLabels(items){
+  if(!svgD3){
+    return;
+  }
+
+  clearSelectedUtteranceLabels();
+  if(!items.length) return;
+
+  const minX=xScale.range()[0]+8;
+  const maxX=xScale.range()[1]-8;
+  const {placedItems}=buildSelectedLabelLayout(items,minX,maxX);
+
+  const labelLayer=svgD3.append('g').attr('class','selected-label-layer');
+  labelLayer.selectAll('text')
+    .data(placedItems,d=>`${d.speaker}-${d.start}-${d.end}-${d.utterance}`)
+    .enter()
+    .append('text')
+    .attr('x',d=>d.labelX)
+    .attr('y',d=>d.labelY+d.labelRow*LABEL_ROW_H)
+    .attr('fill',d=>(EMOTIONS[d.emotion]||EMOTIONS.neutral).color)
+    .attr('font-family','IBM Plex Mono, monospace')
+    .attr('font-size','10px')
+    .attr('font-weight','500')
+    .attr('text-anchor','middle')
+    .attr('dominant-baseline','hanging')
+    .attr('opacity',0.95)
+    .attr('pointer-events','none')
+    .text(d=>d.labelText);
+
+  labelLayer.selectAll('text').append('title').text(d=>d.utterance);
+}
+
+function getEpisodeCsvPaths(){
+  const paths=[];
+  for(let season=1;season<=DATA_FILES.maxSeason;season++){
+    for(let episode=1;episode<=DATA_FILES.maxEpisode;episode++){
+      const s=String(season).padStart(2,'0');
+      const e=String(episode).padStart(2,'0');
+      paths.push(`${DATA_FILES.episodesDir}/emo_data_s${s}_e${e}.csv`);
+    }
+  }
+  return paths;
+}
+
+async function loadCodeMap(path,labelKey,codeKey,labelTransform=v=>v){
+  const rows=await d3.csv(path);
+  const map=new Map();
+
+  rows.forEach(row=>{
+    const code=parseNumeric(row[codeKey]);
+    const labelRaw=normalizeText(row[labelKey]);
+    if(!Number.isFinite(code)||!labelRaw) return;
+
+    const label=labelTransform(labelRaw);
+    if(map.has(code)&&map.get(code)!==label){
+      console.warn(`Conflicting mapping in ${path} for code ${code}. Keeping first value.`);
+      return;
+    }
+    map.set(code,label);
+  });
+
+  return map;
+}
+
+async function loadAllDataFromCsv(){
+  const [speakerMap,emotionMap]=await Promise.all([
+    loadCodeMap(DATA_FILES.speakers,'Speaker','Code'),
+    loadCodeMap(DATA_FILES.emotions,'Emotion','Code',v=>v.toLowerCase()),
+  ]);
+
+  const csvPaths=getEpisodeCsvPaths();
+  const settled=await Promise.all(
+    csvPaths.map(path=>
+      d3.csv(path)
+        .then(rows=>({path,rows}))
+        .catch(()=>null)
+    )
+  );
+
+  const rows=[];
+  const missingSpeakerCodes=new Set();
+  const missingEmotionCodes=new Set();
+  let malformedCount=0;
+
+  settled.forEach(result=>{
+    if(!result||!Array.isArray(result.rows)||!result.rows.length) return;
+    result.rows.forEach(row=>{
+      const season=parseNumeric(row.Season);
+      const episode=parseNumeric(row.Episode);
+      const speakerCode=parseNumeric(row.Speaker_coded);
+      const emotionCode=parseNumeric(row.Emotion_coded);
+      const start=parseNumeric(row.StartTime_int);
+      const end=parseNumeric(row.EndTime_int);
+
+      if(!Number.isFinite(season)||!Number.isFinite(episode)||!Number.isFinite(speakerCode)||
+         !Number.isFinite(emotionCode)||!Number.isFinite(start)||!Number.isFinite(end)){
+        malformedCount++;
+        return;
+      }
+
+      const speaker=speakerMap.get(speakerCode)||`Speaker ${speakerCode}`;
+      let emotion=emotionMap.get(emotionCode)||'neutral';
+      if(!emotionMap.has(emotionCode)) missingEmotionCodes.add(emotionCode);
+      if(!speakerMap.has(speakerCode)) missingSpeakerCodes.add(speakerCode);
+      if(!EMOTIONS[emotion]) emotion='neutral';
+
+      rows.push({
+        season,
+        episode,
+        speaker,
+        emotion,
+        emotion_code:emotionCode,
+        start,
+        end,
+        utterance:normalizeText(row.Utterance),
+      });
+    });
+  });
+
+  rows.sort((a,b)=>a.season-b.season||a.episode-b.episode||a.start-b.start);
+
+  if(malformedCount>0) console.warn(`Skipped ${malformedCount} malformed row(s).`);
+  if(missingSpeakerCodes.size>0) console.warn('Missing speaker codes:',[...missingSpeakerCodes].sort((a,b)=>a-b));
+  if(missingEmotionCodes.size>0) console.warn('Missing emotion codes:',[...missingEmotionCodes].sort((a,b)=>a-b));
+
+  return rows;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  INIT: SEASON/EPISODE DROPDOWNS
+// ═══════════════════════════════════════════════════════════════
+function initSelectors() {
+  const seasons = [...new Set(ALL_DATA.map(d=>d.season))].sort((a,b)=>a-b);
+  const selS = document.getElementById('sel-season');
+  const selE = document.getElementById('sel-episode');
+
+  selS.innerHTML='';
+  selE.innerHTML='';
+  if(!seasons.length) return;
+
+  seasons.forEach(s=>{
+    const o=document.createElement('option');
+    o.value=s; o.textContent=`Season ${s}`;
+    selS.appendChild(o);
+  });
+  currentSeason=seasons[0];
+  selS.value=currentSeason;
+  selS.addEventListener('change',()=>{
+    currentSeason=+selS.value;
+    updateEpisodeDropdown();
+    loadEpisode();
+  });
+  selE.addEventListener('change',()=>{
+    currentEpisode=+selE.value;
+    loadEpisode();
+  });
+  updateEpisodeDropdown();
+}
+
+function updateEpisodeDropdown(){
+  const selE=document.getElementById('sel-episode');
+  selE.innerHTML='';
+  const eps=[...new Set(ALL_DATA.filter(d=>d.season===currentSeason).map(d=>d.episode))].sort((a,b)=>a-b);
+  eps.forEach(e=>{
+    const o=document.createElement('option');
+    o.value=e; o.textContent=`Episode ${e}`;
+    selE.appendChild(o);
+  });
+  currentEpisode=eps[0]||1;
+  selE.value=currentEpisode;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LOAD EPISODE
+// ═══════════════════════════════════════════════════════════════
+function loadEpisode(){
+  episodeData=ALL_DATA.filter(d=>d.season===currentSeason&&d.episode===currentEpisode)
+    .sort((a,b)=>a.start-b.start);
+
+  laneLabelBand=BASE_LANE_LABEL_BAND;
+  lanePitch=LANE_H+laneLabelBand;
+  timelineViewDomain=getEpisodeBounds();
+
+  // reset filters for new episode
+  const spSet=[...new Set(episodeData.map(d=>d.speaker))];
+  activeSpeakers=new Set(spSet);
+  activeEmotions=new Set(Object.keys(EMOTIONS));
+  currentBrush=null;
+
+  updateStats();
+  buildSpeakerPills(spSet);
+  buildEmotionPills();
+  render();
+  clearSelectedUtteranceLabels();
+  updateWindowLabel();
+  document.getElementById('onboard').style.display='block';
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  STATS BAR
+// ═══════════════════════════════════════════════════════════════
+function updateStats(){
+  if(!episodeData.length) return;
+  document.getElementById('stat-count').textContent=episodeData.length;
+  const dur=(d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start))/1000;
+  const m=Math.floor(dur/60),s=Math.floor(dur%60);
+  document.getElementById('stat-dur').textContent=`${m}m ${s}s`;
+  document.getElementById('stat-sp').textContent=[...new Set(episodeData.map(d=>d.speaker))].length;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  FILTER PILLS
+// ═══════════════════════════════════════════════════════════════
+function buildSpeakerPills(speakers){
+  const cont=document.getElementById('speaker-pills');
+  cont.innerHTML='';
+  speakers.forEach(sp=>{
+    const btn=document.createElement('button');
+    btn.className='pill active';
+    btn.dataset.sp=sp;
+    btn.style.color=SPEAKER_COLORS[sp]||'#999';
+    btn.innerHTML=`<span class="dot" style="background:${SPEAKER_COLORS[sp]||'#999'}"></span>${sp}`;
+    btn.addEventListener('click',()=>{
+      if(activeSpeakers.has(sp)){
+        if(activeSpeakers.size===1) return; // keep at least one
+        activeSpeakers.delete(sp);
+        btn.classList.remove('active');
+      } else {
+        activeSpeakers.add(sp);
+        btn.classList.add('active');
+      }
+      const allActive=activeSpeakers.size===speakers.length;
+      document.getElementById('btn-all-sp').classList.toggle('active',allActive);
+      render();
+      if(currentBrush) triggerPreviewUpdate();
+    });
+    cont.appendChild(btn);
+  });
+}
+
+function buildEmotionPills(){
+  const cont=document.getElementById('emotion-pills');
+  cont.innerHTML='';
+  // Rainbow order: red → orange → yellow → green → blue → purple
+  const RAINBOW_ORDER = ['anger','disgust','joy','surprise','sadness','fear','neutral'];
+  const presentEmos = RAINBOW_ORDER.filter(e => episodeData.some(d => d.emotion === e));
+  presentEmos.forEach(emo=>{
+    const conf=EMOTIONS[emo];
+    if(!conf) return;
+    const btn=document.createElement('button');
+    btn.className='pill active';
+    btn.dataset.emo=emo;
+    btn.style.color=conf.color;
+    btn.innerHTML=`<span class="dot" style="background:${conf.color}"></span>${conf.label}`;
+    btn.addEventListener('click',()=>{
+      if(activeEmotions.has(emo)){
+        if(activeEmotions.size===1) return;
+        activeEmotions.delete(emo);
+        btn.classList.remove('active');
+      } else {
+        activeEmotions.add(emo);
+        btn.classList.add('active');
+      }
+      const allActive=activeEmotions.size===presentEmos.length;
+      document.getElementById('btn-all-emo').classList.toggle('active',allActive);
+      render();
+      if(currentBrush) triggerPreviewUpdate();
+    });
+    cont.appendChild(btn);
+  });
+}
+
+function toggleAllSpeakers(){
+  const pills=document.querySelectorAll('#speaker-pills .pill');
+  const speakers=[...new Set(episodeData.map(d=>d.speaker))];
+  const allActive=activeSpeakers.size===speakers.length;
+  if(allActive){
+    // keep only first
+    activeSpeakers=new Set([speakers[0]]);
+    pills.forEach((p,i)=>p.classList.toggle('active',i===0));
+    document.getElementById('btn-all-sp').classList.remove('active');
+  } else {
+    activeSpeakers=new Set(speakers);
+    pills.forEach(p=>p.classList.add('active'));
+    document.getElementById('btn-all-sp').classList.add('active');
+  }
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+function toggleAllEmotions(){
+  const pills=document.querySelectorAll('#emotion-pills .pill');
+  const presentEmos=[...new Set(episodeData.map(d=>d.emotion))];
+  const allActive=activeEmotions.size===presentEmos.length;
+  if(allActive){
+    activeEmotions=new Set([presentEmos[0]]);
+    pills.forEach((p,i)=>p.classList.toggle('active',i===0));
+    document.getElementById('btn-all-emo').classList.remove('active');
+  } else {
+    activeEmotions=new Set(presentEmos);
+    pills.forEach(p=>p.classList.add('active'));
+    document.getElementById('btn-all-emo').classList.add('active');
+  }
+  render();
+  if(currentBrush) triggerPreviewUpdate();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  RENDER TIMELINE
+// ═══════════════════════════════════════════════════════════════
+const wrap=document.getElementById('timeline-svg-wrap');
+const tooltip=document.getElementById('tooltip');
+
+function getFilteredData(){
+  return episodeData.filter(d=>activeSpeakers.has(d.speaker)&&activeEmotions.has(d.emotion));
+}
+
+function render(){
+  wrap.innerHTML='';
+  renderedData=[];
+  const fdata=getFilteredData();
+  if(!fdata.length){
+    clearSelectedUtteranceLabels();
+    wrap.innerHTML='<div class="no-data"><span>No data matches current filters.</span><span style="font-size:9px;font-family:\'IBM Plex Mono\',monospace;opacity:.5">Try enabling more speakers or emotions above</span></div>';
+    return;
+  }
+
+  const speakers=[...activeSpeakers].sort((a,b)=>a.localeCompare(b));
+  const W=wrap.clientWidth||900;
+  const H=speakers.length*lanePitch+MARGIN.top+MARGIN.bottom;
+
+  svgD3=d3.select(wrap).append('svg').attr('width',W).attr('height',H).style('display','block');
+
+  const [tMin,tMax]=timelineViewDomain||getEpisodeBounds();
+
+  xScale=d3.scaleLinear().domain([tMin,tMax]).range([MARGIN.left,W-MARGIN.right]);
+  const rScale = () => 10; // fixed uniform size — duration encoding removed
+
+  // Gridlines
+  svgD3.append('g').attr('class','gridlines')
+    .selectAll('line').data(xScale.ticks(8)).enter().append('line')
+      .attr('x1',d=>xScale(d)).attr('x2',d=>xScale(d))
+      .attr('y1',MARGIN.top).attr('y2',H-MARGIN.bottom)
+      .attr('stroke','var(--border)').attr('stroke-width',1)
+      .attr('stroke-dasharray','2 5');
+
+  // Lanes
+  speakers.forEach((sp,i)=>{
+    const y0=MARGIN.top+i*lanePitch;
+    svgD3.append('rect').attr('x',MARGIN.left).attr('y',y0)
+      .attr('width',W-MARGIN.left-MARGIN.right).attr('height',LANE_H)
+      .attr('fill',i%2===0?'rgba(255,255,255,.014)':'transparent');
+
+    // speaker label — clickable
+    svgD3.append('text')
+      .attr('x',MARGIN.left-10).attr('y',y0+LANE_H/2+1)
+      .attr('text-anchor','end').attr('dominant-baseline','middle')
+      .attr('font-family','IBM Plex Mono, monospace').attr('font-size','10px')
+      .attr('font-weight','600').attr('letter-spacing','.05em').attr('text-transform','uppercase')
+      .attr('fill','var(--muted)')
+      .style('cursor','pointer')
+      .text(sp.length > 14 ? sp.slice(0,13).toUpperCase()+'…' : sp.toUpperCase())
+      .on('click',()=>{
+        // solo this speaker
+        activeSpeakers=new Set([sp]);
+        document.querySelectorAll('#speaker-pills .pill').forEach(p=>{
+          p.classList.toggle('active',p.dataset.sp===sp);
+        });
+        document.getElementById('btn-all-sp').classList.remove('active');
+        render();
+        if(currentBrush) triggerPreviewUpdate();
+      })
+      .append('title').text('Click to solo this speaker');
+
+    svgD3.append('line')
+      .attr('x1',MARGIN.left).attr('x2',W-MARGIN.right)
+      .attr('y1',y0+LANE_H).attr('y2',y0+LANE_H)
+      .attr('stroke','var(--border)').attr('stroke-width',1);
+  });
+
+  // Events
+  const visibleData=fdata.filter(d=>d.end>=tMin&&d.start<=tMax);
+
+  const data=visibleData.map(d=>({
+    ...d,
+    laneTop:MARGIN.top+speakers.indexOf(d.speaker)*lanePitch,
+    cx:xScale((d.start+d.end)/2),
+    r:rScale(d.end-d.start),
+  })).map(d=>(
+    {
+      ...d,
+      cy:d.laneTop+LANE_H/2,
+      labelY:d.laneTop+LANE_H+LANE_LABEL_OFFSET,
+    }
+  )).filter(d=>d.cy>0);
+  renderedData=data;
+
+  const emoGroups=d3.group(data,d=>d.emotion);
+  emoGroups.forEach((items,emo)=>{
+    const eConf=EMOTIONS[emo]; if(!eConf) return;
+    const g=svgD3.append('g');
+    const isel=g.selectAll('g').data(items).enter().append('g')
+      .style('opacity',.88).style('cursor','pointer')
+      .on('mousemove',(evt,d)=>{
+        tooltip.style.opacity='1';
+        tooltip.style.left=(evt.clientX+14)+'px';
+        tooltip.style.top=(evt.clientY-10)+'px';
+        const dur=((d.end-d.start)/1000).toFixed(1);
+        const ts=fmt(d.start);
+        tooltip.innerHTML=`
+          <div class="tt-sp" style="color:${SPEAKER_COLORS[d.speaker]}">${d.speaker}</div>
+          <div class="tt-txt">"${d.utterance}"</div>
+          <div class="tt-row"><span class="tt-dot" style="background:${eConf.color}"></span><span class="tt-emo" style="color:${eConf.color}">${eConf.label}</span></div>
+          <div class="tt-time">${ts} &nbsp;·&nbsp; ${dur}s</div>`;
+        g.selectAll('g').style('opacity',dd=>dd===d?1:.2);
+      })
+      .on('mouseleave',()=>{
+        tooltip.style.opacity='0';
+        g.selectAll('g').style('opacity',.88);
+      });
+
+    if(SHAPE_FNS[emo]){
+      SHAPE_FNS[emo](isel,d=>d.r).attr('fill',eConf.color).attr('stroke','none');
+    }
+  });
+
+  // Axis
+  svgD3.append('g').attr('class','axis')
+    .attr('transform',`translate(0,${H-MARGIN.bottom})`)
+    .call(d3.axisBottom(xScale).ticks(8)
+      .tickFormat(d=>fmt(d)).tickSize(4));
+  svgD3.select('.axis .domain').remove();
+
+  // Brush
+  brushBehavior=d3.brushX()
+    .extent([[MARGIN.left,MARGIN.top],[W-MARGIN.right,H-MARGIN.bottom]])
+    .on('brush',brushingLive)
+    .on('end',brushEnd);
+
+  brushG=svgD3.append('g').attr('class','brush').call(brushBehavior);
+
+  if(currentBrush){
+    brushG.call(brushBehavior.move,[xScale(currentBrush[0]),xScale(currentBrush[1])]);
+  } else {
+    clearSelectedUtteranceLabels();
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BRUSH HANDLERS
+// ═══════════════════════════════════════════════════════════════
+function brushingLive(evt){
+  if(!evt.selection) return;
+  document.getElementById('onboard').style.display='none';
+  const [x0,x1]=evt.selection;
+  const t0=xScale.invert(x0),t1=xScale.invert(x1);
+  updateWindowLabel(t1-t0);
+  const selected=getSelectedRenderedData(t0,t1);
+  renderSelectedUtteranceLabels(selected);
+}
+
+function brushEnd(evt){
+  if(!evt.selection){
+    currentBrush=null;
+    laneLabelBand=BASE_LANE_LABEL_BAND;
+    lanePitch=LANE_H+laneLabelBand;
+    render();
+    clearSelectedUtteranceLabels();
+    updateWindowLabel();
+    return;
+  }
+  const [x0,x1]=evt.selection;
+  currentBrush=[xScale.invert(x0),xScale.invert(x1)];
+  triggerPreviewUpdate();
+}
+
+function triggerPreviewUpdate(){
+  if(!currentBrush) return;
+  let selected=getSelectedRenderedData(currentBrush[0],currentBrush[1]);
+  if(applyDynamicLaneSpacing(selected)){
+    render();
+    selected=getSelectedRenderedData(currentBrush[0],currentBrush[1]);
+  }
+  renderSelectedUtteranceLabels(selected);
+  updateWindowLabel(currentBrush[1]-currentBrush[0]);
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  WINDOW CONTROLS
+// ═══════════════════════════════════════════════════════════════
+function getStep(){
+  if(!episodeData.length) return 30000;
+  const span=d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start);
+  return span*.08; // 8% of total span
+}
+
+function moveWindow(dir){
+  if(!currentBrush||!xScale) return;
+  const step=getStep();
+  const [t0,t1]=currentBrush;
+  const w=t1-t0;
+  const tMin=d3.min(episodeData,d=>d.start);
+  const tMax=d3.max(episodeData,d=>d.end);
+  let nt0=Math.max(tMin,Math.min(tMax-w,t0+dir*step));
+  currentBrush=[nt0,nt0+w];
+  brushG.call(brushBehavior.move,[xScale(nt0),xScale(nt0+w)]);
+}
+
+function zoomWindow(dir){
+  if(!currentBrush||!xScale) return;
+  const [t0,t1]=currentBrush;
+  const center=(t0+t1)/2;
+  const span=d3.max(episodeData,d=>d.end)-d3.min(episodeData,d=>d.start);
+  let w=t1-t0;
+  w=dir>0?w*1.4:w/1.4;
+  w=Math.max(span*.02,Math.min(span*.8,w));
+  const nt0=center-w/2, nt1=center+w/2;
+  currentBrush=[nt0,nt1];
+  brushG.call(brushBehavior.move,[xScale(nt0),xScale(nt1)]);
+}
+
+function clearBrush(){
+  if(!brushG||!brushBehavior) return;
+  currentBrush=null;
+  laneLabelBand=BASE_LANE_LABEL_BAND;
+  lanePitch=LANE_H+laneLabelBand;
+  brushG.call(brushBehavior.move,null);
+  render();
+  clearSelectedUtteranceLabels();
+  updateWindowLabel();
+}
+
+document.getElementById('timeline-wrap').addEventListener('wheel',evt=>{
+  if(!xScale||!episodeData.length) return;
+  if(evt.target.closest('#timeline-svg-wrap')===null) return;
+
+  evt.preventDefault();
+  const rect=wrap.getBoundingClientRect();
+  const plotLeft=rect.left+MARGIN.left;
+  const plotRight=rect.right-MARGIN.right;
+  const ratio=(evt.clientX-plotLeft)/Math.max(1,plotRight-plotLeft);
+  const factor=evt.deltaY<0?0.85:1.15;
+  zoomTimelineAt(factor,ratio);
+},{passive:false});
+
+function updateWindowLabel(durMs){
+  const lbl=document.getElementById('window-size-lbl');
+  if(!durMs){ lbl.textContent='no window'; return; }
+  const s=(durMs/1000).toFixed(1);
+  lbl.textContent=`${s}s window`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  KEYBOARD NAV
+// ═══════════════════════════════════════════════════════════════
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT') return;
+  if(e.key==='ArrowLeft')  { e.preventDefault(); moveWindow(e.shiftKey?-.5:-1); }
+  if(e.key==='ArrowRight') { e.preventDefault(); moveWindow(e.shiftKey?.5:1); }
+  if(e.key==='Escape')     { clearBrush(); }
+  if(e.key==='+')          { zoomWindow(1); }
+  if(e.key==='-')          { zoomWindow(-1); }
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  HELPERS
+// ═══════════════════════════════════════════════════════════════
+function fmt(ms){
+  const s=ms/1000;
+  const m=Math.floor(s/60),sec=Math.floor(s%60);
+  return `${m}:${String(sec).padStart(2,'0')}`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LEGEND (inline in filter bar, handled by pills)
+// ═══════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════
+//  RESIZE
+// ═══════════════════════════════════════════════════════════════
+let resizeTimer;
+window.addEventListener('resize',()=>{
+  clearTimeout(resizeTimer);
+  resizeTimer=setTimeout(()=>{ render(); if(currentBrush) triggerPreviewUpdate(); },120);
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  BOOT
+// ═══════════════════════════════════════════════════════════════
+async function boot(){
+  setLoadingState('Loading transcript and mapping CSV files...');
+
+  try{
+    ALL_DATA=await loadAllDataFromCsv();
+    if(!ALL_DATA.length){
+      throw new Error('No episode rows were loaded. Ensure you are serving this page over HTTP and CSV files exist.');
+    }
+
+    initSelectors();
+    loadEpisode();
+  }catch(err){
+    console.error(err);
+    setLoadingState('Failed to load dataset from CSV files.',true);
+  }
+}
+
+boot();
+</script>
+</body>
+</html>
