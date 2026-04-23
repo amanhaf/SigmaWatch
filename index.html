@@ -606,7 +606,7 @@ const SHAPE_FNS = {
   disgust: (g,r)=>g.append('polygon').attr('points',d=>{const s=r(d);return[0,1,2,3,4,5,6,7].map(i=>{const a=(i/8)*Math.PI*2;return`${d.cx+Math.cos(a)*s},${d.cy+Math.sin(a)*s}`}).join(' ')}),
 };
 
-const MARGIN = {top:12,right:24,bottom:38,left:140};
+const MARGIN = {top:12,right:24,bottom:38,left:160};
 const LANE_H = 60;
 const BASE_LANE_LABEL_BAND = 56;
 const LANE_LABEL_OFFSET = 9;
@@ -710,7 +710,7 @@ function getEpisodeBounds(){
   if(!episodeData.length) return [0,1];
   const b0=d3.min(episodeData,d=>d.start);
   const b1=d3.max(episodeData,d=>d.end);
-  const pad=(b1-b0)*0.04;
+  const pad=(b1-b0)*0.06;
   return [b0-pad, b1+pad];
 }
 
@@ -719,8 +719,8 @@ function clampTimelineView(min,max){
   const total=Math.max(1,b1-b0);
   const minSpan=Math.max(20000,total*0.04);
 
-  let lo=Math.max(b0,min);
-  let hi=Math.min(b1,max);
+  let lo=min;
+  let hi=max;
   let span=hi-lo;
 
   if(span<minSpan){
@@ -729,19 +729,9 @@ function clampTimelineView(min,max){
     hi=mid+minSpan/2;
   }
 
-  if(hi-lo>total){
-    lo=b0;
-    hi=b1;
-  }
-
-  if(lo<b0){
-    hi=Math.min(b1,hi+(b0-lo));
-    lo=b0;
-  }
-  if(hi>b1){
-    lo=Math.max(b0,lo-(hi-b1));
-    hi=b1;
-  }
+  // Only clamp to padded bounds
+  if(lo<b0) lo=b0;
+  if(hi>b1) hi=b1;
 
   return [lo,hi];
 }
