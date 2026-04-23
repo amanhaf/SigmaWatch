@@ -986,8 +986,7 @@ function buildSpeakerPills(speakers){
     const btn=document.createElement('button');
     btn.className='pill active';
     btn.dataset.sp=sp;
-    btn.style.color=SPEAKER_COLORS[sp]||'#999';
-    btn.innerHTML=`<span class="dot" style="background:${SPEAKER_COLORS[sp]||'#999'}"></span>${sp}`;
+    btn.innerHTML=`<span class="dot" style="background:var(--muted)"></span>${sp}`;
     btn.addEventListener('click',()=>{
       if(activeSpeakers.has(sp)){
         if(activeSpeakers.size===1) return; // keep at least one
@@ -1376,3 +1375,4 @@ boot();
 </script>
 </body>
 </html>
+
