@@ -708,7 +708,10 @@ function getSelectedRenderedData(t0,t1){
 
 function getEpisodeBounds(){
   if(!episodeData.length) return [0,1];
-  return [d3.min(episodeData,d=>d.start),d3.max(episodeData,d=>d.end)];
+  const b0=d3.min(episodeData,d=>d.start);
+  const b1=d3.max(episodeData,d=>d.end);
+  const pad=(b1-b0)*0.04;
+  return [b0-pad, b1+pad];
 }
 
 function clampTimelineView(min,max){
