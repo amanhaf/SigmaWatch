@@ -1,0 +1,121 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,12,5,0,451909,455036,"Ok, so it's just because it was my table, I have to buy a new one?"
+1,12,0,4,455204,456955,That's the rule.
+1,12,5,0,457999,461543,"What rule? There's no rule, if anything, you owe me a table!"
+1,12,0,0,461961,465088,How'd you get to that?
+1,12,5,0,465256,467996,"Well, I believe the piece of furniture was fine until your little breakfast adventure with Angela Delvecchio"
+1,12,0,6,468843,469926,You knew about that?
+1,12,5,1,470094,477100,"Well, let's just say the impressions you made in the butter left little to the imagination."
+1,12,0,4,475308,477100,"Ok, ok, How about if we split it?"
+1,12,5,4,478186,480187,"What do you mean, like, buy it together?"
+1,12,0,4,480521,481605,Yeah
+1,12,5,4,481772,483982,You think we're ready for something like that?
+1,12,0,4,485151,487110,Why not?
+1,12,5,4,487278,489821,"Well, it's a pretty big commitment, I mean, what if one of us wants to move out?"
+1,12,0,6,490114,490926,"Why, are you moving out?"
+1,12,5,4,490926,492206,I'm not moving out.
+1,12,0,2,492325,494409,You'd tell me if you were moving out right
+1,12,5,4,494577,496559,"Yeah, yeah, it's just that with my last roommate Kip..."
+1,12,0,0,496559,499421,"Aw, I know all about Kip!"
+1,12,5,0,499540,503877,"It's just that we bought a hibachi together, and then he ran off and got married, and things got pretty ugly."
+1,12,0,5,504921,508798,"Well, let me ask you something, was Kip a better roommate than me?"
+1,12,5,5,509800,511551,"Aw, don't do that"
+1,12,1,6,575283,578618,I can't believe you don't want to know.
+1,12,1,3,578786,582298,"I mean, I couldn't not know, I mean, if, if the doctor knows, and Carol knows, and Susan knows...."
+1,12,4,4,582298,582435,And Monica knows...
+1,12,2,6,584709,587002,"Wha, heh, how could you know, I don't even know!"
+1,12,4,4,587169,591131,"Carol called me to thank me for the lasagna, I asked, she told me."
+1,12,0,3,591299,592757,So what's it gonna be?
+1,12,2,0,594969,597804,"Wait—oh—hey—huh, oh great now he knows, and I don't know!"
+1,12,4,3,597972,600473,"I'm sorry, I'm just excited about being an aunt!"
+1,12,0,4,600641,602392,Or an uncle...
+1,12,5,3,607398,608370,Hey Phoebe!
+1,12,2,3,608370,608454,Hi Pheebs!
+1,12,1,3,608454,609653,Pheebs!
+1,12,3,0,609734,611234,Fine!
+1,12,4,4,613988,616072,"Phoebe, what's the matter?"
+1,12,3,5,616240,623872,"Nothing, I'm sorry, I'm just, I'm out of sorts."
+1,12,1,6,622038,623872,"Oh, right, that's me!"
+1,12,0,4,625249,628418,"Hey, Chandler, that table place closes at 7, come on."
+1,12,5,4,628586,629753,Fine.
+1,12,4,4,630212,632184,"Phoebe, what is it?"
+1,12,3,4,632184,633178,"All right, you know Paolo?"
+1,12,2,4,634383,638053,"I'm familiar with his work, yes..."
+1,12,3,0,639263,640513,"Well, he made a move on me."
+1,12,0,6,640681,642225,"Whoa, store will be open tomorrow!"
+1,12,5,3,642225,643830,"More coffee over here, please!"
+1,12,0,6,659992,661034,Ooooohh!
+1,12,5,6,659992,661034,Ooooohh!
+1,12,3,4,661202,674005,"Oh yeah, I'm sure.  And all of a sudden his hands weren't the problem anymore."
+1,12,4,6,678386,679487,Was it...?
+1,12,3,4,679595,682097,"Oh, boy scouts could have camped under there."
+1,12,1,6,684225,686687,"""Ooo,"" what?"
+1,12,3,4,686687,686829,Uma Thurman.
+1,12,4,6,686936,688021,Oh!
+1,12,2,6,688021,688166,The actress!
+1,12,2,4,691023,692732,Thanks Rach.
+1,12,5,6,694652,695824,So what are you gonna do?
+1,12,2,3,695824,696658,You have to tell her!
+1,12,2,3,696779,699531,You have to tell her!
+1,12,2,0,696779,703076,"It's your moral obligation, as a friend, as a woman, I think it's a feminist issue!"
+1,12,2,0,699699,700033,Guys?
+1,12,2,0,700033,703147,Guys?
+1,12,5,4,703244,705120,"Oh, yeah, you have to tell her."
+1,12,0,4,705287,706788,Feminist issue. That's where I went!
+1,12,3,2,708833,710083,She is gonna hate me.
+1,12,2,4,710251,711251,"Yeah, well..."
+1,12,0,0,719301,722929,"Will you pick one, just pick one! Here, how about that one?"
+1,12,5,6,723681,725682,That's patio furniture!
+1,12,0,4,726142,734232,"So what, like people are gonna come in and think, ""Uh-oh, I'm outside again?"" Of course!"
+1,12,5,4,732523,734232,What about the birds?
+1,12,0,4,735651,740196,"I don't know, birds just don't say, ""Hello, sit here, eat something."""
+1,12,5,4,741282,742782,You pick one.
+1,12,0,4,742950,744325,"All right, how about the ladybugs?"
+1,12,5,0,744493,748705,"Oh, so, forget about the birds, but big red insects suggest fine dining!"
+1,12,0,0,749290,751207,"Fine, you want to get the birds, get the birds!"
+1,12,5,5,751375,770518,"Not like that, I won't!  Kip would have liked the birds!"
+1,12,3,3,768559,769281,Hey!
+1,12,1,3,769281,770565,Hi Pheebs!
+1,12,3,4,770936,771978,Are you moving out?
+1,12,1,4,772146,776107,"No, these aren't all my suitcases.  This one's Paolo's."
+1,12,3,4,776275,781571,"Um, um, Rachel can we talk for a sec?"
+1,12,1,4,782281,786785,"Well, sure...just a sec, though, 'cause Paolo's on his way over."
+1,12,3,2,787828,793416,"Oh!  Ok, um, ok, um,"
+1,12,1,3,794502,795585,"Oh, Pheebs, Pheebs..."
+1,12,3,4,796420,804177,"Ok, um,  we haven't known each other for that long a time, and, um, there are three things that you should know about me."
+1,12,3,4,804720,815480,"One, my friends are the most important thing in my life, two, I never lie, and three, I make the best oatmeal raisin cookies in the world."
+1,12,1,6,818359,831329,"Ok, thanks Pheebs  Oh my God, why have I never tasted these before?!"
+1,12,3,4,831497,835416,"Oh, I don't make them a lot because I don't think it's fair to the other cookies"
+1,12,1,6,841090,845635,"All right, well, you're right, these are the best oatmeal cookies I've ever had."
+1,12,3,4,845803,847535,Which proves that I never lie.
+1,12,1,4,847535,849601,I guess you don't.
+1,12,3,5,849974,851307,Paolo made a pass at me.
+1,12,5,4,854465,856354,"So, what do you think?"
+1,12,2,3,856522,858773,I think It's the most beautiful table I've ever seen.
+1,12,5,3,858941,860400,I know!
+1,12,4,4,860568,863611,"So how does this work, you going to balance the plates on these little guys' heads?"
+1,12,0,3,863779,866197,"Who cares, we'll eat at the sink! Come on, let's play!"
+1,12,4,3,868617,872662,Heads up Ross!  Score!  You suck!
+1,12,3,4,875749,877500,Are you okay?
+1,12,1,4,880254,881462,I need some milk.
+1,12,3,0,883924,901733,"Ok, I've got milk  Here you go...  Oh! Better?"
+1,12,1,5,903402,904861,No...
+1,12,3,6,920544,925840,"I'm so embarrassed, I'm the one he hit on!"
+1,12,1,4,928302,929719,"Pheebs, if I had never met him this never would have happened!"
+1,12,3,5,929887,932013,I'm so sorry! No I'm sorry! No I'm sorry! No I'm sorry!
+1,12,3,6,933599,937393,"No, wait, oh, what are we sorry about?"
+1,12,1,5,937561,939604,"I don't know...right, he's the pig!"
+1,12,3,1,939772,941044,Such a pig!
+1,12,1,1,941044,942306,"Oh, God, he's such a pig,"
+1,12,3,1,942306,942581,Oh he's like a...
+1,12,1,1,942650,944922,He's like a big disgusting...
+1,12,3,4,944922,946299,...like a...
+1,12,3,0,946403,948738,"Yes, good! Ok..."
+1,12,1,0,953035,959832,"Oh, but he was my pig man...how did I not see this?"
+1,12,3,5,961001,973554,"Oh! I know!  It's because... he's gorgeous, and he's charming, and when he looks at you..."
+1,12,1,4,970928,973554,"Ok, Ok, Pheebs..."
+1,12,3,4,973722,975223,The end.
+1,12,1,3,976809,978935,"Oh, God..."
+1,12,3,6,980771,982939,Should I not have told you?
+1,12,1,4,983607,986943,"No, no, trust, me, it's, it's, it's much better that I know."
+1,12,1,5,990155,994450,"Uh, I just liked it better before it was better..."

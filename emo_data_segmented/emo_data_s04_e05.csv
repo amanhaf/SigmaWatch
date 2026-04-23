@@ -1,0 +1,17 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,5,2,3,8341,10050,Hello!
+4,5,2,4,10552,11844,What's this?
+4,5,2,4,12095,15097,Oh right its that girl's phone number.
+4,5,2,3,18143,24023,"Yeah-yeah, there it is, just a phone number a really hot girl gave me."
+4,5,2,6,25775,35701,"It's no big deal, I mean it is her home phone number, but... Whoa!"
+4,5,2,3,37829,41749,"Whoa-whoops, I almost lost this baby!"
+4,5,2,0,42459,46962,"Yeah, the lovely Amanda gives me her number and I-I go and drop it."
+4,5,3,4,56014,57222,Thank you.
+4,5,5,3,705121,746161,"Kathy! Kathy! Hi!! Kathy! Kathy! (She doesn't hear him and keeps running, Chandler starts chasing her as the theme to"
+4,5,52,6,746704,749414,"Hey, Chandler! What are you doing here?"
+4,5,5,3,751208,752917,"Oh, I just wanted to say, ""Hey!"""
+4,5,52,4,754003,754555,Hey!
+4,5,5,4,754555,757055,Okay.
+4,5,5,4,881338,882922,You got me.
+4,5,5,4,893726,896644,Yeah. Right.
+4,5,0,3,893726,899814,"Good, and hey! My treat.  But that's only because you're not eating anything, right?"

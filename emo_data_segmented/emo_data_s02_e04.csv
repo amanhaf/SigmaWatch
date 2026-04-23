@@ -1,0 +1,54 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+2,4,1,5,2961,5045,"Mom, would you relax."
+2,4,1,5,5338,11010,"That was 10 blocks from here and, the, the woman was walking alone at night, I would never do that."
+2,4,1,2,11386,13846,"Mom, c'mon, stop worrying."
+2,4,1,4,14055,17391,"This is a safe street, this is a safe building, there's nothing"
+2,4,112,4,71029,71581,Hi.
+2,4,1,3,71581,73249,"Hi, hi can I help you?"
+2,4,112,4,73364,75616,"Yeah, I'm looking for Phoebe, does she still live here?"
+2,4,1,4,75784,78160,"Uh, no she doesn't but I can, I can get a message to her."
+2,4,112,4,78328,81205,"Great. Uhh, just tell her her husband stopped by."
+2,4,1,6,81414,82956,What?
+2,4,112,6,84542,86835,"Hey, how, how did you do that?"
+2,4,1,4,417583,420629,Bye-bye Julie.
+2,4,1,4,427969,428601,Hey.
+2,4,2,4,428601,429570,Hey.
+2,4,1,3,430930,433140,"Hey, c'mon, cut it out."
+2,4,2,4,434392,434893,Hey?
+2,4,1,4,434893,436130,What?
+2,4,2,4,437186,439688,Can I ask you somethin'?
+2,4,3,4,592592,593925,Hi.
+2,4,70,6,594343,595315,Phoebe!
+2,4,3,3,595315,596264,Ta-da.
+2,4,70,4,597346,598139,Hey.
+2,4,3,4,598139,598830,Hi.
+2,4,70,3,599098,601308,"Ahh, look at you, you look great."
+2,4,3,4,601684,603810,"Do I? Thank you, so do you."
+2,4,70,4,604186,605688,Thanks.
+2,4,3,4,605688,606938,Sparkly.
+2,4,3,3,609025,615572,"So, wow, this is pretty wonerful, huh."
+2,4,3,4,610318,615572,Mr. major capades guy.
+2,4,3,4,616824,621494,"I, I remember when you were just, like, King Friday in Mr. Roger's Ice is Nice."
+2,4,70,3,623080,624789,You always said I'd make it.
+2,4,3,4,625041,628376,"Yeah, well, ya know, I'm kind of spooky that way. Wooo."
+2,4,70,4,629920,636801,I missed you.  I'm gonna get changed.
+2,4,3,4,634800,636801,OK.
+2,4,70,4,639055,640764,"Um, now. Phoebs."
+2,4,3,4,643559,645685,"Oh, right, OK. Ole."
+2,4,70,4,646270,648980,What?
+2,4,3,3,650441,658281,"Um, the matador.  Ole, ha ha ha."
+2,4,2,4,681347,682972,Hi everyone.
+2,4,2,4,685976,689270,"I just, I wanted to thank you for our uh, our little talk before."
+2,4,2,4,693192,696611,"Well, I was going to, but after I talked to you, I talked to Joey."
+2,4,1,2,701409,703284,"What did, what did he say?"
+2,4,2,4,703494,706204,"Basically he told me to get over myself and just do it, ya know."
+2,4,2,4,706997,712627,"So I though about what you said and I though about what he said and, well, his way I get to have sex tonight so."
+2,4,4,1,965005,967632,"You know, it still smells like monkey in there."
+2,4,20,4,969677,972220,That saves us a conversation.
+2,4,5,4,974139,976808,"Well, listen, this has been great but I'm officially wiped."
+2,4,0,4,977059,978269,"Me too, we should get goin'."
+2,4,201,4,978269,979329,No.
+2,4,20,4,1106355,1108981,"And my second grade teacher was Ms. Thomas, and my first grade teacher was Mrs. Cobb."
+2,4,1,4,1109817,1111317,"Mrs., Mrs. Gobb?"
+2,4,20,4,1111610,1113402,"No Cobb, as in cobb salad."
+2,4,1,4,1116156,1119450,"Now, what exactly is in a cobb salad?"

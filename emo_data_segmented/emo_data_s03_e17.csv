@@ -1,0 +1,69 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+3,17,4,3,104145,107648,Let’s get the show on it!
+3,17,1,4,107899,108899,"Okay, let me just get a cup of coffee."
+3,17,4,4,109067,111151,"Oh Rachel, I know the best coffee house and it’s sooo close."
+3,17,1,4,111820,112861,Closer than here?
+3,17,3,4,113655,117449,"Oh, hey, look, I found coffee!  Okay, let’s skedaddle."
+3,17,1,4,117659,120160,"Wait, I’m not just gonna drink somebody’s old coffee."
+3,17,3,4,120370,121995,"Okay, your highness."
+3,17,3,6,129754,137886,"Um, Rachel I’m really sorry.  That’s okay, do you wanna get back together?  Yeah, okay.  Did anyone else hear that?!"
+3,17,4,6,482064,483273,Why? Do you think he’s still mad at us?
+3,17,5,4,483483,487694,Well he’s probably mad after you called him this morning to borrow his goggles.
+3,17,0,6,487904,489529,What? Mine aren’t tinted.
+3,17,2,3,765890,770602,"Umm, candles, champagne, yeah anniversaries are great."
+3,17,2,3,771103,773605,"‘Cause you know love lasts forever, y'know."
+3,17,2,5,777943,779694,"Nothing like it in this lifetime, money in the bank, so Rachel and I broke up."
+3,17,7,3,781238,783782,"Oh God, Ross I am so sorry."
+3,17,7,4,785284,793583,"Y'know what, I want to talk to you about this so much, but we should probably do it when we could really get into it, are you free for dinner tomorrow night?"
+3,17,2,3,791332,793583,"Oh yeah, I’d love that."
+3,17,7,3,793751,794751,"Oh, great! Me too."
+3,17,2,4,794919,798588,I guess it all started when Rachel got this new job.
+3,17,1,4,814438,817440,"Yeah, we are definitely on Route 27."
+3,17,3,4,817650,825365,"Okay.  We are at a rest stop on Route 27. Okay.  There is no Route 27.   Okay, either 93 or 76?"
+3,17,1,5,825574,828117,"I don’t know, I’m sorry, I always slept in the back when we drove up here."
+3,17,3,4,829286,836084,"Hey, can you send somebody up and down 76 and check every rest stop, and, and also 93?"
+3,17,3,4,837545,838670,Okay!
+3,17,3,4,838879,840171,"Yeah, no they don’t do that."
+3,17,1,4,843843,845677,"Ugh, okay, well somebody will come and save us."
+3,17,4,0,845928,848306,Who?
+3,17,4,2,848306,849327,I mean have you seen a car come by here in the last hour and a half?
+3,17,4,4,849515,852600,"I think we should call Ross, maybe he can get a car and come pick us up."
+3,17,1,0,852852,858231,"No! No, I am not getting in a car with Ross, we will just have to live here!"
+3,17,3,2,859692,861234,But if...
+3,17,1,0,859692,864904,"No you guys, I am not getting in a car with him, you’ll have to think of something else."
+3,17,3,3,859692,866656,"Oh good, oh Joey and Chandler are back."
+3,17,4,4,869869,872203,So the going for help went well?
+3,17,2,0,886302,886904,....right?
+3,17,2,0,886302,892682,"I mean it’s pretty unbelievable y'know, I mean they just took off, took off without even looking back."
+3,17,2,0,886904,888906,Right?
+3,17,2,0,893517,898229,"Y'know I don’t, I don’t need them, huh, I’ve got you guys now as friends, you and Susan."
+3,17,7,3,898898,901149,"Ah, Susan will be so pleased."
+3,17,2,6,905070,911409,"717?  Where’s 717?  Hey, you’ve have more of these for Susan right?"
+3,17,7,4,911660,915955,"No. But it’s okay, I’ll just put out pickles or something."
+3,17,3,3,920169,922045,"Ross, thank God."
+3,17,2,6,922254,923755,"Pheebs? What, why are you whispering?"
+3,17,3,1,924298,926215,I ate a bug.
+3,17,4,3,927384,932013,"Hey Rach, the tampons here are only a penny. Let’s stock up."
+3,17,3,2,933098,937393,"Listen Ross, we ran out of gas, and we don’t know where we are, so we can’t get a tow truck."
+3,17,2,3,937728,940320,"Oh, now you want a favour?"
+3,17,3,4,940320,941441,"Yes, please."
+3,17,2,0,941565,950573,"Well, oh, I’m sorry your car broke down Pheebs, but I’m a little too busy with some of my real friends right now, but please call to let me know you got home safely okay?"
+3,17,7,4,950824,954619,"Phoebe, hang on a second.  Here, take my car, go pick up your friends."
+3,17,2,0,954828,956454,"No, I’m not gonna pick them up."
+3,17,7,4,956705,959666,"Listen, we both know you’re gonna do it ‘cause you’re not a jerk."
+3,17,7,0,959917,966047,"So you can either sulk here for a half hour and then go pick them up, or save us both time and sulk in the car."
+3,17,2,0,963128,966047,"No, Rachel doesn’t want me to...."
+3,17,7,4,966298,974263,"Look, I-I-I am sorry that Rachel dumped you ‘cause she fell in love with that Mark guy, and you are the innocent victim in all of this, but don’t punish your friends for what Rachel did to you."
+3,17,2,4,976642,977892,"Yeah, you’re right."
+3,17,7,1,1318608,1320735,Ugh.  Ross!
+3,17,2,4,1318608,1323446,Hi! Sorry I’m late. Were you sleeping?
+3,17,7,3,1322000,1323446,"Ahh, nooo!!"
+3,17,2,3,1323613,1324989,"Oh, great!"
+3,17,2,4,1326158,1329452,"Listen, oh I had to get you a whole new battery."
+3,17,2,4,1326158,1331495,"I got you the best one I could, ‘cause that’s not where you want to skimp."
+3,17,7,3,1331705,1332830,"You’re a genius, Ross."
+3,17,2,4,1333081,1340629,"Yeah, well it came to about $112, but what the hell, just call it an even 110?"
+3,17,7,4,1338587,1340629,"Okay, I’ll pay you tomorrow."
+3,17,2,5,1340839,1346635,"So they ah, they all took off, it was pretty hard watching them go, y'know?"
+3,17,7,4,1346887,1348471,"Yeah, okay, bye."
+3,17,2,4,1352517,1354769,So I’m gonna take off then!

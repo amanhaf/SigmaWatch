@@ -1,0 +1,115 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,23,0,3,217967,222137,"Shoot! Shoot! Shoot! Shoot, or just fall down. That's good too."
+1,23,49,4,223056,223818,Knick fan?
+1,23,0,4,223818,224358,"Oh, yeah."
+1,23,49,0,224474,226566,"Oh, boy, do they suck."
+1,23,0,6,226566,227696,"Hey, listen, lady.......whoa."
+1,23,49,1,230480,236443,"Look, look at your man, Ewing. Nice shot. You know what, he couldn't hit water if he was standing on a boat."
+1,23,0,4,236611,238111,Oh yeah? And who do you like?
+1,23,49,4,238279,239041,The Celtics.
+1,23,0,1,239041,247581,"The Celtics? Ha. They couldn't hit a boat if...wait. They suck, alright?"
+1,23,49,0,248081,251875,"Oh, shut up. You know, it's a rebuilding year. You... waah!"
+1,23,0,0,252043,257506,"Wha? Wha..aa? Let me get the father. Hey, we need a father over here! We need a father!"
+1,23,49,4,256172,257506,There is no father.
+1,23,0,2,257674,259424,"Oh, oh, oh, sorry."
+1,23,49,4,260885,263553,Ok.
+1,23,0,4,263222,263612,"Oh, uh, ok. Right this way. All the other pregnant women seem to be goin' in here."
+1,23,4,6,313688,316481,Oh yeah? When?
+1,23,5,4,316733,318025,I'll tell you what.
+1,23,5,4,318192,323613,"When we're 40, if neither one of us are married, what do you say you and I get together and have one?"
+1,23,4,6,323781,325574,Why won't I be married when I'm 40?
+1,23,5,4,326784,328952,"Oh, no, no. I just meant hypothetically."
+1,23,4,0,329120,332122,"Ok, hypothetically, why won't I be married when I'm 40?"
+1,23,5,4,332332,334541,"No, no, no."
+1,23,4,0,334709,337210,What is it? Is there something fundamentally unmarriable about me?
+1,23,5,4,338129,338761,"Uh, uh."
+1,23,4,6,338761,340690,Well?
+1,23,5,6,340798,344343,Dear God! This parachute is a knapsack!
+1,23,1,4,347055,348513,Hey.
+1,23,3,6,347055,350682,"Hey. Ooh, look at you, dressy-dress."
+1,23,4,6,350850,352726,Did you go home and change?
+1,23,1,4,352894,359066,"Yeah, well, it's an important day. I wanna look nice. Um, has uh Dr. Franzblau been by?"
+1,23,4,4,360651,361818,"No, I haven't seen him."
+1,23,1,6,361986,369159,"Well, where is he? He is supposed to be here.  What if the baby needs him?"
+1,23,5,4,369327,375624,"Rachel, what is the deal with you and doctors, anyway? Was, like, your father a doctor?"
+1,23,1,4,371662,375624,"Yeah, why?"
+1,23,5,4,376376,377834,No reason.
+1,23,25,4,482023,483398,Your son.
+1,23,2,0,483566,490113,"No-no-no. I don't have a son named Jordie. We all agreed, my son's name is Jamie."
+1,23,7,4,487320,492574,"Well, Jamie was the name of Susan's first girlfriend, so we went back to Jordie."
+1,23,2,6,492950,496703,"What? Whoa, whoa whoa whoa, what do you mean,"
+1,23,7,0,502335,505212,"Ow, ow, ow, ow, leg cramp, leg cramp, leg cramp."
+1,23,2,4,505379,507173,I got it.
+1,23,25,4,507173,507483,I got it.
+1,23,2,0,507590,510008,"I got it! Hey, you get to sleep with her, I get the cramps."
+1,23,25,4,510176,511343,"No, you don't."
+1,23,7,0,511511,513803,"All right, that's it. I want both of you out."
+1,23,2,6,512803,513803,Why?
+1,23,25,0,513971,514973,He started it!
+1,23,2,0,514973,515487,"No, you started it."
+1,23,7,0,515598,522687,"I don't care. I am trying to get a person out of my body here, and you're not making it any easier."
+1,23,7,0,519227,522687,Now go!
+1,23,2,0,525107,525983,Thanks a lot.
+1,23,25,0,525983,526669,See what you did.
+1,23,2,4,526776,527694,"Yeah, listen..."
+1,23,7,0,527694,529225,Out
+1,23,0,1,540248,543667,Ew! What is that? Something exploded!
+1,23,69,4,543834,546169,"It's just her water breaking. Calm down, will you?"
+1,23,0,6,546337,549714,"Water breaking, what do you mean? What's that, water breaking?"
+1,23,69,4,549882,553510,"Breathe, breathe, breathe."
+1,23,7,4,623247,625332,Are they here yet?
+1,23,1,4,628085,631254,"No, honey, they're not, but don't worry, because we are going to find them, and until we do, we are all here for you, ok?"
+1,23,4,4,687687,689606,"Now, Mom, everything's going fine, really."
+1,23,4,4,689606,692260,"Yeah, Ross is great."
+1,23,4,4,692400,694122,"He's uh, he's in a whole other place."
+1,23,4,4,694122,697009,"No, he's gone."
+1,23,4,4,697113,700281,"No no, you don't have to fly back, really."
+1,23,4,6,700449,702575,What do you mean this might be your only chance?
+1,23,4,0,702743,705120,Would you stop?
+1,23,4,0,705287,710792,"I'm only 26, I'm not even thinking about babies yet."
+1,23,5,4,721220,722072,Where have you been?
+1,23,0,3,722072,724400,"Oh, just had a baby."
+1,23,5,3,725683,727684,Mazel tov!
+1,23,49,6,805888,809390,So how did you know I was even here?
+1,23,55,4,805888,811726,Your mom called me. So is this her?
+1,23,49,4,811894,813645,"No, this is a loaner."
+1,23,55,4,815606,817899,I'm sorry you had to do this by yourself.
+1,23,49,4,818067,827242,"I wasn't by myself. I had a doctor, a nurse, and a helper guy.  So, did you see who won the game?"
+1,23,55,4,827409,830954,"Yeah, the Knicks by 10. They suck."
+1,23,49,4,831664,833915,"Yeah, they're not so bad."
+1,23,4,4,939229,940751,I'm sure they'll be here soon.
+1,23,1,4,940751,942238,"Yeah, honey, they wouldn't miss this."
+1,23,0,4,942358,947362,Relax. You're only at nine centimeters. And the baby's at zero station.
+1,23,5,2,950699,952575,You are really frightening me.
+1,23,5,2,954787,962210,"Somebody wanna help me, tryin' to rip out my heart.  Uh, that's great.  Anybody seen a nipple?"
+1,23,168,4,963754,966464,"All right, ten centimeters, here we go."
+1,23,69,4,966632,968684,"All right, honey, time to start pushing."
+1,23,7,2,968684,969982,But they're not here yet!
+1,23,168,4,970094,972220,"I'm sorry, I can't tell the baby to wait for them."
+1,23,7,2,972805,975223,"Oh, god."
+1,23,2,4,978268,980228,"Ok, got the vent open."
+1,23,3,3,980396,986359,"Hi, I'm Ben. I'm hospital worker Ben. It's Ben... to the rescue!"
+1,23,2,4,991115,992198,"Ben, you ready?"
+1,23,2,4,992366,994033,"All right, gimme your foot."
+1,23,2,4,994201,995343,"Ok, on three, Ben."
+1,23,2,4,995343,998255,"One, two, three."
+1,23,2,4,998747,1002583,"Ok, That's it, Ben."
+1,23,25,4,1002793,1004460,What do you see?
+1,23,3,4,1004628,1013594,"Well, Susan, I see what appears to be a dark vent. Wait. Yes, it is in fact a dark vent."
+1,23,2,6,1016557,1018891,"Phoebs, It's open! It's open!"
+1,23,197,6,1021770,1025231,Wait! You forgot your legs!
+1,23,2,5,1229436,1237401,"Ben, I want you to know that there may be some times when I may not be around, like this."
+1,23,2,4,1239988,1245576,"But I'll still always come back, like this."
+1,23,2,4,1246662,1252375,"And sometimes I may be away longer, like this."
+1,23,2,4,1255796,1262843,"But I'll still always come back, like this."
+1,23,5,4,1263971,1269016,"And sometimes, I'll want you to steal third, and I'll go like this."
+1,23,4,3,1277651,1279610,He is so amazing.
+1,23,1,3,1279778,1282238,"Oh, I know. Look at him."
+1,23,0,4,1282406,1291664,"Ben, Ben, hey Ben. Nothing. I don't think that's his name."
+1,23,3,3,1292749,1295876,"Oh, look, look, he's closing his eyes.  Look, he's opening his eyes."
+1,23,0,4,1301091,1303551,"He doesn't do much, does he?"
+1,23,2,4,1303719,1306554,"No, this is pretty much it."
+1,23,1,4,1313812,1314954,You guys wanna get some coffee?
+1,23,11,4,1314954,1317034,Yeah.
+1,23,2,4,1317524,1319984,"All right, I'll see you guys later."
+1,23,3,4,1352726,1355561,"Oh, look, he's closing his eyes again."

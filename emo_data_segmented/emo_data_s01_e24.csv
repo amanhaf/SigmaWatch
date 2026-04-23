@@ -1,0 +1,72 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,24,4,4,147605,150232,"OK, we got the cole slaw, we got the buns..."
+1,24,3,1,150441,154611,"We've got the ground-up flesh of formerly cute cows and turkeys, ew..."
+1,24,5,4,156447,158365,Men are here.
+1,24,1,6,506547,507319,Who's this from?
+1,24,5,4,507319,508553,"Oh, that's Ross's."
+1,24,1,6,514805,518892,Oh...  Oh my God. He remembered.
+1,24,3,4,519101,520310,Remembered what?
+1,24,1,6,520520,522229,It was like months ago.
+1,24,1,5,522438,529819,"We were walking by this antique store, and I saw this pin in the window, and I told him that it was just like one my grandmother had when I was a little girl."
+1,24,1,6,530029,531029,Oh!
+1,24,1,6,530029,533365,I can't believe he remembered!
+1,24,3,6,541290,547420,"Oh, it's so pretty. This must have cost him a fortune."
+1,24,4,6,544460,547420,I can't believe he did this.
+1,24,5,4,547630,556555,"Come on, Ross? Remember back in college, when he fell in love with Carol and bought her that ridiculously expensive crystal duck?"
+1,24,1,6,554887,556555,What did you just say?
+1,24,5,2,581247,582998,F-hah.... flennin....
+1,24,1,6,586377,589379,Oh.... my God.
+1,24,1,6,603269,606771,"I mean, this is unbelievable."
+1,24,3,6,606981,609649,"I know. This is really, really huge."
+1,24,5,4,609859,614321,No it's not. It's small. It's tiny. It's petite. It's wee.
+1,24,5,1,620911,623496,"OK, is there a mute button on this woman?"
+1,24,2,3,715965,717841,Ni-chou chi-ma!
+1,24,1,6,719260,723179,"Ross! Excuse me, pardon me, excuse me...."
+1,24,1,4,723389,724000,Hi.
+1,24,91,4,723389,724848,May I see your boarding pass?
+1,24,1,4,725057,726891,"Oh, no, no, I don't have one. I just need to talk to my friend."
+1,24,91,4,727101,731062,"Oh, oooh. I'm sorry. You are not allowed on the jetway unless you have a boarding pass."
+1,24,1,4,731272,732272,"No, I know, but I—he just went on."
+1,24,1,5,731272,734482,"He's right there, he's got the blue jacket on, I... can I j-just..."
+1,24,91,0,734692,736651,No no no! Federal regulations!
+1,24,1,4,736861,742615,"OK, alright, OK, um... then could you please, uh... just give him a message for me? Please? This is"
+1,24,91,4,742825,745160,Alright. What's the message?
+1,24,1,4,745494,747871,Uh... I don't know.
+1,24,91,4,750458,754919,"Sir? Sir? Excuse me, sir? Uh... I have a message for you."
+1,24,47,4,753002,754919,What?
+1,24,91,4,755129,759007,"It's from Rachel. She said that she loved the present, and she will see you when you get back."
+1,24,47,6,759216,765045,": Toby... Oh, for God's sake, I don't know what she's talking about!"
+1,24,47,0,765264,766765,There's no Rachel!
+1,24,0,3,1098847,1102141,Seven hundred bucks!
+1,24,5,3,1102351,1103726,"Alright, you did it! Do we have any fruit?"
+1,24,0,3,1106855,1112026,"Man, hell of a two weeks, huh? Y'know what, though? I really feel like I learned something."
+1,24,5,4,1112236,1114862,"Really? So, you're gonna stick with this 'it's all for her' thing?"
+1,24,0,1,1115072,1121452,"What, are you crazy? When a blind man gets his sight back, does he walk around like this?"
+1,24,121,1,1126917,1132547,"I'm just sayin', if I see one more picture of Ed Begley, Jr. in that"
+1,24,2,6,1142391,1146602,I can't believe you'd rather go out with him than me.
+1,24,1,0,1146812,1150022,"Would you excuse me, please? I'm trying to have a date here."
+1,24,2,3,1150232,1152692,"Fine, just stop thinking about me."
+1,24,2,4,1156196,1158406,"Can't do it, can you?"
+1,24,1,4,1159241,1161534,So I'm thinking about you. So what?
+1,24,2,6,1161827,1164954,"I don't get it. What do you see in this guy, anyway?"
+1,24,1,4,1165164,1168541,Well... he happens to be a very nice... guy....
+1,24,121,4,1168750,1171878,"I mean, come on, buddy, get a"
+1,24,2,4,1175090,1178593,"Rachel, come on. Give us a chance."
+1,24,1,5,1179344,1181220,"Ross, it's too hard."
+1,24,2,4,1181430,1183347,"No, no, no... why, because it might get weird for everyone else?"
+1,24,2,4,1183557,1184899,Who cares about them.
+1,24,2,4,1184899,1185777,This is about us.
+1,24,2,4,1185934,1189437,"Look, I-I've been in love with you since, like, the ninth grade."
+1,24,1,3,1189646,1192028,"Ross, you're like my best friend."
+1,24,2,4,1192028,1192250,I know.
+1,24,1,2,1192399,1194358,"If we broke up, and I lost you..."
+1,24,1,5,1193399,1194358,"Ohh, God."
+1,24,1,4,1276984,1280778,"Excuse me, pardon me, excuse me, excuse me, sorry. Hi."
+1,24,47,0,1280988,1285783,"For God's sake, will you let it go? There's no Rachel!"
+1,24,2,4,1290622,1293791,"Oh, hey, hey, I got that."
+1,24,20,3,1294001,1296502,"Oh, thanks, sweetie."
+1,24,2,3,1302342,1304760,No problem. I cannot wait for you to meet my friends.
+1,24,20,6,1304970,1307513,Really?
+1,24,20,2,1304970,1307513,You don't think they'll judge and ridicule me?
+1,24,2,4,1307723,1309515,"No, no, they will. I just... uh..."
+1,24,20,4,1309725,1311017,Can't wait.

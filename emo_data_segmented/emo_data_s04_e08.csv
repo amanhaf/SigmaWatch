@@ -1,0 +1,14 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,8,0,4,4379,5421,Hello.
+4,8,5,4,5588,7000,"Hey, it’s me."
+4,8,5,5,5588,11552,"I know you can’t stand to be in the same room as me, so I just thought I’d try and apologize over the phone."
+4,8,0,4,16516,18100,Hello.
+4,8,5,2,19019,22187,"Look I never should have kissed your girlfriend, but I’m"
+4,8,0,0,26067,27109,Stop callin’!!
+4,8,187,3,27277,34283,"Hey! Hey! Hey! This is 92.3, WXRK, K-Rock for our $1,000 daily challenge."
+4,8,0,4,34451,35701,All right!
+4,8,187,4,35869,41874,"What is the name of your roommate who is very, very sorry and would do anything"
+4,8,2,3,360902,362029,Hey!
+4,8,0,3,362029,362167,Hey!
+4,8,2,4,362528,363570,What are you doing?
+4,8,0,4,363738,366323,I’m sending back all this stuff that Chandler bought out of guilt.

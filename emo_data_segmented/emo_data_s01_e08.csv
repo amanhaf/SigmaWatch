@@ -1,0 +1,42 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,8,5,4,10385,15889,Dehydrated Japanese noodles under fluorescent lights... does it
+1,8,74,4,16599,21854,"Question. You're not dating anybody, are you, because I met somebody who would be perfect for you."
+1,8,5,4,22313,28235,"Ah, y'see, perfect might be a problem. Had you said 'co-dependent', or 'self-destructive'..."
+1,8,74,4,28987,30364,Do you want a date Saturday?
+1,8,5,4,30364,31264,Yes please.
+1,8,74,4,33158,36744,"Okay. He's cute, he's funny, he's-"
+1,8,5,6,34576,36744,He's a he?
+1,8,74,6,36953,38370,Well yeah!
+1,8,74,2,38663,41206,...Oh God.
+1,8,74,0,38663,47671,"I- just- I thought- Good, Shelley."
+1,8,74,1,43960,47671,I'm just gonna go flush myself down the toilet now...
+1,8,74,1,47922,49048,"Okay, goodbye..."
+1,8,2,5,243993,246328,"So, uh, how's she doing?"
+1,8,207,5,247080,249498,The doctor says it's a matter of hours.
+1,8,4,5,250083,252876,"How-how are you, Mom?"
+1,8,22,0,253127,259424,"Me? I'm fine, fine. I'm glad you're here. ...What's with your hair?"
+1,8,4,6,258299,259424,What?
+1,8,22,6,259968,261009,What's different?
+1,8,4,4,261344,262386,Nothing.
+1,8,22,4,262929,264972,"Oh, maybe that's it."
+1,8,4,0,265807,267349,"She is unbelievable, our mother is..."
+1,8,2,4,267558,268850,"Okay, relax, relax."
+1,8,2,4,269060,274648,"We are gonna be here for a while, it looks like, and we still have boyfriends and your career to cover."
+1,8,4,6,274983,276233,Oh God!
+1,8,4,4,282991,285158,The fuzzy little mints at the bottom of her purse.
+1,8,2,6,285326,286827,Oh!
+1,8,2,1,287287,289413,"...Yeah, they were gross."
+1,8,2,3,290248,292040,"Oh, you know what I loved?"
+1,8,2,3,292250,294084,Her Sweet 'n' Los.
+1,8,2,3,294294,297504,How she was always stealing them from- from restaurants.
+1,8,19,4,297755,300799,"Not just restaurants, from our house."
+1,8,1,6,1218800,1220843,"Hey, who's this little naked guy?"
+1,8,2,4,1221053,1223179,That little naked guy would be me.
+1,8,1,6,1223805,1226557,"Aww, look at the little thing."
+1,8,5,6,1235317,1236129,Who are those people?
+1,8,2,6,1236129,1237878,Got me.
+1,8,4,4,1238111,1245826,"Oh, that's Nana, right there in the middle.  'Me and the gang at Java Joe's'."
+1,8,1,6,1246036,1249622,"Wow, Monica, you look just like your grandmother. How old was she there?"
+1,8,4,4,1249831,1257088,"Let's see, 1939... yeah, 24, 25?"
+1,8,2,4,1254211,1257088,Looks like a fun gang.
+1,8,0,3,1262970,1266138,"Ooh, look-look-look-look-look! I got Monica naked!"

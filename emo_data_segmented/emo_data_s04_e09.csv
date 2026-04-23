@@ -1,0 +1,68 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,9,3,4,4879,6801,Okay!
+4,9,4,3,6801,7312,"Come on, no peeking!"
+4,9,5,3,7424,11343,Our eyes are closed and we’re about to cross the street. Very good.
+4,9,3,3,11511,13303,"Okayyyyy, open up!"
+4,9,2,4,17183,22604,What did you want to show us? Because all I can see is this
+4,9,3,3,24149,25774,"Yeah, it’s for our catering business!"
+4,9,0,4,25942,27985,I think I know that girl.
+4,9,4,3,30113,33005,"All right, umm, we’re not gonna really keep it this way though."
+4,9,1,6,33005,33762,No?
+4,9,3,4,33867,36910,"No, we’re gonna paint over the sword, and replace it with a baguette."
+4,9,1,6,37078,38746,Oh!
+4,9,3,4,38913,42166,"And also, we don’t know what to do with this."
+4,9,0,4,44961,47212,"Oh yeah, I definitely know her."
+4,9,4,4,98056,101308,Remember that guy from cooking school I told you about that put cilantro with everything?
+4,9,3,4,101476,103310,"Oh sure, Cilantro Larry."
+4,9,4,3,104145,107606,"Well, I’m gonna fill in for him as food critic for the Chelsea Reporter."
+4,9,4,3,107774,114321,"Wow, Monica! What an amazing opportunity to influence… dozens of people."
+4,9,3,0,116950,119159,"How could you say yes, what about our catering business?"
+4,9,4,4,119327,123956,"Oh no-no-no, it’s only one night a week, and plus I get to take all of you out for a"
+4,9,11,3,124124,125290,Yay!!
+4,9,3,3,125458,133006,"Oh, in that case——Yay!  That was me hopping on board."
+4,9,4,3,132000,133006,Oh.
+4,9,5,3,133883,139680,"Hey, you guys! Hey, Ross, quick question for ya. Are you ready to party?"
+4,9,176,3,384842,392307,"You have a very impressive resume, Ms. Green. I especially like what I see here about implementing a new filing system."
+4,9,1,3,392475,393975,Thank you.
+4,9,17,4,394143,395228,Filing system?
+4,9,17,6,395228,398065,Oh-oh!
+4,9,17,4,398065,398209,You mean those-those little colored labels you put on all the folders?
+4,9,17,3,398272,401650,It certainly did brighten up the inside of the filing cabinets.
+4,9,1,4,402485,406729,"Well, they uh, they-they do more than that."
+4,9,228,4,406447,410492,I notice that you’ve been trusted with a lot of rather important responsibilities.
+4,9,1,3,410660,415163,"Yes, Joanna really has been an incredible mentor to me."
+4,9,17,3,415331,421920,Oh. And Rachel has been really incredible in getting my morning bagel for me. It’s amazing how she gets it right almost
+4,9,1,4,423423,426383,"I-I-I of course, I have more responsibilities than that."
+4,9,17,3,426551,432139,"Oh yes, well there’s the coffee too.  Rachel can carry two things at once!"
+4,9,176,4,433182,442941,"Yes, that’s very good. Now a uh, big part of this job is cultivating personal relationships, especially with designers."
+4,9,1,4,443109,445652,"Yes, I realize that"
+4,9,17,4,445820,449531,"And Rachel shouldn’t have any problem with that. The only problem might be getting a little too friendly, if you know what I mean."
+4,9,1,3,450658,452409,I love working with designers!
+4,9,17,4,452577,455704,"With them, under them, what’s the difference? Eh, Rach?"
+4,9,4,0,553177,556304,The waiter carried the breadsticks in his pants!
+4,9,111,4,557557,561351,"Well, you said that we except the"
+4,9,4,4,564397,566815,"All right, that I’ll retract."
+4,9,4,1,566983,570193,"But I stand by my review, I know food and that wasn’t it."
+4,9,4,1,570653,572737,You’re marinara sauce tasted like tomato juice!
+4,9,4,1,572905,575865,You should serve it with vodka and a piece of celery.
+4,9,111,0,576033,578368,"Hey! I’m proud of that sauce, it’s delicious."
+4,9,4,6,578536,584207,Oh my God! You own an Italian restaurant and you think that tastes good?! Where are you even from?
+4,9,111,4,585918,587752,Lebanon.
+4,9,4,0,589130,593842,"Hand me those tomatoes, I’m gonna show you what it should taste like! Come on, hand me them."
+4,9,111,4,595011,598513,How long is this gonna take? ‘Cause I got another critic to go yell at.
+4,9,1,4,698948,700198,My drinking?
+4,9,17,4,701617,704244,"Oh, I must’ve said that after you left."
+4,9,1,2,705579,706955,Said what? Exactly.
+4,9,17,4,707123,708915,That you enjoyed the occasional drink…ing binge.
+4,9,1,1,712211,718299,"Oh my God!! Ohh, that is it! I’m leaving! You are just a horrible person!"
+4,9,17,2,714964,718299,Wait-wait-wait-wait-wait-wait-wait-wait!!
+4,9,17,0,718467,721386,If you’re gonna get all sensitive about it!
+4,9,17,5,721554,722929,I don’t want to lose you.
+4,9,17,4,723097,725640,"What if I, create a position for you?"
+4,9,17,4,725808,728810,I’ll make you an assistant buyer in this department.
+4,9,1,3,730229,732731,Say more things like that.
+4,9,17,3,733524,736526,"You can have your own office, and a raise! Effective tomorrow."
+4,9,1,4,737319,738779,I’d need an expense account.
+4,9,17,3,738779,739983,Done!
+4,9,1,4,740448,741491,And an assistant.
+4,9,17,3,741491,743063,"Sophie, get in here!"

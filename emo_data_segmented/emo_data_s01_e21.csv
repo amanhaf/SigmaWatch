@@ -1,0 +1,68 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+1,21,4,4,311436,313013,What d'you think?
+1,21,0,4,313271,315272,Lot of things.
+1,21,1,4,316232,318108,Which one do you think she is?
+1,21,96,4,318318,319943,May I help you?
+1,21,4,4,320111,321862,"Oh, no thanks, we're just here to observe."
+1,21,96,4,322071,325907,You don't observe a dance class. You
+1,21,1,4,330788,332039,What does she mean?
+1,21,3,4,332248,334082,I think she means  'You
+1,21,4,0,340089,342799,"Okay, d'y'see anybody you think could be me?"
+1,21,96,0,342967,349598,People! Last time there were some empty yoghurt containers lying around after class. Let's not have that happen again!
+1,21,1,4,350350,352142,She could be you.
+1,21,96,4,356773,362694,"Let's get started. Five, six, a-five six seven eight..."
+1,21,4,0,367408,369242,"Okay, I'm not getting this!"
+1,21,3,3,369452,372537,I'm totally getting it!
+1,21,4,5,376626,380420,Did you ever feel like sometimes you are just so unbelievably uncoordinated?
+1,21,1,6,388262,390430,What? You just click when they click.
+1,21,96,4,392308,394810,"Alright people, now everyone grab a partner."
+1,21,3,4,396646,401608,"Okay. And, my, dead, mother, says, you, are, it. I'm with Rachel."
+1,21,4,1,402026,404736,Great. It's gym class all over again.
+1,21,2,4,850182,851891,Where exactly is your zoo?
+1,21,61,4,852059,857730,"Well, it's technically not a zoo per se, it's more of an interactive wildlife experience."
+1,21,61,4,858691,861317,"Let me ask you some questions about, is it, uh, Marcel?"
+1,21,2,4,861861,863069,Yes.
+1,21,61,4,863237,865238,"Does he, uh, fight with other animals?"
+1,21,2,4,866240,868324,"No-no, he's, he's very docile."
+1,21,61,4,868492,871744,Even if he were... cornered?
+1,21,2,4,874790,877250,"Well I, I don't know. Why?"
+1,21,61,4,877418,880461,"Uh, how is he at handling small objects?"
+1,21,2,4,881714,884340,"He can hold a banana, if that's whatcha mean..."
+1,21,61,4,885676,888469,"How about a hammer, or a small blade?"
+1,21,61,4,900608,902901,Otherwise it's just cruel.
+1,21,0,3,905654,908702,"He- he- he got in, he- he got in to San Diego."
+1,21,0,4,909575,912857,"We, we come back from our walk and the- the phone was ringing..."
+1,21,2,3,912995,919584,"He's in! Oh, did you hear that, Marcel? San Diego. San Diego!"
+1,21,5,4,912995,914621,...He's in.
+1,21,61,1,919752,922879,You're making a big mistake here.
+1,21,61,4,923047,928551,"I mean, San Diego's all well and good, but if you give him to me, I'll start him off against a blind rabbit and give you twenty percent of the gains."
+1,21,4,3,963003,966756,Noooo!  I'm lying. I am so drunk.
+1,21,1,0,966924,968257,"Oh God, oh."
+1,21,1,5,971261,973179,"Great, Monica, y'know what, you could've called, I have been up here, I've been worried..."
+1,21,1,0,973347,974722,Monica? Monica!
+1,21,4,3,979895,982522,Water rules!
+1,21,1,4,985109,991531,"Yes, yes, it does. Okay, look, the restaurant called, they wanna know if you're gonna be showing up for work?"
+1,21,4,4,991699,995785,Nope. Going to the
+1,21,1,0,995953,999998,"Okay Monica, what are you doing? You're gonna lose your job! This is not you!"
+1,21,4,3,1000165,1001916,"No, it is me!"
+1,21,4,0,1002084,1007755,"Y'know, I'm not just the person who needs to fluff the pillows and pay the bills as soon as they come in!"
+1,21,4,3,1007965,1012677,"Y'know, when I'm with her, I am so much more than that."
+1,21,4,3,1012845,1014512,I'm- I'm Monana!
+1,21,1,4,1025733,1032989,"Hello? Yes, she is, hold on a second, please. Monana, it's for you, the credit card people."
+1,21,4,3,1040122,1046919,Helloooo? Yeah. Oh my God. Thanks.
+1,21,1,4,1045419,1046919,What?
+1,21,4,5,1047087,1049547,They've arrested Monica.
+1,21,4,4,1060017,1060859,Hi.
+1,21,105,4,1060859,1062407,Hey.
+1,21,4,4,1062561,1064187,How are you?
+1,21,105,4,1064354,1069776,"I'm not too bad. Fortunately, blue's my colour. How-how did you know I was here?"
+1,21,4,4,1071862,1079702,Because... I'm Monica Geller. It was my credit card you were using.
+1,21,105,6,1079870,1082246,That I was not expecting.
+1,21,4,4,1082414,1085041,"I want you to know, it wasn't me who turned you in."
+1,21,105,4,1085209,1090088,Oh. Thanks.
+1,21,4,3,1087002,1090088,"No, thank you! You have given me so much! I mean, if it wasn't for you, I would never have gotten to sing"
+1,21,105,4,1097930,1100056,"Well, actually, you only got to sing 'Memo-'."
+1,21,4,6,1102476,1103728,I just can't believe you're in here.
+1,21,4,5,1103728,1106455,"I mean, what am I gonna do without you?"
+1,21,4,5,1106563,1109107,Who's gonna crash the embassy parties with me?
+1,21,4,5,1109274,1111526,Who's gonna take me to the

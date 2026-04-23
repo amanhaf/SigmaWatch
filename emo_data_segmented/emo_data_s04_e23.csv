@@ -1,0 +1,102 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,23,2,4,190815,192024,This is my wedding.
+4,23,4,0,193318,196737,"All right, y’know what? We really are late! Let’s go! Let’s go! Let’s go!!"
+4,23,2,4,198781,201491,Fine. You’ll-you’ll watch it on video when we get back.
+4,23,5,3,202869,205704,Here you go Phoebe! Here you go Phobo! Phewbedo! Phaybobo.
+4,23,3,4,207790,208791,Thank you.
+4,23,3,4,208791,208931,Thank you.
+4,23,2,3,212503,214463,"All right, let’s go! Bye, Pheebs!"
+4,23,0,3,214631,216340,"Bye, Pheebs!"
+4,23,0,3,220803,222554,London baby!!
+4,23,3,3,224849,231563,"Oh, do you need a hug? You don’t have to bring me anything!"
+4,23,0,3,548214,549256,Hey!
+4,23,148,4,551842,556471,"So, what are you guys in the market for? We’ve got uh, scarves, tulip post cards..."
+4,23,0,4,551842,560850,Check this out? Huh?  Yeah. That’s the stuff. What do you think?
+4,23,5,4,561018,564396,"Well, I don’t have to buy that, ""I’m with stupid"" T-shirt anymore."
+4,23,0,4,565982,567941,"Well, I like it. Here you go."
+4,23,5,0,568109,571861,"All right, look, you’re not really gonna buy that are you? Don’t you think you’ve embarrassed me enough for one day?"
+4,23,0,6,572029,573488,"Oh, I embarrass you?"
+4,23,5,4,573656,576700,How can I answer that when I’m pretending I don’t know you?
+4,23,5,4,580663,584833,Oh really? Then how come no one here is wearing them?
+4,23,148,4,585001,587252,They’re all tourists.
+4,23,5,1,588087,595176,"All right, look, if you insist on wearing that, in public, y’know, you’re gonna spend the rest of the afternoon all by yourself."
+4,23,0,4,595344,604311,Oh yeah?  If you’re gonna make me choose between you and the hat? I choose the hat.
+4,23,148,0,604478,605104,Good choice.
+4,23,0,3,605104,605581,Thanks.
+4,23,5,0,605688,611192,"Okay, wait. All right, that’s it, okay, I’m out of here. I am not going to be embarrassed anymore!"
+4,23,2,6,643851,645935,She said what?
+4,23,8,4,643851,649981,"She said, ""If I’m not gonna be happy getting married somewhere that we find in a day, well then we should just postpone it."""
+4,23,2,3,653069,654361,Postpone it?
+4,23,2,0,656072,660325,"Emily, do you think Monica realises how much our parents spent on this wedding?"
+4,23,2,0,660493,670710,"Do you my sister’s teeny-tiny little brain comprehends that people took time out of their lives to fly thousands of miles to be here, huh?"
+4,23,2,4,674882,676049,This isn’t right.
+4,23,8,5,677134,683014,"I realize that people are going to be disappointed. But, I’m sure they’ll come back when we can do it right."
+4,23,2,0,683182,686685,I can’t ask people to do that? Would you ask people to do that?
+4,23,8,0,686852,688436,Don’t you point your pants at me!
+4,23,8,0,690481,691981,We have no choice!
+4,23,8,0,692141,697779,"Anywhere that’s half-decent would’ve be booked months ago, Ross don’t you understand?"
+4,23,8,0,695236,697779,This is our wedding I’m talking about.
+4,23,2,4,697947,702659,The only thing I understand is postponing it is not an option. This is when we’re getting married.
+4,23,8,0,702827,704709,So what are you saying? It’s now or never?
+4,23,2,4,704709,705891,No. I’m saying it’s now.
+4,23,8,0,705891,706033,Or?
+4,23,2,0,706122,710625,There’s no ‘or’ in mind. What is wrong with these pants?!!
+4,23,8,0,713003,715685,It’s not the pants.
+4,23,8,0,715685,715841,It’s you that is backwards.
+4,23,8,0,715965,721594,"And if, and if you don’t understand how important this is to me, well then, perhaps we shouldn’t get married at all!"
+4,23,2,5,721762,724013,"No, wait! Emily! No, wait, stop! Emily, please—"
+4,23,3,3,733899,735071,Hey!
+4,23,1,4,735071,735863,Hi.
+4,23,3,4,735985,739112,"So, did shopping make you feel any better about Ross?"
+4,23,1,5,739280,742157,Manhattan does not have enough stores.
+4,23,3,4,743576,745870,"Well,"
+4,23,1,6,745870,746011,You can?
+4,23,3,4,746120,750206,Yeah. I just need you to bring me some photos of Ross.
+4,23,1,4,750374,752043,Um-hmm.
+4,23,3,4,752043,753155,And a small piece of chocolate.
+4,23,0,3,1068150,1070318,"Hey, Pheebs! It’s Joey!"
+4,23,3,3,1070486,1071078,"Hey, Joey!"
+4,23,3,3,1071078,1071180,Hey!
+4,23,3,3,1071180,1072807,Ooh!
+4,23,3,3,1072807,1073009,Ooh!
+4,23,3,4,1073030,1075865,I just say someone on the—that looks just like you on the subway.
+4,23,3,3,1076033,1080495,"And I was gonna go over and say ‘hi!’ but then I figured, he doesn’t care if he looks like you."
+4,23,0,4,1082164,1088544,"That just cost me four bucks. But uh listen, I just called to see how the chick and the duck are doing?"
+4,23,3,3,1088712,1090797,"Ohh, they’re having a"
+4,23,0,3,1095761,1098596,"Kinda, but I’ve just been having way too much fun."
+4,23,3,6,1098764,1100264,So you’re not homesick yet?
+4,23,0,4,1100933,1103893,"No, I don’t think so."
+4,23,3,3,1104061,1106395,"All right, the seven of us miss you."
+4,23,8,6,1164371,1166248,"Monica, why have you brought me here of all places?!"
+4,23,4,4,1166248,1168398,You’ll see.
+4,23,8,3,1168500,1171460,"I tell you, this wedding is not going to happen."
+4,23,2,4,1175007,1183598,"Okay? But-but imagine a lot more lights, okay? And-and y’know fewer bricks, and-and-and flowers, and candles"
+4,23,4,4,1183765,1191230,"And the musicians, look, they can go over here , okay? And the chairs can face this way , and…  You go."
+4,23,2,4,1194985,1196027,"But-but, if you don’t love this, we’ll do it in any other place at any other time."
+4,23,2,4,1196195,1199447,"Really, it’s fine, whatever you want."
+4,23,8,3,1201200,1202742,It’s perfect.
+4,23,2,3,1203327,1205589,"And, I don’t know, if it starts to rain"
+4,23,8,0,1205589,1207211,Well then we’ll get wet.
+4,23,4,5,1210876,1214962,Ohh. And I don’t even have a date.
+4,23,1,4,1219301,1221344,Do you remember where the duck food is?
+4,23,3,6,1221511,1224263,"Yeah, it’s in the guys’ apartment under the sink. Why?"
+4,23,1,4,1224431,1226474,Because I’m going to London.
+4,23,3,6,1226642,1228893,What?! What do you mean you’re going to London?
+4,23,1,4,1229061,1231020,"Yeah, I have to tell Ross that I love him."
+4,23,1,4,1231188,1234815,"Now honey, you take care, you don’t have those babies until I get back."
+4,23,3,2,1235692,1237735,"I—Rachel, you can’t go! Ross loves Emily!"
+4,23,1,2,1237903,1239155,"Yeah, I know, I know, I know he does."
+4,23,1,5,1239155,1241060,But I have to tell him how I feel!
+4,23,1,4,1241156,1245451,He deserves to have all the information and then he can make an informed decision.
+4,23,3,5,1245619,1248829,That’s not why you’re going!
+4,23,3,5,1245619,1252792,"You’re going because you hope he’s gonna say, ""Yeah, I love you too, Rach."
+4,23,3,5,1248997,1252792,"Forget that British chippy."""
+4,23,1,6,1254169,1255211,Ohh—Do you think he will?!
+4,23,3,5,1255379,1258401,No!
+4,23,3,5,1258401,1259220,Because he’s in love with the British chippy!
+4,23,3,0,1260467,1264720,"Look, Rachel, if you go, you’re just gonna mess with his head and ruin his wedding!"
+4,23,3,0,1264888,1267440,"Y’know, it’s too late!"
+4,23,3,5,1267440,1267577,You missed you’re chance!
+4,23,3,5,1268475,1274146,"I’m sorry, I know this must be really hard, it’s over."
+4,23,1,0,1272354,1280945,"Y’know what? No. It’s not over until someone says, ""I do."""
+4,23,3,3,1281697,1289036,"I do! I do! I do!  I do!  Ugh, like I can really chase you. I’m carrying a litter."

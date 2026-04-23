@@ -1,0 +1,41 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+2,3,5,4,5130,5673,Hey.
+2,3,11,3,5673,6967,Hey!
+2,3,4,4,7173,8173,So how was Joan?
+2,3,5,4,8341,9341,I broke up with her.
+2,3,2,6,11136,13887,"Don’t tell me, because of the big nostril thing?"
+2,3,5,1,15015,20060,"They were huge. When she sneezed, bats flew out of them."
+2,3,1,4,21021,22855,"Come on, they were not that huge."
+2,3,5,1,23106,26358,"I'm tellin' you, she leaned back; I could see her brain."
+2,3,4,6,28319,32573,How many perfectly fine women are you gonna reject over the most superficial insignificant things?
+2,3,0,4,32824,33456,"Hold it, hold it."
+2,3,0,4,33456,35556,I gotta side with Chandler on this one.
+2,3,0,1,35744,44334,"When I first moved to the city, I went out a couple of times with this girl, really hot, great kisser, but she had the biggest Adam's apple."
+2,3,0,1,45462,46587,It made me nuts.
+2,3,5,4,48173,50799,You or me?
+2,3,2,4,51009,53594,"I got it. Uh, Joey, women don't have Adam's apples."
+2,3,0,6,60518,63520,"You guys are messing with me, right?"
+2,3,11,4,65398,67274,Yeah.
+2,3,0,3,68401,72071,"That was a good one. For a second there, I was like, ""whoa."""
+2,3,64,4,146312,148856,I could have birds.
+2,3,4,4,152277,158448,"Okay, Mr. Heckles, we'll try to keep it down."
+2,3,64,4,154445,158448,Thank you. I'm going to rejoin my dinner party.
+2,3,1,4,159284,161160,"All right, bye-bye."
+2,3,5,4,162704,166832,"Okay, Janice. Janice. You gotta give me Janice. That wasn't about being picky."
+2,3,2,4,163955,166832,We'll give you Janice.
+2,3,3,4,168459,172671,"I miss Janice though.  ""Hello, Chandler Bing."""
+2,3,1,6,174924,178594,"""Oh, my, god."""
+2,3,0,3,180680,188729,"""Oh, Chandler, now, now, that's it. There, faster!"""
+2,3,4,4,196446,200365,"Stop with the broom, we're not making noise."
+2,3,1,3,210418,211585,We won. We won!
+2,3,4,4,216633,218091,Mr. Heckles.
+2,3,1,4,222388,224806,How did this happen?
+2,3,18,4,225058,232064,He musta been sweeping. They found a broom in his hand.
+2,3,4,0,230563,232064,That's terrible.
+2,3,18,4,232523,240197,I know. I was sweeping yesterday. It coulda been me.
+2,3,2,4,238112,240114,"Sure, you coulda. You never know."
+2,3,18,4,240114,240256,You never know.
+2,3,4,1,405780,409783,Would you look at this dump? He hated us. This is his final revenge!
+2,3,1,1,410034,412285,Have you ever seen so much crap?
+2,3,5,0,412537,416123,"Actually, I think this apartment sullies the good name of crap"
+2,3,0,4,417125,422254,Check this out. Can I have this?

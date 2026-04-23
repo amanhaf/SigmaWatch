@@ -1,0 +1,89 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+4,15,1,4,348181,350349,Okay.
+4,15,5,5,348181,355562,"Okay, we have to talk. I’m just getting out of a very serious relationship"
+4,15,6,2,355730,361818,"I know! And I’m just getting out of a marriage, I mean talk about meant to be!"
+4,15,5,3,362945,366323,Right! I just think that this is happening too soon.
+4,15,6,5,366491,373288,"Oh, too soon, too schmoon. Face it honey, I am not letting you get away this time."
+4,15,5,1,379128,385967,"I hear ya.  But! Unfortunately, my company is transferring me overseas!"
+4,15,6,6,387637,395685,Oh no! Where to?  Too Paris?
+4,15,5,4,392308,395685,"No! No! Not, Paris."
+4,15,6,3,395853,399773,"Too London? No-no, Rome? Vienna? Ooh-ooh, Barcelona?"
+4,15,5,0,399941,407781,"Okay, could you just stop talking for a second?  Yemen. That’s right, yes, I’m being transferred to Yemen!"
+4,15,6,0,412703,415415,When?
+4,15,5,4,415415,415840,I don’t know exactly.
+4,15,6,5,417166,426174,"Ugh, well I will just have to soak up every once of Chandler Bing until that moment comes."
+4,15,5,3,427343,430137,But I do know that it’s some time tomorrow.
+4,15,0,4,740990,742073,No.
+4,15,2,4,742783,744492,You’ll see.
+4,15,8,4,745536,750665,"Liam, do me a favour. Tell the lads to go easy on Ross, it’s his first time."
+4,15,138,6,751459,752584,You don’t say!
+4,15,8,3,761969,763845,"Good luck, babe."
+4,15,138,3,764013,766389,Ross! Ross! Come on! Get in here!  Ross! Come on!
+4,15,138,0,764013,770351,"Ross, come on! Get in the bloody scrum! Ross, get in!"
+4,15,2,3,793042,795460,JOEY!!!!!!
+4,15,1,3,797463,801925,"You…are…not going to believe it! Joshua came into work today, and guess what happened?"
+4,15,4,6,802092,803551,He asked you out?!
+4,15,1,3,803719,807639,No. But I was showing him some cufflinks and I felt his pulse.
+4,15,4,3,809642,811518,Saucy!
+4,15,1,4,812436,813398,What are these?
+4,15,4,4,813398,816277,Electrical plans for the building.
+4,15,1,2,817566,820109,"Okay, okay, okay should I be scared?"
+4,15,4,4,820277,822488,"I know that switch does something, okay?"
+4,15,4,4,822488,824298,So-so I went down to city hall and got these.
+4,15,4,5,824406,827200,All I had to do was pay $25 and wait in line for three hours.
+4,15,1,6,828661,830829,Wow! If only more people knew.
+4,15,5,4,870286,873705,"Okay. Then I guess it’s just, wait here then.   Hi. I need one fake ticket to Yemen."
+4,15,143,6,876083,879085,One ticket to Yemen?
+4,15,5,4,882923,885466,"Oh no-no-no, no. No, no, no, I just, I just need a pretend ticket."
+4,15,143,6,885634,887677,"I’m sorry sir, I don’t understand."
+4,15,5,4,887845,890847,What would you give to a kid if he wanted a ticket to play with?
+4,15,143,4,891015,893516,Are you travelling with a child?
+4,15,5,4,894768,896436,No.
+4,15,5,4,897688,904736,"All right, y’know what, she’s  gonna think that I’m handing you a credit card, but what I’m really gonna do is hand you a library card."
+4,15,2,5,973430,976599,"What? No! No, I’m not stopping. I’m Red Ross!"
+4,15,0,0,976767,979978,"Dude, if you go back out there, you’re gonna be Dead Ross!"
+4,15,2,0,980145,986567,I don’t care! I am not quitting! I insist on finishing this game!
+4,15,8,0,983565,986567,"All right, all right, if you insist on doing this, at least let me help you."
+4,15,2,4,986735,990780,"No, God no! That is no place for a woman. Those guys will grab anything."
+4,15,8,4,991907,996619,No. That’s not what I’m saying. I just may know a few things that might help you inflict some pain.
+4,15,2,3,996787,1000164,I like that.
+4,15,8,4,1000332,1002251,"Yeah? Listen closely, Devon has got a weak ankle."
+4,15,2,4,1002251,1002473,Huh?
+4,15,8,4,1002584,1004669,One swift kick and he’ll back off.
+4,15,2,4,1004837,1006587,"All right, bad ankle, got it!"
+4,15,8,4,1006755,1010591,"And that big bloke with the beard, he has got a trick hip."
+4,15,8,4,1010759,1014321,Yeah.
+4,15,8,4,1014321,1014685,"And uh, and David over there, I heard he doesn’t wear a cup."
+4,15,2,3,1014805,1018057,"Yeah? I can use that, trick hip, no cup, okay! Okay!"
+4,15,8,4,1018267,1023187,"And uh, Liam, Liam’s got bad knees. You hit him right and he’ll go down like a lamp."
+4,15,2,3,1023355,1025064,"But-but, Liam’s on my team."
+4,15,8,0,1025232,1028276,I don’t care! You just get him!
+4,15,2,3,1028444,1031487,"I’m gonna go get him! Okay, I am going back in!"
+4,15,0,3,1033991,1037326,The Red Ross! Okay.
+4,15,4,4,1063353,1066647,"I know that there’s no hole there, I just really liked that picture."
+4,15,1,6,1069318,1071694,Oh my God! Look at this!
+4,15,4,4,1071862,1075323,"Okay, but there"
+4,15,1,0,1075491,1079410,I don’t care! The wires have come loose in your head!
+4,15,4,4,1079828,1082914,I just thought that if I could follow the wire I could find out what it did.
+4,15,1,5,1083082,1086000,And did you?!
+4,15,4,4,1086502,1091672,"No. It disappears back there behind that baseboard. For a minute there, I thought it went downstairs."
+4,15,4,4,1096386,1102767,But it didn’t. Say hello to Mrs. Chatracus.
+4,15,1,6,1099515,1102767,Oh my God.
+4,15,212,4,1102935,1103227,Hello darling.
+4,15,1,4,1103227,1106861,"Hello, Mrs. Chatracus."
+4,15,2,0,1156989,1159201,Please!
+4,15,2,0,1159201,1159673,Are you kidding?
+4,15,2,0,1159673,1159821,"I-I hurt three huge men, I gave a guy a bloody nose—I mean I-I’m not proud of it but, I really am."
+4,15,2,3,1167916,1169917,"And it’s all because of you, wonderful, amazing you."
+4,15,8,2,1170085,1174839,I think you’ve got concussion.
+4,15,2,3,1175007,1177592,"No, no, I’m serious. Thank you."
+4,15,8,2,1178802,1186142,You’re welcome.  I’m sorry. Did I hurt you?
+4,15,2,5,1187728,1190021,"It’s worth the pain.  Y’know what, you know what? It’s not."
+4,15,4,4,1279653,1280585,All right.
+4,15,4,4,1280585,1283003,The super couldn’t figure out what it did.
+4,15,4,5,1283115,1287159,A $200 an hour electrician couldn’t figure out what it did.
+4,15,4,5,1287327,1290538,I’ve had seven pretty serious shocks.
+4,15,4,1,1291373,1292395,I officially give up.
+4,15,1,3,1292395,1294467,Thank God.
+4,15,4,3,1295377,1299839,"I guess Joey was right, it does nothing."
+4,15,3,0,1304761,1322737,See? I’m doing it. I am totally doing it.  I lost it.
