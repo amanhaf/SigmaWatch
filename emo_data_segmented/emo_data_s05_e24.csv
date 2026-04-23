@@ -1,0 +1,112 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,24,2,4,62979,64981,I think the check in is that way.
+5,24,1,4,64981,65668,Ahh.
+5,24,2,4,344177,345309,"Yes, hello."
+5,24,2,4,345309,346226,I have a question.
+5,24,2,4,346346,351558,"Umm, I used your pen to draw on my friend's face."
+5,24,2,4,352393,354478,A beard and a moustache.
+5,24,2,4,357190,359358,Thank you.
+5,24,2,4,360526,362694,"No,"
+5,24,1,6,384300,386134,What?! What else did he say?
+5,24,2,4,386344,389596,"Umm, he said he thought I was funny."
+5,24,2,4,391599,398230,"So… Okay, look-look umm, let's just go downstairs, we'll have some fun, and you will forget all about it."
+5,24,1,0,398439,401525,"Ross, no! There is"
+5,24,2,4,401734,403819,"Oh, come on! Rach, it's-it's not that bad."
+5,24,1,0,404070,406071,"Ross, I am a human doodle!!"
+5,24,2,4,407532,411785,"Look, just because some idiot drew on your face doesn't mean you shouldn't have any fun!"
+5,24,2,4,412036,414246,"And besides, hey-hey-hey no one is even gonna"
+5,24,2,4,435017,437727,"Okay, there was"
+5,24,3,0,480313,484065,Get out of here you lurker!  Go on! Get!
+5,24,5,3,486110,486528,Hey Pheebs!
+5,24,3,6,486528,489007,Ohh! You made up!
+5,24,4,4,489614,491698,"Yeah, I couldn't be mad at him for too long."
+5,24,5,3,491991,500290,"Yeah, she couldn't live without the Chan Love."
+5,24,3,1,498122,500290,"Ohh, get a room."
+5,24,4,4,500500,501682,We have one.
+5,24,3,1,501682,502506,I know. Use it.
+5,24,0,3,506297,511968,"Oh-oh-oh, yeah!  That's right, you take good care of those babies!"
+5,24,92,6,512595,513397,Excuse me?
+5,24,0,3,513397,514857,"It's me, Joey!"
+5,24,92,6,515014,517307,Do I know you?
+5,24,0,3,517517,518892,Joey!
+5,24,92,4,522438,524731,"Oh-ho, yeah. Yeah, the hand guy."
+5,24,92,4,529487,530737,Nothing?
+5,24,0,4,531697,534783,"Look, you and I have been given a gift."
+5,24,0,4,534992,536536,We have to do something with it.
+5,24,0,3,534992,538912,Or-or magic!
+5,24,0,3,536536,538973,"Like-like, hand modeling!"
+5,24,92,4,543501,544463,I have to get back to
+5,24,0,6,544463,545225,Whoa!
+5,24,0,6,545225,545327,Whoa!
+5,24,0,3,545878,547462,We could have our own show!
+5,24,0,3,547672,550882,Y'know we could clap our hands together people will love it!
+5,24,0,0,551759,552801,Huh?
+5,24,0,3,552969,554886,And-and-and I wrote a song for us!
+5,24,0,3,555137,568400,"(Singing, to the tune of"
+5,24,0,4,570861,574573,Okay that’s fair.
+5,24,92,4,570861,571873,That's okay.
+5,24,0,4,571873,574617,But you haven't even heard the chorus!
+5,24,2,4,581956,583415,All right.
+5,24,4,3,613362,616281,A new pair of shoes for the Chan-Chan man!  Yes!
+5,24,5,3,617283,622329,Yes! I've-I've never seen a roll like this in my life!
+5,24,4,3,621078,623872,"That's right baby! Okay, what do I want now?"
+5,24,5,4,625666,628168,"Okay, ah umm, ah, a 8. Ah, a 6?"
+5,24,4,4,628419,631296,Pick a number! That is your
+5,24,5,3,631505,632506,8. 8!
+5,24,4,3,632506,632826,Thank you!
+5,24,5,3,632965,635800,"If you get this one, we buy everybody here a steak dinner!"
+5,24,4,6,711168,712460,What did you just say?
+5,24,5,3,712837,715714,You roll another hard eight and we get married here tonight.
+5,24,4,6,716716,717968,Are you serious?!
+5,24,5,3,717968,719735,Yes! I love you! I've never loved anybody as much as I love you.
+5,24,4,3,719885,725974,I've never loved anybody as much as I love you.
+5,24,5,3,726434,730228,"Okay, so if an eight comes up, we take it as a sign and we do it!"
+5,24,5,4,730479,732522,What do you say?
+5,24,4,3,732732,733483,Okay!
+5,24,5,3,733483,734011,Okay! Come on! Let's go! All right!
+5,24,5,0,740114,743199,Okay! That's a four! And where-where's the other one?
+5,24,223,4,743409,746619,It went under the table.
+5,24,4,0,746871,749414,"Nobody move!  Okay, you look that way; I'll look this way!"
+5,24,5,3,752877,754294,Here it is! Here it is!
+5,24,4,4,756046,762010,That could be a four or a five. It's your call.
+5,24,5,4,765514,767223,It's a four.
+5,24,4,4,770603,772187,I think so too.
+5,24,3,6,1021812,1024689,I won! I won! I finally won!
+5,24,133,0,1024898,1026649,I won! That was my quarter!
+5,24,3,0,1026859,1028985,Fine! Here! Take a hike toots!
+5,24,133,0,1030487,1034782,"Excuse me, sir! This lady played my quarter, this is my money."
+5,24,103,4,1034992,1036284,Is that true miss?
+5,24,3,1,1037786,1038954,Sells drugs to kids.
+5,24,103,6,1038954,1040122,What?!
+5,24,3,1,1040122,1040763,She sells drugs to kids.
+5,24,133,0,1044918,1046520,It was my quarter!
+5,24,103,4,1046520,1046924,Was it her quarter?
+5,24,3,4,1049048,1051758,How about we talk about this over dinner?
+5,24,103,1,1051967,1055720,"Okay lady, you're out of here."
+5,24,3,0,1055929,1058014,"No! No, you can't arrest me! No!! I won't go back! I won't go back to that hell hole!!"
+5,24,103,0,1059767,1062268,I'm just taking you outside!
+5,24,3,4,1062478,1063978,"Oh, okay."
+5,24,4,3,1076575,1079035,You're so efficient. I love you!
+5,24,5,3,1079453,1080703,Let's go!
+5,24,4,5,1080954,1082455,No-no-no! We need something old!
+5,24,5,4,1082664,1086501,"Ohh, great, I have condom in my wallet I've had since I was twelve."
+5,24,4,3,1088420,1090046,That'll work!
+5,24,5,4,1090255,1091923,I don't think so.
+5,24,4,3,1093467,1095593,"Okay, now we just need something borrowed!"
+5,24,5,4,1096512,1098064,Here just…take this.
+5,24,4,5,1098064,1100161,That's stealing!
+5,24,5,4,1100641,1102850,"No, we'll-we'll bring it back! Just put it under your dress."
+5,24,4,5,1218592,1224805,"Okay, come on, I can't get married until I get something old, something new, something borrowed, and something blue."
+5,24,5,3,1236526,1238736,Hello! One marriage please!
+5,24,4,3,1238987,1240404,"Yep, we wanna get married!"
+5,24,4,4,1243784,1245117,All right.
+5,24,5,3,1247871,1249205,Dum! Dum-dum-dum! Dum! Dum! Dum! Dum-dum-dum!
+5,24,4,4,1254002,1255253,What are you doing?
+5,24,5,4,1255504,1258005,"Oh, that's"
+5,24,4,4,1258215,1260091,"No, only because that's the graduation song."
+5,24,5,3,1264763,1271060,"Okay, all right, all right, all right! Okay!  Okay, here's something, here's something blue and new."
+5,24,5,3,1264763,1269267,Okay!  This is it!  We're gonna get married!
+5,24,4,4,1269476,1271060,Are you sure you wanna do this?
+5,24,2,3,1276733,1278985,"Well, hello, Mrs. Ross!"
+5,24,1,3,1279236,1282321,"Well, hello, Mr. Rachel!"
+5,24,1,4,1284491,1286284,Wait!  Okay!

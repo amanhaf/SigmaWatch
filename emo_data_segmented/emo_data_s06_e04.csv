@@ -1,0 +1,57 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+6,4,5,4,373164,374289,Hey.
+6,4,0,4,374457,375916,Hey! Any good mail?
+6,4,5,4,376084,378293,"Yes, you got something from the Screen Actor’s Guild."
+6,4,0,4,378461,382422,"Ooh, it’s probably a residual check, hey can you open it for me, I’m kinda…."
+6,4,5,4,384008,387219,"""Benefits lapsed."""
+6,4,0,4,384008,390430,Hmm that’s weird. I don’t remember being in a move called benefits lapsed.
+6,4,5,4,391057,398563,"Okay, it’s not a check. They’re saying your health insurance expired because, you didn’t work enough last year."
+6,4,0,6,396020,398563,Let me see that!
+6,4,5,4,398731,400107,All right.
+6,4,0,6,400274,402734,"Oh, I can’t believe this!"
+6,4,0,0,402902,404653,This sucks!
+6,4,0,2,405238,410158,"When I had insurance I could get hit by a bus or catch on fire, y’know?"
+6,4,0,0,410326,411298,And it wouldn’t matter.
+6,4,0,0,411298,413292,Now I gotta be careful?
+6,4,5,5,414622,419793,"I’m sorry man, there’s never a good time to  stop catching on fire."
+6,4,0,5,421212,425298,"All right well, I guess I gotta go get a job. I’m gonna go see my agent."
+6,4,5,4,425466,427510,"Okay, make sure you look both ways before you cross the street."
+6,4,0,3,427510,428402,look both ways before you cross the street.
+6,4,0,5,559892,564145,"Estelle, you gotta get me some work. I-I lost my health insurance."
+6,4,162,4,564313,567607,"All right, first thing we gotta do, damage control."
+6,4,0,6,567775,570318,Why?
+6,4,162,5,570486,579494,"Well, I think uhh, someone out there may have been bad mouthing you all over town."
+6,4,0,0,578369,579494,Bastard!
+6,4,5,4,587295,589045,Hey!
+6,4,0,3,587295,596177,Hey! So Estelle lined up a bunch of auditions for me tomorrow and I’ll have my health insurance back in no time.
+6,4,5,1,597346,600890,"That’s great, but shouldn’t you be on the toilet right now?"
+6,4,0,6,604312,605647,What?!
+6,4,5,1,605647,606929,What’s wrong with you?
+6,4,0,4,607023,608023,Nothing!
+6,4,0,2,608190,618575,"Well, I-I got this blinding pain in my stomach when I was lifting weights before, then I uh passed out and uh, haven’t been able to stand up since."
+6,4,0,4,618743,621536,"But um, I don’t think it’s anything serious."
+6,4,5,6,621704,624706,This sounds like a hernia. You have to—you-you go to the doctor!
+6,4,0,2,624874,631463,"No way! ‘Kay look, if I have to go to the doctor for anything it’s gonna be for this thing sticking out of my stomach!"
+6,4,5,1,634842,636009,That’s a hernia.
+6,4,0,0,636177,641556,Why did I have to start working out again?  Damn you 15s!
+6,4,1,4,1156697,1157490,Hello?
+6,4,41,4,1157490,1158790,"Hello, is Ross there?"
+6,4,1,4,1158907,1160449,"Uh no, he’s not. Can I take a message?"
+6,4,41,4,1163203,1171127,"Yes, this Russell, Ross’s divorce lawyer, just tell him that since I haven’t heard from him, I assume he’s decided to give the marriage a try."
+6,4,1,6,1168125,1171127,Ross got married again—Nooooooo!!!!!!!!!
+6,4,224,6,1201742,1204327,What’s happening to your accent?
+6,4,2,6,1207164,1207976,Come again?
+6,4,2,2,1207976,1210173,What’s-what’s this nonsense?
+6,4,2,5,1214213,1216964,"All right, I’m-I’m not English."
+6,4,2,4,1218592,1220927,I’m from Long Island.
+6,4,2,5,1221428,1225806,"I was really nervous and the accent just uh, just came out."
+6,4,2,5,1225974,1228184,I’m sorry.
+6,4,2,4,1230062,1233022,"So, if we could just get back to the lecture."
+6,4,2,4,1233732,1236984,"Umm, were there any questions?"
+6,4,2,4,1239696,1241322,About paleontology.
+6,4,2,0,1243867,1247703,"All right, look I was just trying to make a good first impression."
+6,4,2,5,1247871,1249747,"Obviously, I screwed up."
+6,4,2,4,1249915,1255294,But what you guys think of me is really important because I’m-I’m hoping to get a permanent job here.
+6,4,2,4,1255462,1258839,So if you just give me another chance to make a good impression
+6,4,1,0,1260425,1266055,Ross!! Are you crazy?! I am
+6,4,2,6,1276024,1277775,"Well, hello Rachel!"

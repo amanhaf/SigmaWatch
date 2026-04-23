@@ -1,0 +1,77 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,17,4,3,248164,251500,Yeah! So-so when are you getting married?
+7,17,76,4,251751,253813,"Oh I’m not, I just like to try these on."
+7,17,1,4,253813,256851,I do the same thing.
+7,17,76,3,257632,261510,I’m just kidding. I’m getting married July 25
+7,17,1,3,264806,267432,I’m just kidding too.  I’m getting married in December.
+7,17,76,4,269269,270688,So when are you getting married?
+7,17,4,4,270688,271965,Oh May 15
+7,17,76,3,272146,274731,Oooh it’s getting close!
+7,17,76,4,272146,274731,"So uh, who’s your photographer?"
+7,17,4,4,274983,276733,Jeffrey
+7,17,76,4,274983,282030,We met with him. Did he show you the photos of the nude wedding he did?
+7,17,4,6,276985,282030,The best man? Wow!
+7,17,76,3,282448,289204,"I know! I almost called off my wedding. Oh, who’s your band?!"
+7,17,4,4,285493,289204,"Oh, my fiancee wants the Swing Kings."
+7,17,76,5,289414,293542,"Oh, you’re so lucky. My fiancee wants the heavy metal band Carcass."
+7,17,3,3,293751,298672,"Ooh, is that spelled with a ‘C’ or a ‘K’? Oh my God! It doesn’t matter; they’re both great!"
+7,17,1,4,300466,302509,Oh y’know what?
+7,17,1,4,302719,306346,Now that you know what you want you should go to Kleinman’s and get it half off.
+7,17,1,1,306597,308724,This place is so overpriced.
+7,17,1,4,312520,316023,"So, does this  come in another color or"
+7,17,38,4,331247,336126,Oh okay. But y’know what? Be careful. Because a guy who was helping me before had to leave because he hurt his back.
+7,17,0,6,337045,337887,Boyfriend?
+7,17,38,4,337887,338774,No.
+7,17,0,4,338921,340630,I’m Joey.
+7,17,38,4,341299,342341,Kristen.
+7,17,0,3,342550,348347,"Oh wow, what a beautiful name!  What is it again?"
+7,17,38,4,349265,350058,Kristen.
+7,17,0,4,350058,351837,Got it!  So
+7,17,38,4,352477,353949,"So uh, do you live around here?"
+7,17,0,4,353949,354471,Yeah!
+7,17,0,3,354471,354805,Yeah!
+7,17,0,4,354805,355349,Right down there.
+7,17,0,4,355480,357314,Hey listen.. let me give you a little tip.
+7,17,0,3,357565,362319,Do not take a nap on this stoop  or you can wake up with your shoes gone.
+7,17,38,4,363363,364821,I’ll remember that.
+7,17,0,4,363363,369701,"Okay. Yeah. Listen would you uh, would you like to have dinner with me tonight?"
+7,17,38,4,369911,373080,"Oh I, I have plans tonight."
+7,17,38,4,369911,373080,But how about tomorrow?
+7,17,0,3,373289,375874,"Sounds great! Okay, alright, well where does this go?"
+7,17,38,4,376084,378710,"You look strong, why don’t I take that and you grab one of the boxes."
+7,17,0,4,378878,386968,"Okay. Yeah.  Yeah, I’ll grab this one."
+7,17,2,4,645561,648605,Well obviously only one of us can keep dating her.
+7,17,0,4,648814,652484,"Obviously! So, how do we decide?"
+7,17,2,4,652693,658740,"Well now let’s-let’s look at this objectively, I think I should date her"
+7,17,0,4,660534,662035,Uh-huh. Uh-huh.
+7,17,2,3,666123,670585,"That’s interesting, but check this out. I date her"
+7,17,0,4,671003,673505,Yeah-yeah I like that but just to go in another direction
+7,17,2,4,673756,676132,"Okay, okay. This can go on for a while."
+7,17,0,4,676342,679427,Yeah well we should order some food then.
+7,17,2,4,680971,690438,"No Joey! Look why don’t, why don’t we just let her decide? Okay? Hey-hey, we’ll"
+7,17,0,4,691524,693817,That sounds fair.
+7,17,2,4,694151,697862,Maybe I’ll take her to that new French restaurant down the street
+7,17,0,0,698072,699634,Ah yeah—wait a second now!
+7,17,0,4,699634,701593,Look we’re gonna have to set a spending limit on the date.
+7,17,0,0,701701,704577,I don’t have the money to take her to a fancy place like that.
+7,17,2,4,704787,708665,"Well sorry, that’s what I do on dates."
+7,17,0,4,708874,713461,"All right, well I guess I’ll just have to do what I do on dates."
+7,17,2,4,719093,722595,So let’s decide on the spending limit
+7,17,0,4,723180,729060,"Yeah. Uh, …a slice……six dollars?"
+7,17,2,4,733941,737193,I was thinking more like a hundred.
+7,17,0,4,737445,740196,Okay. Can I borrow 94 dollars?
+7,17,0,3,849181,853643,You spent a hundred dollars. That’s the limit. You’re screwed!
+7,17,2,0,854478,859482,"Uh actually, I sent the flowers before the actual date. So technically,"
+7,17,0,0,864238,867657,Oh-oh! So that’s the way it’s gonna be huh? Yeah I can break the rules too y’know!
+7,17,2,0,867867,868952,Oh yeah? What are you gonna do?
+7,17,0,4,868952,870484,I don’t know.
+7,17,2,1,870661,871829,Why am I not surprised?
+7,17,0,0,871829,873719,Y’know what Ross? I’m not gonna let you get away with this!
+7,17,2,4,873873,874845,I don’t think you have much choice.
+7,17,0,0,874845,875602,Well we’ll see!
+7,17,2,4,875708,877041,Bye-bye!
+7,17,0,4,875708,881963,Yeah bye-bye!  Hey! So just a light layer?
+7,17,2,4,882172,884841,Yes. Yes. Just here  and there .
+7,17,1,4,946403,949989,Well you have to because maybe it’s stupid.
+7,17,5,3,951617,964337,Well it’s just while Monica and I were dancing to them it was…the first time I knew that…you were the woman I wanted to dance all my dances with.
+7,17,4,0,966799,969092,Oh crap!

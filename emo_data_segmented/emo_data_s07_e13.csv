@@ -1,0 +1,59 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,13,4,5,113029,116198,"Hey Ross! So, I was checking out the uh, real estate section"
+7,13,2,4,116366,118548,Yeah?
+7,13,4,4,118548,118714,Look at this.
+7,13,2,4,118827,120661,"Oh, it looks like mom and dad’s house."
+7,13,2,6,120829,130796,"Oh, it even has a tree with a broken limb out front and the uh, the window in the attic is…Oh my God!"
+7,13,3,6,131256,134258,What? What happened to the window in the attic?!
+7,13,4,0,134968,136969,I can’t believe mom and dad are selling the house!
+7,13,2,3,137137,138929,I can’t believe they-they didn’t even tell us!
+7,13,3,6,139097,142391,I can’t believe I still don’t know what happened to the
+7,13,150,4,253544,259341,So basically this is very easy. You read from the script and try to sell as much toner as you possibly can.
+7,13,3,3,259509,264846,"Okay, I can do that! Oh, by the way, I"
+7,13,150,4,265014,268141,Why don’t we do a trial run.
+7,13,3,4,268768,277317,"Oh okay. Umm, all right.  Hi, this is Phoebe from Empire Office Supplies, can I speak to your supply manager please?"
+7,13,150,4,277485,279069,I’m the supply manager.
+7,13,3,4,279237,281488,"Umm, okay I would like to talk to you about your toner needs."
+7,13,2,4,357106,357628,Dad?
+7,13,19,4,357628,359752,I’m here!
+7,13,2,6,360318,361818,Hey!
+7,13,19,3,361986,366323,"Hi. God, it seems like just yesterday you guys used to come out to watch me work."
+7,13,2,5,366491,368867,"Dad, we-we can’t believe you’re selling the house."
+7,13,19,4,369035,377459,"Well, it’s time for a new family to start their memories here and hopefully their check will clear before they find the crack in the foundation and the asbestos in the ceiling."
+7,13,2,4,379462,382339,Let’s grab our stuff and get the hell out of here.
+7,13,19,5,382757,385342,I’m sorry we can’t store your childhood things anymore.
+7,13,4,3,385510,388720,"Oh, that’s okay, I can’t wait to see everything again! All of the memories"
+7,13,19,4,388888,394726,"Well, I don’t know what’s in the boxes down here, but I do know there are six or seven"
+7,13,4,4,395812,397771,I used to
+7,13,2,4,397939,401066,"Yeah, not as much as you used to love to play uncooked batter eater."
+7,13,4,4,401317,406655,"Hey, it is unreasonable to expect a child to wait for a"
+7,13,3,2,569735,575782,No-no wait-wait! I can’t just let you hang up! Just please talk to me.
+7,13,60,4,573864,585208,Well…I only have one thing to do today.  I guess I could push it back.
+7,13,3,5,582206,585208,"Yeah! Now, why do you want to kill yourself?"
+7,13,60,5,590006,595218,"It’s just that I uh, have been working for ten years now at this meaningless, dead-end job and nobody here even knows I exist!"
+7,13,3,4,596554,598138,Chandler?
+7,13,19,5,724056,727100,"Well, she’ll understand right? It’s not like I did it on purpose."
+7,13,2,4,727268,728852,"Dad, that won’t matter to her."
+7,13,2,0,729019,736359,"Look, all my stuff is safe and dry and all hers is-is, is growing new stuff!"
+7,13,2,0,736527,741448,"See, this is exactly the kind of thing that makes her think you guys love me more than you love her."
+7,13,19,6,741615,743616,"Oh my God, does she really thinks that?"
+7,13,2,5,743784,745243,"Well, can you blame her?"
+7,13,19,3,745411,753293,"Well I don’t know, I-I suppose we may have favored you unconsciously, you were a medical marvel! The doctor said your mother could"
+7,13,2,5,750416,753293,"Dad, dad I don’t want to hear about it."
+7,13,19,6,753461,754045,Really?
+7,13,2,4,754045,756247,"Well, not right now."
+7,13,2,4,756964,761134,"Okay look, Monica came here for some memories and damnit, we’re gonna give her some!"
+7,13,2,4,761302,766014,"Okay, grab…grab some empty boxes."
+7,13,2,4,763095,766014,Okay?
+7,13,2,3,763095,769934,We’ll-we’ll take stuff from mine and whatever we can pass off as hers we’ll-we’ll put ‘em in there.
+7,13,60,4,1143058,1145726,Philadelphia.
+7,13,3,6,1143058,1149438,"Oh my God! So was she! Oh, I’ve got-I’ve got goose bumps."
+7,13,60,6,1149773,1150857,Really?
+7,13,3,4,1151024,1152656,"Well, y’know I’m wearing layers and it’s warm."
+7,13,0,3,1152656,1153713,Yeah.
+7,13,3,5,1153819,1161200,"But if—no look, okay. These jerks might not care about you, but the universe does! And that says a lot!"
+7,13,60,4,1163245,1164996,Did you hear that?!
+7,13,60,0,1165414,1167874,I don’t need you guys to care about me!
+7,13,60,3,1168041,1169960,Because the universe cares!
+7,13,60,3,1169960,1170396,The whole universe!
+7,13,60,5,1178135,1180553,I really wished they’d care just a little bit though.

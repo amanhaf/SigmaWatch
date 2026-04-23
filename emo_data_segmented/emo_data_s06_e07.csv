@@ -1,0 +1,24 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+6,7,57,4,1015889,1017932,"Hey Joey, I got some beer for you."
+6,7,0,4,1019309,1022687,"Uh, don't you mean ""for whom?"""
+6,7,57,4,1024314,1029318,"Sure, listen I was gonna order some pizza, you wanna share one?"
+6,7,0,4,1029486,1033740,"Pizza, heh, its not like I never had that before...ba dum bum cheshhh."
+6,7,57,4,1036201,1037368,Is there something wrong?
+6,7,0,4,1038912,1043833,"All right, All right, let's just get this out in the open okay?"
+6,7,0,4,1044001,1045501,You're hot.
+6,7,0,4,1046670,1048212,I'm lovable.
+6,7,0,4,1048714,1051382,Clearly there's a vibe going on between us.
+6,7,0,4,1051550,1057597,"But, we're roommates and it's a huge mistake for us to continue down this road."
+6,7,57,4,1057765,1059515,Joey...
+6,7,1,4,1146436,1146538,Hey!
+6,7,3,4,1146538,1148442,Hey!
+6,7,1,3,1149857,1152400,"Oh honey, I'm so sorry, you were right, this feels great!"
+6,7,3,4,1152568,1157446,"See? And you don't care if people are staring, it's just for a second cause then you're gone!"
+6,7,1,3,1157614,1165538,Gone! I mean its amazing Pheebs. I feel so free and so graceful.  Hey! Look out for the horse! Sorry!
+6,7,2,4,1267724,1275564,"So it said that by the year 2030, there'll be computers that can carry out the same number of functions as an actual human brain."
+6,7,2,4,1279403,1281612,So theoretically we could download our thoughts and our memories into this computer...
+6,7,57,3,1281780,1284198,...and live forever as a machine!
+6,7,2,3,1287286,1292164,"That's so Janine, you-you-you know what, do you know we're doing right now?"
+6,7,2,4,1293583,1296085,"You and I, we're interfacing."
+6,7,57,2,1297546,1299297,"Yeah, I gotta go."
+6,7,5,3,1305554,1306887,Ba dum bumb cheshhh!

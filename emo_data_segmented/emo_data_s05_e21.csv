@@ -1,0 +1,31 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+5,21,0,4,158032,161118,"Hey Ross, is uh, is Staten Island really an island?"
+5,21,2,6,161286,165080,"Uh-huh, that's why they call it Staten"
+5,21,0,6,165456,168292,Ohhh. I thought it was like Long Island.
+5,21,2,4,173798,175215,Also an island.
+5,21,0,4,177051,177927,"Hey, what time is it?"
+5,21,2,4,177927,179104,2:17.
+5,21,0,6,179971,183807,"Wow! You realize that we've been throwing this ball, without dropping it, for like an hour?"
+5,21,2,6,184434,185475,Are you serious?!
+5,21,0,4,185643,190856,Yeah. I realized it about a half-hour ago but I didn't want to say anything 'cause I didn't want to jinx it.
+5,21,2,6,191065,196653,Wow! We are pretty good at this! Hey! We totally forgot about lunch!
+5,21,0,0,198239,203243,"Oh, I-I, I think that's the first time I ever missed a meal!  Yeah, my pants are a little loose!"
+5,21,1,4,207790,208750,"Hey, you guys"
+5,21,0,3,208750,209932,Hey!
+5,21,2,4,305096,309474,"Hey, you wanna get something to eat or uh, do you wanna see how long we can throw this ball back and forth? Huh?"
+5,21,0,4,309642,311603,"Uhh, the ball thing."
+5,21,2,4,311603,312542,Yeah?
+5,21,0,3,314022,319109,"Hey Ross, wouldn't it be great if we could go two straight hours without dropping it?!"
+5,21,2,4,319277,322279,"Uhh,"
+5,21,0,3,323489,324990,Okay!
+5,21,0,2,328578,329670,Uh-oh.
+5,21,2,4,329670,330222,What?
+5,21,0,5,330330,334166,I have to pee. And Rachel's in the bathroom!
+5,21,0,6,339047,341548,"Man, I didn't think we were gonna make it!"
+5,21,2,2,342383,345969,"I know!  Don't switch hands, okay?"
+5,21,71,3,1199698,1201282,I really like waking up with you.
+5,21,3,3,1199698,1207163,"I like waking up with you too.  Oh! It's such a beautiful morning.  Oh, I can stay here all day."
+5,21,71,3,1209166,1210917,That would be great!
+5,21,3,3,1211168,1212980,We could have breakfast in bed
+5,21,71,4,1212980,1213729,"Wait, just a second."
+5,21,3,6,1215797,1219425,Okay.  Oh! Oh no.

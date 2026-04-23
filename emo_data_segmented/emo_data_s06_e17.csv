@@ -1,0 +1,77 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+6,17,0,3,421546,426967,"Hi uh, I’m Joey Tribbiani and with all do respect I’d like to donate some fluids."
+6,17,54,4,428845,433473,"We’re actually at the end of one of our research cycles, so we’re not looking for applicants right now."
+6,17,0,5,433641,443191,"Oh that’s too bad. I’ve kinda been saving up.  Uh, are you sure there’s no studies I can participate in?"
+6,17,54,4,443401,445444,"Well, here’s a schedule of what’s coming up."
+6,17,0,4,447697,449239,Thanks.  Well but this one starts now.
+6,17,54,4,449407,455245,"Oh that one is available now, but only identical twins are eligible. It’s a twins study."
+6,17,0,6,452577,455245,"But it’s $2,000."
+6,17,54,5,455955,458248,Sorry.
+6,17,0,4,459709,466673,Well how about this one? Testing the effects of Joey Tribbiani on attractive nurse receptionists.
+6,17,54,3,467592,471386,"We already got the results back on that on, and they’re not good."
+6,17,5,4,566732,567816,Hey.
+6,17,2,4,567984,573655,Chandler. I sensed it was you.
+6,17,5,6,575491,576992,What?!
+6,17,2,4,577660,581705,Unagi. I’m always aware.
+6,17,5,3,581872,584833,"Okay, are you aware unagi  is an eel?"
+6,17,2,4,586711,587383,What’s up?
+6,17,5,4,587383,589507,I can’t figure out what to make Monica.
+6,17,2,0,589630,592048,"Oh, why don’t you make her one of your little jokes."
+6,17,5,2,592216,596219,I’m going crazy! Okay? Do you have any thing around here that looks homemade?
+6,17,2,4,597096,597938,Y’know what?
+6,17,2,4,597938,599785,She’d-she’d love this.
+6,17,2,4,599890,602018,"Uh, it’s an exact replica of Apollo 8."
+6,17,2,4,602018,603374,I made it in the sixth grade.
+6,17,5,4,604645,608273,"Yeah, I guess I could use that. I could say that your love sends me to the moon."
+6,17,2,4,608441,611651,"Yeah-yeah, except Apollo 8 didn’t actually land on the moon."
+6,17,2,3,613154,618199,"But you-you-you could write that umm, your love lets me orbit the moon twice and return safely."
+6,17,5,4,619577,621036,"Wait a minute, I can’t give this to her."
+6,17,2,4,621245,624205,Why not?
+6,17,5,4,626083,628960,"Because it says ""Captain Ross"" on the side and ""I hate Monica"" on the bottom."
+6,17,3,4,803219,805136,"Yeah, what town are we near?"
+6,17,4,4,805387,809140,"Freemont. West-Westmont, ah Westburg?"
+6,17,3,0,809350,814187,Then why are you answering? Do you at least know what route we’re on?
+6,17,3,4,941148,941816,Pat Sajak?
+6,17,1,3,941816,943331,Yep!
+6,17,3,4,943442,944443,Alex Trebek?
+6,17,1,3,944443,945372,"Oh, of course!"
+6,17,3,4,945486,947195,Chuck Woolery?
+6,17,1,3,947363,962377,"Definitely! Phoebe, you will not find a single game show host, who’s ass I cannot kick."
+6,17,1,3,962628,963880,Say it!
+6,17,3,3,963880,965104,Say we are unagi!
+6,17,2,0,966632,969717,It’s not something you are! It’s something you have!
+6,17,1,3,970761,971803,Say it!
+6,17,2,0,971971,977767,"Y’know what? I can easily get out of this, but there is a chance you can get very, very hurt!"
+6,17,0,4,990406,994701,"All right Carl, we’re next. Now remember, what is not gonna be?"
+6,17,121,4,994868,997787,Another
+6,17,0,4,997955,999372,That’s right! And what are you not gonna do?
+6,17,121,4,999540,1003292,"Well, I’m not gonna talk because"
+6,17,2,4,1166165,1169083,Yes that’s right.
+6,17,130,6,1170252,1171294,Why?
+6,17,2,4,1171461,1175047,"I tired attacking two women, did not work."
+6,17,130,6,1175632,1177341,What?!
+6,17,2,4,1175632,1182305,"No, I mean it’s okay, I mean, they’re-they’re my friends."
+6,17,2,0,1177509,1182305,"In fact, I-I-I was married to one of them."
+6,17,130,0,1182472,1184849,"Let me get this straight man, you attacked your ex-wife?!"
+6,17,2,6,1185559,1186651,"Oh, no!"
+6,17,2,6,1186651,1187821,No-no!
+6,17,2,6,1187936,1189896,"No, I tired!"
+6,17,2,4,1191773,1193125,But I couldn’t.
+6,17,2,0,1193125,1194611,That’s why I’m here.
+6,17,2,4,1195027,1197695,Maybe we could attack them together?
+6,17,2,4,1199823,1201908,That-that’s a no.
+6,17,5,5,1203118,1206996,"I am so, so, so, so sorry!"
+6,17,4,1,1207915,1209165,Uh-huh.
+6,17,5,2,1211043,1218633,"And I will cook anything you want in here , and do anything in there!"
+6,17,4,0,1219885,1223095,"Yeah you will!  And, are you kiddin’ me?!"
+6,17,5,5,1225515,1230811,"Come on Monica, it’s our Valentine’s Day. Please? Please-please, please?"
+6,17,4,4,1233106,1233524,Okay.
+6,17,5,4,1233524,1236078,Okay.
+6,17,5,4,1250123,1251515,"So, are we going in there?"
+6,17,4,3,1251515,1253729,I am!!
+6,17,2,3,1268850,1271811,"Ah-ha, nowhere to run!"
+6,17,1,0,1273605,1276315,I don’t like sitting up here! I’m just gonna over
+6,17,3,0,1276483,1278150,No Rachel! They got here first!
+6,17,3,4,1287452,1289094,Why is Ross doing that?
+6,17,2,2,1289094,1289757,DANGER
+6,17,1,6,1289871,1294709,Oh my God! Why is he jumping on those women!

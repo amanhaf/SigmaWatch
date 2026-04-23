@@ -1,0 +1,92 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+7,19,3,3,5380,8257,Oh hey! How was your audition?
+7,19,0,4,8842,11260,"I’m sorry, do I know you?"
+7,19,3,4,12762,13804,What are you doing?
+7,19,0,6,13972,16724,"Nothing, I’m just practicing blowing you off because I’m gonna be a big movie star!"
+7,19,3,5,16891,18892,Oh! You got it?!
+7,19,0,3,19060,21521,"Well no, not yet. But the audition went really good."
+7,19,4,4,21521,22718,What was it for?
+7,19,0,4,22814,30320,"Oh, it’s this big budget period movie about these three Italian brothers who come to America around the turn of the century."
+7,19,0,3,26609,30320,It’s really classy!
+7,19,0,3,30488,34783,"Oh, and the director is supposed to be the next next Martin Scorcese."
+7,19,3,4,36619,37911,The next next?
+7,19,0,4,38079,41915,"Yeah, there’s this guy from Chicago who’s supposed to be the next Martin Scorcese, all right?"
+7,19,0,4,42083,44209,But then this guy’s right after him.
+7,19,0,3,47547,48630,Hello!
+7,19,0,3,54804,55888,They loved me!
+7,19,0,3,59809,61935,Oh my God!
+7,19,0,6,67692,78118,"Are you kidding me? I never rent a movie without it!  Oh.  Uh, okay uh let me call you back."
+7,19,3,4,78286,79538,What’s the matter?
+7,19,0,6,79538,82052,They want me to be totally naked in the movie!
+7,19,0,3,82165,88754,I know! My grandmother’s gonna see this!
+7,19,4,6,82165,83457,Wow!
+7,19,3,3,83625,88754,Grandma’s gonna have to get in line.
+7,19,3,4,311311,317024,Lusts of the flesh.
+7,19,1,4,318234,318826,What?
+7,19,3,4,318826,321627,I don’t know.  A cowboy theme?
+7,19,5,3,324907,325575,Hey!
+7,19,4,3,325575,326813,Hey!
+7,19,5,3,326909,330495,Y’know I’m-I’m really glad we decided not to sleep together before the wedding.
+7,19,4,3,330705,332998,"Oh boy, me too!"
+7,19,5,4,333541,338211,Y’know I was thinking if we had a…a big fight and uh we broke up for a few hours
+7,19,4,2,338379,339522,Yeah?
+7,19,5,4,338379,346136,"Technically we could have sex again. What do you think, bossy and domineering?!"
+7,19,4,0,346304,348972,"The wedding is off, sloppy and immature!"
+7,19,5,3,349140,350474,That’s me! Come on!
+7,19,4,4,350641,354144,"Okay.  But wait, we can’t. My Cousin Cassie is in the guest room, we’re supposed to have lunch."
+7,19,5,4,354312,356438,"Well, get rid of her, obsessive and shrill."
+7,19,4,0,357440,359900,Shrill?! The wedding is back on!
+7,19,36,4,362111,365447,I thought I heard voices. You must be Chandler.
+7,19,5,3,366074,367506,Hi! Nice to meet you!
+7,19,36,4,367506,369254,Nice to meet you too.
+7,19,4,4,369369,370291,"So, are you ready to go?"
+7,19,36,4,370291,371973,Yeah.
+7,19,4,0,389847,390682,Chandler!
+7,19,5,4,390682,392688,I’ll be right with you.
+7,19,36,5,754670,756672,"Ah yeah, sorry about that."
+7,19,2,4,756672,758286,"It’s okay. Come, come on in."
+7,19,36,3,758382,766055,"Thanks for letting me stay here! I mean Monica’s place was nice, but her fiancée sure stares a lot."
+7,19,2,4,766223,767807,Oh.
+7,19,36,6,787578,791456,Oh my God! You do a great Chandler!
+7,19,2,4,792958,798129,"Uh-huh. Yeah, I-I have a knack for impressions."
+7,19,36,3,798297,801424,"Well, maybe after we get reacquainted uh, you can do me."
+7,19,2,1,801592,803551,Yeah—No!!
+7,19,2,4,812645,817982,"Cassie, how you-how you doin’ on that…hot dog."
+7,19,36,4,820319,821487,I’m all done.
+7,19,2,3,821487,823590,Thank God.
+7,19,36,4,825741,829619,I guess the last time we really hung out was when our parents rented that beach house together.
+7,19,2,4,829787,830788,Oh right.
+7,19,2,3,829787,835667,"Ooh, remember the time I uh, I pinned you down and tickled you ‘til you cried?"
+7,19,2,4,830788,832068,Right.
+7,19,2,5,837461,840421,We’re probably too old to do that now.
+7,19,36,3,842800,847637,"I’ll always remember that summer, because it’s when I got all of these freckles."
+7,19,2,3,847805,857480,Uh-huh! Uh-huh! And-and-and I’ll always remember that summer because that’s when I realized that we are related.
+7,19,36,6,857731,859649,"It took you that long to figure it out, huh?"
+7,19,2,4,859859,866614,"Well I’m, I’m a little slow.  Just as our children would be."
+7,19,4,4,941857,946694,"Okay, we have a lot of options here, a number of prototypes for you to try on."
+7,19,0,3,947529,948905,Wow! This looks great!
+7,19,4,3,949073,953910,"Yeah! Okay, this one is a mushroom cap.  Umm, this one is made of bologna."
+7,19,0,1,954078,956871,And-and-and-and-and the toothpicks?
+7,19,4,3,1135175,1141806,Phoebe! Rachel! It’s Monica! I wonder what you could possibly need me for on such short notice!  Oh.
+7,19,1,5,1145060,1150273,"Oh Monica, we are so sorry."
+7,19,4,3,1146478,1150273,For what?
+7,19,1,5,1150440,1154318,"Well first, for forgetting to throw you a bridal shower."
+7,19,3,4,1154486,1156946,And then for forgetting to invite you to it.
+7,19,4,6,1159366,1160867,You al-you already had it?
+7,19,3,4,1161034,1167915,"Well, we called everyone in your phone book and a bunch of people came, but it took us so long to get you here that they-they had to leave."
+7,19,1,5,1168750,1175173,"Yeah, we wanted to throw you a big surprise and a great shower, and now you don’t have either."
+7,19,3,5,1175340,1176562,We ruined everything.
+7,19,1,5,1176562,1176856,Ugh
+7,19,4,5,1176967,1178844,"Well no, wait a minute, that’s not true!"
+7,19,4,3,1178844,1181868,"No, what did, that was really sweet."
+7,19,4,3,1181972,1183854,And it kinda works out for the best.
+7,19,1,6,1183854,1185536,"What do you, what do you mean?"
+7,19,4,3,1185642,1190229,"Well now, I get to spend my shower with the only people I really love!"
+7,19,4,3,1190397,1195234,"I mean, I get all those presents  without having to talk to people I don’t even like!"
+7,19,1,5,1201116,1202668,Surprise
+7,19,0,3,1202668,1203170,Surprise
+7,19,1,4,1203170,1203928,Monica.
+7,19,3,4,1274147,1276482,"Cassie, are you finding everything okay in there?"
+7,19,36,4,1276650,1279443,Yeah! Thank you so much for letting me stay here.
+7,19,3,3,1279611,1281821,Oh! No problem! I
+7,19,36,6,1300007,1301048,What?

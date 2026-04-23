@@ -1,0 +1,127 @@
+Season,Episode,Speaker_coded,Emotion_coded,StartTime_int,EndTime_int,Utterance
+6,18,4,5,468926,473346,"All right, well why don’t I go out with an ex-boyfriend and do Joey a favor?!"
+6,18,0,4,473514,476725,"Hey, you wanna do Joey a favor, maybe you go out with Joey."
+6,18,5,3,485318,487986,"Oh that’s great, my friend Joey’s in the movie business."
+6,18,67,4,488154,491573,Y’know who I ran into from school? Howie.
+6,18,5,4,491782,494576,My friend’s name is Joey.
+6,18,67,4,494744,497162,Apparently Howie’s editing now.
+6,18,67,0,497330,501625,"Yeah, he-he-he calls me up and asks me if he can edit my new movie."
+6,18,67,6,501792,503168,Can you believe that?!
+6,18,67,6,506255,509090,Y’know I-I-I haven’t spoken to him in like ten years and he asks me for a favor!
+6,18,5,1,511469,514513,"Yeah, I’ve always hated that Howie."
+6,18,67,1,514680,520393,"No, no ""How you doing?"" Man, I mean not even a cup of coffee first!"
+6,18,5,1,520561,521743,The nerve huh?
+6,18,67,1,521743,522439,Yeah!
+6,18,5,4,522563,523939,Refill?
+6,18,4,3,525733,528485,"Now, this is last minute so I want to apologize for the mess. Okay?"
+6,18,1,6,533783,537786,Oh my God! It sure didn’t look this way when I lived here.
+6,18,4,6,537954,539412,I know!
+6,18,4,3,541249,542582,"Now look, there’s only one problem though."
+6,18,4,4,542750,546545,"There’s only room for one, so I guess one of you will have to stay at Joey’s."
+6,18,3,5,546712,550840,"Well, since the fire was kinda my fault I guess  you should get to stay here."
+6,18,1,4,551008,555679,"Hey! Hey-hey, now this was no one’s fault Pheebs. Okay? It was an accident."
+6,18,3,4,555846,557973,"Well no, it was my fault so you should get the nice room."
+6,18,1,3,558140,560475,Okay!
+6,18,4,3,560643,561186,So Rach!
+6,18,4,3,561186,562949,You’re the first guest at Hotel Monica!
+6,18,4,4,564272,566398,"Umm, you’ll just have to tell me how you like your eggs in the morning."
+6,18,4,4,566566,568650,"And I thought I would bring them to you, y’know, in bed."
+6,18,4,5,568818,570402,"Oh, you have been through so much."
+6,18,1,5,570570,571611,I have.
+6,18,21,3,587253,591923,Oh please! It was such a big class! You never even noticed me!
+6,18,2,6,592091,596386,"What? Of course I did! You uh, you sat next to Sleepy Sleeperson."
+6,18,21,4,596554,597596,Who?
+6,18,2,4,597763,606271,"Oh uh, I had trouble remembering everyone’s name, so I-I kinda came up with nicknames."
+6,18,2,4,602059,606271,Like the guy on the other side of you was Smelly von Brownshirt.
+6,18,21,4,606439,614321,"Oh yeah. So umm, did you have a nickname for me?"
+6,18,2,4,609692,614321,"Umm, no. No."
+6,18,21,6,614488,616406,Yes you did! What was it?
+6,18,2,4,619368,620869,"Umm, it’s Cutie McPretty."
+6,18,21,3,621037,624873,Ohh that’s so sweet!
+6,18,2,3,625041,628376,"Listen, I gotta tell ya, I-I’m having a great time!"
+6,18,2,6,628586,638011,"Y’know how before you said it might be weird, the whole student teacher thing, and to be frank I thought it would be too, but it’s not."
+6,18,2,4,632673,638011,I mean it’s not at all.
+6,18,213,3,642058,642980,Dr. Geller!
+6,18,2,3,642980,644491,Burt!
+6,18,4,3,695111,698071,Now there you go! I wouldn’t want my best guest to strain her eyes!
+6,18,3,3,698239,700865,Thanks Monica!
+6,18,4,1,701033,703702,Does that smell bother you?
+6,18,3,6,703869,705745,"What the smell from Joey’s? No, I can hardly smell it over here."
+6,18,4,4,706706,710917,"Well you let me know if you can, because y’know I can bake a pie to cover it."
+6,18,3,3,712211,713963,"I can smell it a little, bake the pie."
+6,18,4,3,713963,714355,Okay!
+6,18,3,4,714355,715031,Okay.
+6,18,4,4,719218,723471,"Hello?  Oh yes, one minute please.  It’s for you. It’s the fire inspector."
+6,18,3,6,719218,727642,Oh!  Hello?  Yeah this is Phoebe.  Really?!
+6,18,0,4,732982,734899,"Yeah, so it turns out that it wasn’t the hair straightener that started the fire."
+6,18,0,4,735067,737402,"No-no, it was the candles."
+6,18,0,4,737570,741072,It’s very not good leaving candles unattended.
+6,18,0,4,741240,752417,"In fact, one of the first things they teach you in fire school is…  Uhh… Uhh… Okay."
+6,18,0,4,750207,752417,"Well, I have to go now."
+6,18,2,4,776692,777859,"Well, not really."
+6,18,2,4,778027,782197,"I mean technically it’s-it’s not against the rules or anything, but it is frowned upon."
+6,18,2,0,782364,786951,"Especially by that professor we ran into last night, Judgey von Holierthanthou."
+6,18,4,3,790039,795001,"Well Ross, you be careful now. You don’t want to get a reputation as y’know Professor McNailshisstudents."
+6,18,2,2,797963,799590,Yeah. What-what should I do?
+6,18,0,4,799590,801456,"Well Ross, it seems pretty clear."
+6,18,0,4,801550,802677,I mean what’s more important?
+6,18,0,4,802677,805161,"What people think or how you feel, huh?"
+6,18,0,4,805262,806534,"Ross, you gotta follow your heart."
+6,18,4,3,806534,808570,Joey that is so sweet.
+6,18,5,4,813771,816314,Hey.
+6,18,0,4,816482,820235,"Hey-hey-hey! So, how did it go with Dana? Any reason I should leave a block of time open say Thursday?"
+6,18,5,5,820402,821464,I couldn’t do it.
+6,18,0,6,821464,822878,You couldn’t do it?!
+6,18,5,4,822988,825448,"Hey, relax I just need more time. We’re going to dinner tonight."
+6,18,4,6,825616,827328,What?! You’re going out with her again!
+6,18,2,4,827328,827537,Going out with who?
+6,18,5,4,829328,832413,"Uh, Dana Keystone from college."
+6,18,2,6,832581,835708,Oh yeah! Wasn’t she uh
+6,18,5,4,836919,838461,"No, that was Dana Caplin."
+6,18,4,6,841799,843061,Joey! You didn’t even know her!
+6,18,0,0,843061,844360,Ah whatever!
+6,18,5,3,849139,852433,Great story again! The yarns that you weave! Woo-hoo-hoo!
+6,18,67,0,855479,858523,"Y’know uh, actually I-I-I should get going."
+6,18,5,2,858691,862777,Oh no-no-no! Stay! Stay! Because you-you should you-you-you should stay!
+6,18,67,6,864321,873204,"Wow. Oh, I am really flattered, but I just I don’t feel that way about you."
+6,18,5,0,874373,877333,"Oh no-no-no, that’s not—No-no-no!"
+6,18,3,4,941815,943858,"Well, not much has changed in the last five minutes."
+6,18,4,3,945736,947278,Yes it has! I made cookies!
+6,18,3,4,947446,950448,Oh that’s all right. I’m still full from your homemade potato chips.
+6,18,4,3,950616,954994,But you should eat them now because they’re hot from the oven.
+6,18,3,4,956538,959040,Okay.
+6,18,4,3,956538,961876,"Oh-ho! But not in here! Can’t eat ‘em in bed, remember? No crumbies!"
+6,18,3,4,963379,965296,"Okay, I’ll be out in a second."
+6,18,4,4,965464,966923,Okay!
+6,18,4,4,975057,975829,What are you doing?
+6,18,3,4,975829,977789,That doesn’t lock does it?
+6,18,0,4,983732,988403,No that’s all right. Don’t worry about it.
+6,18,1,1,988570,991072,Oh but look! That’s gonna leave a stain!
+6,18,0,3,991240,995284,Rach! Hey! It’s fine! You’re at Joey’s!
+6,18,1,6,995828,996540,Really?
+6,18,0,4,996540,998474,Yeah! Look!
+6,18,1,1,1003752,1005554,I’ve never lived like this before.
+6,18,0,4,1005554,1007358,I know.
+6,18,0,4,1010926,1013803,"All right, don’t waste it, I mean its still food."
+6,18,1,5,1182389,1187310,"No! No! Phoebe, come on! I don’t want to switch! Please come on! I can throw wet paper towels here!"
+6,18,3,3,1187477,1191522,No but at Monica’s you can eat cookies over the sink!
+6,18,1,5,1192649,1195193,I know. I’m sorry.
+6,18,3,4,1195944,1200656,All right fine! This looks like so much fun.
+6,18,0,4,1198238,1200656,Yeah.
+6,18,3,4,1200824,1203159,"God, what a mess."
+6,18,2,6,1208790,1209374,Wow!
+6,18,2,4,1209374,1211854,It actually is in the handbook.
+6,18,2,4,1211960,1216589,I can’t date you or have a hot plate in my office.
+6,18,2,5,1218217,1221886,I can’t believe we have to stop seeing each other.
+6,18,21,3,1222930,1232480,For what it’s worth I did appreciate you standing up for me. It felt really nice. It kinda made me like you even more.
+6,18,2,4,1232648,1239403,"I know, I know I really like you too. But we-we can’t date. It’s against the rules. It’s forbidden."
+6,18,21,6,1240447,1241906,Wow!
+6,18,2,6,1242074,1243886,What?
+6,18,21,3,1242074,1249247,"Just hearing you describe it as forbidden, it’s really hot."
+6,18,2,6,1244034,1249247,Really?
+6,18,21,4,1252626,1254418,Yeah.
+6,18,2,3,1255128,1265221,"Well I-I-I don’t care how hot it is it’s-it’s uh, it’s wrong."
+6,18,21,3,1261260,1265221,Stop it!
+6,18,2,3,1265389,1271769,No! No! It’s wrong! It’s-it’s-it’s naughty. It’s taboo.
+6,18,21,3,1272479,1274355,Shut the book!
+6,18,2,3,1275649,1279318,Let’s also get a hot plate!
